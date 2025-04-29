@@ -29,6 +29,7 @@ jobs:
         sed -i -E "s#<Version>[^<]+</Version>#<Version>${{ steps.ver.outputs.version }}</Version>#g" "$proj"
 
     - name: Create PR (bump)
+      id: bump_pr
       uses: peter-evans/create-pull-request@v7
       with:
         base: master
@@ -38,10 +39,12 @@ jobs:
         delete-branch: true
 
     - name: Merge bump PR
+      if: ${{ steps.bump_pr.outputs.pull-request-number }}
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        gh pr merge --merge --delete-branch --admin
+        gh pr merge ${{ steps.bump_pr.outputs.pull-request-number }} \
+          --merge --delete-branch --admin
 
 ########################################################################
 # 2. Codegen
@@ -67,6 +70,7 @@ jobs:
           --namespace Poolz.Finance.CSharp.Strapi
 
     - name: Create PR (codegen)
+      id: codegen_pr
       uses: peter-evans/create-pull-request@v7
       with:
         base: master
@@ -75,10 +79,12 @@ jobs:
         delete-branch: true
 
     - name: Merge codegen PR
+      if: ${{ steps.codegen_pr.outputs.pull-request-number }}
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        gh pr merge --merge --delete-branch --admin
+        gh pr merge ${{ steps.codegen_pr.outputs.pull-request-number }} \
+          --merge --delete-branch --admin
 
 ########################################################################
 # 3. Publish
