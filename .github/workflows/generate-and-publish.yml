@@ -1,0 +1,87 @@
+name: Release – bump, codegen, publish
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+  pull-requests: write
+  packages: write
+
+env:
+  DOTNET_VERSION: '8.0.x'
+
+########################################################################
+# 1. Version bump
+########################################################################
+jobs:
+  bump-version:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - id: ver
+      run: echo "version=${GITHUB_REF_NAME#v}" >> $GITHUB_OUTPUT
+    - name: Patch csproj
+      run: |
+        proj=$(git ls-files '*.csproj' | head -n1)
+        sed -i -E "s#<Version>[^<]+</Version>#<Version>${{ steps.ver.outputs.version }}</Version>#g" "$proj"
+    - name: Commit + PR
+      uses: peter-evans/create-pull-request@v7
+      with:
+        commit-message: "chore: bump version to ${{ steps.ver.outputs.version }}"
+        branch: "version/${{ steps.ver.outputs.version }}"
+        title:  "Bump version to ${{ steps.ver.outputs.version }}"
+        delete-branch: true
+    - name: Merge bump PR
+      run: gh pr merge --merge --auto --delete-branch --admin
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+########################################################################
+# 2. Codegen
+########################################################################
+  codegen:
+    needs: bump-version
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+    - run: dotnet tool install GraphQlClientGenerator.Tool --global
+    - env:
+        GRAPHQL_URL: ${{ secrets.GRAPHQL_URL }}
+      run: |
+        graphql-client-generator \
+          --serviceUrl "$GRAPHQL_URL" \
+          --outputPath ./src/Poolz.Finance.CSharp.Strapi/StrapiClient.cs \
+          --namespace Poolz.Finance.CSharp.Strapi
+    - name: Commit + PR (codegen)
+      uses: peter-evans/create-pull-request@v7
+      with:
+        commit-message: "feat: update generated Strapi client"
+        branch: "codegen/${{ github.run_id }}"
+        title:  "Update generated Strapi client"
+        delete-branch: true
+    - name: Merge codegen PR
+      run: gh pr merge --merge --auto --delete-branch --admin
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+########################################################################
+# 3. Publish
+########################################################################
+  publish:
+    needs: codegen
+    runs-on: ubuntu-latest
+    environment: publish-approval
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+
+    - name: Package and Push NuGet Package to GitHub Packages
+      run: |
+        dotnet pack ./src/Poolz.Finance.CSharp.Strapi/Poolz.Finance.CSharp.Strapi.csproj --configuration Release --output nupkg/
+        dotnet nuget push nupkg/*.nupkg --source https://nuget.pkg.github.com/The-Poolz/index.json --api-key ${{ secrets.GITHUB_TOKEN }}
