@@ -47,9 +47,9 @@ jobs:
           --merge --delete-branch --admin
 
 ########################################################################
-# 2. Codegen
+# 2.1. Codegen - Generate and create PR
 ########################################################################
-  codegen:
+  codegen-generate:
     needs: bump-version
     runs-on: ubuntu-latest
     steps:
@@ -78,6 +78,19 @@ jobs:
         branch: codegen/${{ github.run_id }}
         delete-branch: true
 
+########################################################################
+# 2.2. Codegen - Approve the PR
+########################################################################
+  codegen-merge:
+    needs: codegen-generate
+    runs-on: ubuntu-latest
+    environment: merge-pr-approval
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        ref: master
+        fetch-depth: 0
+
     - name: Merge codegen PR
       if: ${{ steps.codegen_pr.outputs.pull-request-number }}
       env:
@@ -90,11 +103,14 @@ jobs:
 # 3. Publish
 ########################################################################
   publish:
-    needs: codegen
+    needs: codegen-merge
     runs-on: ubuntu-latest
     environment: publish-approval
     steps:
     - uses: actions/checkout@v4
+      with:
+        ref: master
+        fetch-depth: 0
     - uses: actions/setup-dotnet@v4
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
