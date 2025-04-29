@@ -31,7 +31,7 @@ jobs:
         proj=$(git ls-files '*.csproj' | head -n1)
         sed -i -E "s#<Version>[^<]+</Version>#<Version>${{ steps.ver.outputs.version }}</Version>#g" "$proj"
 
-    - name: Create PR (bump)
+    - name: Create and Merge PR (bump)
       id: bump_pr
       uses: peter-evans/create-pull-request@v7
       with:
@@ -40,14 +40,6 @@ jobs:
           chore: bump version to ${{ steps.ver.outputs.version }}
         branch: version/${{ steps.ver.outputs.version }}
         delete-branch: true
-
-    - name: Merge bump PR
-      if: ${{ steps.bump_pr.outputs.pull-request-number }}
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        gh pr merge ${{ steps.bump_pr.outputs.pull-request-number }} \
-          --merge --delete-branch --admin
 
 ########################################################################
 # 2.1. Codegen - Generate C# and create PR
@@ -81,7 +73,6 @@ jobs:
         base: master
         commit-message: "feat: update generated Strapi client"
         branch: codegen/${{ github.run_id }}
-        delete-branch: true
 
 ########################################################################
 # 2.2. Codegen - Approve the PR
