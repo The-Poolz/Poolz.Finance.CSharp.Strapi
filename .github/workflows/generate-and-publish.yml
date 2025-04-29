@@ -47,7 +47,7 @@ jobs:
           --merge --delete-branch --admin
 
 ########################################################################
-# 2.1. Codegen - Generate and create PR
+# 2.1. Codegen - Generate C# and create PR
 ########################################################################
   codegen-generate:
     needs: bump-version
