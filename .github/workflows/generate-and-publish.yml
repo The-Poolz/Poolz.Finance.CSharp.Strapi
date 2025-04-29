@@ -28,6 +28,7 @@ jobs:
     - name: Commit + PR
       uses: peter-evans/create-pull-request@v7
       with:
+        base: master
         commit-message: "chore: bump version to ${{ steps.ver.outputs.version }}"
         branch: "version/${{ steps.ver.outputs.version }}"
         title:  "Bump version to ${{ steps.ver.outputs.version }}"
@@ -56,9 +57,10 @@ jobs:
           --serviceUrl "$GRAPHQL_URL" \
           --outputPath ./src/Poolz.Finance.CSharp.Strapi/StrapiClient.cs \
           --namespace Poolz.Finance.CSharp.Strapi
-    - name: Commit + PR (codegen)
+    - name: Commit + PR
       uses: peter-evans/create-pull-request@v7
       with:
+        base: master
         commit-message: "feat: update generated Strapi client"
         branch: "codegen/${{ github.run_id }}"
         title:  "Update generated Strapi client"
