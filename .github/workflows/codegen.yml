@@ -1,0 +1,43 @@
+name: Codegen
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  codegen:
+    if: startsWith(github.event.issue.title, 'Codegen')
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        ref: master
+        fetch-depth: 0
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Install Codegen
+      run: dotnet tool install GraphQlClientGenerator.Tool --global
+
+    - name: Run Codegen
+    - env:
+        GRAPHQL_URL: ${{ secrets.GRAPHQL_URL }}
+      run: |
+        graphql-client-generator \
+          --serviceUrl "$GRAPHQL_URL" \
+          --outputPath ./src/Poolz.Finance.CSharp.Strapi/StrapiClient.cs \
+          --namespace Poolz.Finance.CSharp.Strapi
+
+    - name: Create PR
+      uses: peter-evans/create-pull-request@v7
+      with:
+        base: master
+        commit-message: "Update generated Strapi client"
+        branch: codegen/${{ github.run_id }}

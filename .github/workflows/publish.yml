@@ -1,0 +1,28 @@
+name: Publish
+on:
+  release:
+    types: [published]
+
+permissions:
+  packages: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: publish-approval
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        ref: master
+        fetch-depth: 0
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Package and Push NuGet Package to GitHub Packages
+      run: |
+        dotnet pack ./src/Poolz.Finance.CSharp.Strapi/Poolz.Finance.CSharp.Strapi.csproj --configuration Release --output nupkg/
+        dotnet nuget push nupkg/*.nupkg --source https://nuget.pkg.github.com/The-Poolz/index.json --api-key ${{ secrets.GITHUB_TOKEN }}
