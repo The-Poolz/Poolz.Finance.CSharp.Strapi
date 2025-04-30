@@ -39,3 +39,5 @@ jobs:
         commit-message: |
           Bump version to ${{ steps.ver.outputs.version }}
         branch: bump-version-to-${{ steps.ver.outputs.version }}
+        body: |
+          Closes #${{ github.event.issue.number }}
