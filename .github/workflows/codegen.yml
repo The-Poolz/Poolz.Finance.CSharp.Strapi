@@ -1,13 +1,14 @@
 name: Codegen
 on:
-  release:
-    types: [published]
+  issues:
+    types: [opened]
 
 permissions:
   pull-requests: write
 
 jobs:
-  codegen-generate:
+  codegen:
+    if: startsWith(github.event.issue.title, 'Codegen')
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
