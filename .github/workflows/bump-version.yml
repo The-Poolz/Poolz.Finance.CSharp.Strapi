@@ -12,32 +12,32 @@ jobs:
     if: startsWith(github.event.issue.title, 'Bump version to')
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-
-    - name: Tag parsing
-      id: ver
-      shell: bash
-      run: |
-        title="${{ github.event.issue.title }}"
-        version="${title#Bump version to }"
-        version="${version#v}"
-        version="$(echo "$version" | xargs)"
-        echo "version=$version" >> "$GITHUB_OUTPUT"
-
-    - name: Patch .csproj
-      run: |
-        proj=$(git ls-files '*.csproj' | head -n1)
-        sed -i -E "s#<Version>[^<]+</Version>#<Version>${{ steps.ver.outputs.version }}</Version>#g" "$proj"
-
-    - name: Create PR
-      uses: peter-evans/create-pull-request@v7
-      with:
-        base: master
-        commit-message: |
-          Bump version to ${{ steps.ver.outputs.version }}
-        branch: bump-version-to-${{ steps.ver.outputs.version }}
-        body: |
-          Closes #${{ github.event.issue.number }}
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+  
+      - name: Tag parsing
+        id: ver
+        shell: bash
+        run: |
+          title="${{ github.event.issue.title }}"
+          version="${title#Bump version to }"
+          version="${version#v}"
+          version="$(echo "$version" | xargs)"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+  
+      - name: Patch .csproj
+        run: |
+          proj=$(git ls-files '*.csproj' | head -n1)
+          sed -i -E "s#<Version>[^<]+</Version>#<Version>${{ steps.ver.outputs.version }}</Version>#g" "$proj"
+  
+      - name: Create PR
+        uses: peter-evans/create-pull-request@v7
+        with:
+          base: master
+          commit-message: |
+            Bump version to ${{ steps.ver.outputs.version }}
+          branch: bump-version-to-${{ steps.ver.outputs.version }}
+          body: |
+            Closes #${{ github.event.issue.number }}
