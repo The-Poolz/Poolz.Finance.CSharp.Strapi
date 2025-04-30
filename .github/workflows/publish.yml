@@ -4,12 +4,11 @@ on:
     types: [published]
 
 permissions:
-  packages: write
+  contents: read
 
 jobs:
   publish:
     runs-on: ubuntu-latest
-    environment: publish-approval
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -22,7 +21,21 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
-    - name: Package and Push NuGet Package to GitHub Packages
+    - name: Pack package and symbols
       run: |
-        dotnet pack ./src/Poolz.Finance.CSharp.Strapi/Poolz.Finance.CSharp.Strapi.csproj --configuration Release --output nupkg/
-        dotnet nuget push nupkg/*.nupkg --source https://nuget.pkg.github.com/The-Poolz/index.json --api-key ${{ secrets.GITHUB_TOKEN }}
+        dotnet pack ./src/Poolz.Finance.CSharp.Strapi/Poolz.Finance.CSharp.Strapi.csproj \
+          --configuration Release \
+          --output artifacts/ \
+          -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg
+
+    - name: Push NuGet package and symbols
+      run: |
+        dotnet nuget push artifacts/*.nupkg  \
+          --api-key ${{ secrets.NUGET_API_KEY }} \
+          --source https://api.nuget.org/v3/index.json \
+          --skip-duplicate
+
+        dotnet nuget push artifacts/*.snupkg \
+          --api-key ${{ secrets.NUGET_API_KEY }} \
+          --source https://api.nuget.org/v3/index.json \
+          --skip-duplicate
