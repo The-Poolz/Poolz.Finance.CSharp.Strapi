@@ -41,3 +41,5 @@ jobs:
         base: master
         commit-message: "Update generated Strapi client"
         branch: codegen/${{ github.run_id }}
+        body: |
+          Closes #${{ github.event.issue.number }}
