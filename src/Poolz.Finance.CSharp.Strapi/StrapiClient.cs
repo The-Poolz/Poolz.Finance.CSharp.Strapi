@@ -1352,8 +1352,7 @@ namespace Poolz.Finance.CSharp.Strapi
         public static readonly IReadOnlyDictionary<global::System.Type, string> ReverseMapping =
             new Dictionary<global::System.Type, string>
             {
-                { typeof(Guid), "ID" },
-                { typeof(string), "String" },
+                { typeof(string), "ID" },
                 { typeof(DateTimeOffset), "DateTime" },
                 { typeof(bool), "Boolean" },
                 { typeof(int), "Int" },
@@ -1546,7 +1545,7 @@ namespace Poolz.Finance.CSharp.Strapi
     #endregion
 
     #region builder classes
-    public class PaginationQueryBuilder : GraphQlQueryBuilder<PaginationQueryBuilder>
+    public partial class PaginationQueryBuilder : GraphQlQueryBuilder<PaginationQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -1602,7 +1601,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class DeleteMutationResponseQueryBuilder : GraphQlQueryBuilder<DeleteMutationResponseQueryBuilder>
+    public partial class DeleteMutationResponseQueryBuilder : GraphQlQueryBuilder<DeleteMutationResponseQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -1625,7 +1624,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentVisualTextVisualTextQueryBuilder : GraphQlQueryBuilder<ComponentVisualTextVisualTextQueryBuilder>
+    public partial class ComponentVisualTextVisualTextQueryBuilder : GraphQlQueryBuilder<ComponentVisualTextVisualTextQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -1722,7 +1721,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentVersionVersionQueryBuilder : GraphQlQueryBuilder<ComponentVersionVersionQueryBuilder>
+    public partial class ComponentVersionVersionQueryBuilder : GraphQlQueryBuilder<ComponentVersionVersionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -1767,7 +1766,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentUploadPoolUploadPoolQueryBuilder : GraphQlQueryBuilder<ComponentUploadPoolUploadPoolQueryBuilder>
+    public partial class ComponentUploadPoolUploadPoolQueryBuilder : GraphQlQueryBuilder<ComponentUploadPoolUploadPoolQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -1845,119 +1844,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentTokenDistributionTokenDistributionQueryBuilder : GraphQlQueryBuilder<ComponentTokenDistributionTokenDistributionQueryBuilder>
-    {
-        private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
-            new []
-            {
-                new GraphQlFieldMetadata { Name = "id" },
-                new GraphQlFieldMetadata { Name = "Unlock" },
-                new GraphQlFieldMetadata { Name = "Ratio" },
-                new GraphQlFieldMetadata { Name = "IsTimeTBA" },
-                new GraphQlFieldMetadata { Name = "StartTime" }
-            };
-
-        protected override string TypeName { get { return "ComponentTokenDistributionTokenDistribution"; } } 
-
-        public override IReadOnlyList<GraphQlFieldMetadata> AllFields { get { return AllFieldMetadata; } } 
-
-        public ComponentTokenDistributionTokenDistributionQueryBuilder WithId(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("id", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentTokenDistributionTokenDistributionQueryBuilder ExceptId()
-        {
-            return ExceptField("id");
-        }
-
-        public ComponentTokenDistributionTokenDistributionQueryBuilder WithUnlock(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("Unlock", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentTokenDistributionTokenDistributionQueryBuilder ExceptUnlock()
-        {
-            return ExceptField("Unlock");
-        }
-
-        public ComponentTokenDistributionTokenDistributionQueryBuilder WithRatio(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("Ratio", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentTokenDistributionTokenDistributionQueryBuilder ExceptRatio()
-        {
-            return ExceptField("Ratio");
-        }
-
-        public ComponentTokenDistributionTokenDistributionQueryBuilder WithIsTimeTba(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("IsTimeTBA", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentTokenDistributionTokenDistributionQueryBuilder ExceptIsTimeTba()
-        {
-            return ExceptField("IsTimeTBA");
-        }
-
-        public ComponentTokenDistributionTokenDistributionQueryBuilder WithStartTime(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("StartTime", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentTokenDistributionTokenDistributionQueryBuilder ExceptStartTime()
-        {
-            return ExceptField("StartTime");
-        }
-    }
-
-    public class ComponentSyntheticZoneSynteticQueryBuilder : GraphQlQueryBuilder<ComponentSyntheticZoneSynteticQueryBuilder>
-    {
-        private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
-            new []
-            {
-                new GraphQlFieldMetadata { Name = "id" },
-                new GraphQlFieldMetadata { Name = "TokenAddress" },
-                new GraphQlFieldMetadata { Name = "chain_setting", IsComplex = true, QueryBuilderType = typeof(ChainSettingQueryBuilder) }
-            };
-
-        protected override string TypeName { get { return "ComponentSyntheticZoneSyntetic"; } } 
-
-        public override IReadOnlyList<GraphQlFieldMetadata> AllFields { get { return AllFieldMetadata; } } 
-
-        public ComponentSyntheticZoneSynteticQueryBuilder WithId(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("id", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentSyntheticZoneSynteticQueryBuilder ExceptId()
-        {
-            return ExceptField("id");
-        }
-
-        public ComponentSyntheticZoneSynteticQueryBuilder WithTokenAddress(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("TokenAddress", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentSyntheticZoneSynteticQueryBuilder ExceptTokenAddress()
-        {
-            return ExceptField("TokenAddress");
-        }
-
-        public ComponentSyntheticZoneSynteticQueryBuilder WithChainSetting(ChainSettingQueryBuilder chainSettingQueryBuilder, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithObjectField("chain_setting", alias, chainSettingQueryBuilder, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentSyntheticZoneSynteticQueryBuilder ExceptChainSetting()
-        {
-            return ExceptField("chain_setting");
-        }
-    }
-
-    public class ComponentTokenomicsTokenomicsQueryBuilder : GraphQlQueryBuilder<ComponentTokenomicsTokenomicsQueryBuilder>
+    public partial class ComponentTokenomicsTokenomicsQueryBuilder : GraphQlQueryBuilder<ComponentTokenomicsTokenomicsQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -1970,7 +1857,8 @@ namespace Poolz.Finance.CSharp.Strapi
                 new GraphQlFieldMetadata { Name = "CirculationSupply" },
                 new GraphQlFieldMetadata { Name = "TotalSupply" },
                 new GraphQlFieldMetadata { Name = "USDPrice" },
-                new GraphQlFieldMetadata { Name = "TotalRaise" }
+                new GraphQlFieldMetadata { Name = "TotalRaise" },
+                new GraphQlFieldMetadata { Name = "TokenPrice" }
             };
 
         protected override string TypeName { get { return "ComponentTokenomicsTokenomics"; } } 
@@ -2066,9 +1954,131 @@ namespace Poolz.Finance.CSharp.Strapi
         {
             return ExceptField("TotalRaise");
         }
+
+        public ComponentTokenomicsTokenomicsQueryBuilder WithTokenPrice(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("TokenPrice", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentTokenomicsTokenomicsQueryBuilder ExceptTokenPrice()
+        {
+            return ExceptField("TokenPrice");
+        }
     }
 
-    public class ComponentSmartLinksSmartLinksQueryBuilder : GraphQlQueryBuilder<ComponentSmartLinksSmartLinksQueryBuilder>
+    public partial class ComponentSyntheticZoneSynteticQueryBuilder : GraphQlQueryBuilder<ComponentSyntheticZoneSynteticQueryBuilder>
+    {
+        private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
+            new []
+            {
+                new GraphQlFieldMetadata { Name = "id" },
+                new GraphQlFieldMetadata { Name = "TokenAddress" },
+                new GraphQlFieldMetadata { Name = "chain_setting", IsComplex = true, QueryBuilderType = typeof(ChainSettingQueryBuilder) }
+            };
+
+        protected override string TypeName { get { return "ComponentSyntheticZoneSyntetic"; } } 
+
+        public override IReadOnlyList<GraphQlFieldMetadata> AllFields { get { return AllFieldMetadata; } } 
+
+        public ComponentSyntheticZoneSynteticQueryBuilder WithId(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("id", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentSyntheticZoneSynteticQueryBuilder ExceptId()
+        {
+            return ExceptField("id");
+        }
+
+        public ComponentSyntheticZoneSynteticQueryBuilder WithTokenAddress(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("TokenAddress", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentSyntheticZoneSynteticQueryBuilder ExceptTokenAddress()
+        {
+            return ExceptField("TokenAddress");
+        }
+
+        public ComponentSyntheticZoneSynteticQueryBuilder WithChainSetting(ChainSettingQueryBuilder chainSettingQueryBuilder, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithObjectField("chain_setting", alias, chainSettingQueryBuilder, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentSyntheticZoneSynteticQueryBuilder ExceptChainSetting()
+        {
+            return ExceptField("chain_setting");
+        }
+    }
+
+    public partial class ComponentTokenDistributionTokenDistributionQueryBuilder : GraphQlQueryBuilder<ComponentTokenDistributionTokenDistributionQueryBuilder>
+    {
+        private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
+            new []
+            {
+                new GraphQlFieldMetadata { Name = "id" },
+                new GraphQlFieldMetadata { Name = "Unlock" },
+                new GraphQlFieldMetadata { Name = "Ratio" },
+                new GraphQlFieldMetadata { Name = "IsTimeTBA" },
+                new GraphQlFieldMetadata { Name = "StartTime" }
+            };
+
+        protected override string TypeName { get { return "ComponentTokenDistributionTokenDistribution"; } } 
+
+        public override IReadOnlyList<GraphQlFieldMetadata> AllFields { get { return AllFieldMetadata; } } 
+
+        public ComponentTokenDistributionTokenDistributionQueryBuilder WithId(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("id", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentTokenDistributionTokenDistributionQueryBuilder ExceptId()
+        {
+            return ExceptField("id");
+        }
+
+        public ComponentTokenDistributionTokenDistributionQueryBuilder WithUnlock(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("Unlock", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentTokenDistributionTokenDistributionQueryBuilder ExceptUnlock()
+        {
+            return ExceptField("Unlock");
+        }
+
+        public ComponentTokenDistributionTokenDistributionQueryBuilder WithRatio(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("Ratio", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentTokenDistributionTokenDistributionQueryBuilder ExceptRatio()
+        {
+            return ExceptField("Ratio");
+        }
+
+        public ComponentTokenDistributionTokenDistributionQueryBuilder WithIsTimeTba(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("IsTimeTBA", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentTokenDistributionTokenDistributionQueryBuilder ExceptIsTimeTba()
+        {
+            return ExceptField("IsTimeTBA");
+        }
+
+        public ComponentTokenDistributionTokenDistributionQueryBuilder WithStartTime(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("StartTime", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentTokenDistributionTokenDistributionQueryBuilder ExceptStartTime()
+        {
+            return ExceptField("StartTime");
+        }
+    }
+
+    public partial class ComponentSmartLinksSmartLinksQueryBuilder : GraphQlQueryBuilder<ComponentSmartLinksSmartLinksQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -2113,7 +2123,174 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentSectionSectionQueryBuilder : GraphQlQueryBuilder<ComponentSectionSectionQueryBuilder>
+    public partial class ComponentSimpleUrlSimpleUrlQueryBuilder : GraphQlQueryBuilder<ComponentSimpleUrlSimpleUrlQueryBuilder>
+    {
+        private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
+            new []
+            {
+                new GraphQlFieldMetadata { Name = "id" },
+                new GraphQlFieldMetadata { Name = "name" },
+                new GraphQlFieldMetadata { Name = "url" },
+                new GraphQlFieldMetadata { Name = "newWindow" }
+            };
+
+        protected override string TypeName { get { return "ComponentSimpleUrlSimpleUrl"; } } 
+
+        public override IReadOnlyList<GraphQlFieldMetadata> AllFields { get { return AllFieldMetadata; } } 
+
+        public ComponentSimpleUrlSimpleUrlQueryBuilder WithId(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("id", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentSimpleUrlSimpleUrlQueryBuilder ExceptId()
+        {
+            return ExceptField("id");
+        }
+
+        public ComponentSimpleUrlSimpleUrlQueryBuilder WithName(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("name", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentSimpleUrlSimpleUrlQueryBuilder ExceptName()
+        {
+            return ExceptField("name");
+        }
+
+        public ComponentSimpleUrlSimpleUrlQueryBuilder WithUrl(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("url", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentSimpleUrlSimpleUrlQueryBuilder ExceptUrl()
+        {
+            return ExceptField("url");
+        }
+
+        public ComponentSimpleUrlSimpleUrlQueryBuilder WithNewWindow(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("newWindow", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentSimpleUrlSimpleUrlQueryBuilder ExceptNewWindow()
+        {
+            return ExceptField("newWindow");
+        }
+    }
+
+    public partial class ComponentMainCtaMainCtaQueryBuilder : GraphQlQueryBuilder<ComponentMainCtaMainCtaQueryBuilder>
+    {
+        private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
+            new []
+            {
+                new GraphQlFieldMetadata { Name = "id" },
+                new GraphQlFieldMetadata { Name = "text" },
+                new GraphQlFieldMetadata { Name = "url" },
+                new GraphQlFieldMetadata { Name = "ctaText" },
+                new GraphQlFieldMetadata { Name = "addText" },
+                new GraphQlFieldMetadata { Name = "backColor" },
+                new GraphQlFieldMetadata { Name = "TextColor" },
+                new GraphQlFieldMetadata { Name = "hoverBackColor" },
+                new GraphQlFieldMetadata { Name = "flag" }
+            };
+
+        protected override string TypeName { get { return "ComponentMainCtaMainCta"; } } 
+
+        public override IReadOnlyList<GraphQlFieldMetadata> AllFields { get { return AllFieldMetadata; } } 
+
+        public ComponentMainCtaMainCtaQueryBuilder WithId(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("id", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentMainCtaMainCtaQueryBuilder ExceptId()
+        {
+            return ExceptField("id");
+        }
+
+        public ComponentMainCtaMainCtaQueryBuilder WithText(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("text", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentMainCtaMainCtaQueryBuilder ExceptText()
+        {
+            return ExceptField("text");
+        }
+
+        public ComponentMainCtaMainCtaQueryBuilder WithUrl(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("url", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentMainCtaMainCtaQueryBuilder ExceptUrl()
+        {
+            return ExceptField("url");
+        }
+
+        public ComponentMainCtaMainCtaQueryBuilder WithCtaText(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("ctaText", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentMainCtaMainCtaQueryBuilder ExceptCtaText()
+        {
+            return ExceptField("ctaText");
+        }
+
+        public ComponentMainCtaMainCtaQueryBuilder WithAddText(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("addText", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentMainCtaMainCtaQueryBuilder ExceptAddText()
+        {
+            return ExceptField("addText");
+        }
+
+        public ComponentMainCtaMainCtaQueryBuilder WithBackColor(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("backColor", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentMainCtaMainCtaQueryBuilder ExceptBackColor()
+        {
+            return ExceptField("backColor");
+        }
+
+        public ComponentMainCtaMainCtaQueryBuilder WithTextColor(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("TextColor", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentMainCtaMainCtaQueryBuilder ExceptTextColor()
+        {
+            return ExceptField("TextColor");
+        }
+
+        public ComponentMainCtaMainCtaQueryBuilder WithHoverBackColor(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("hoverBackColor", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentMainCtaMainCtaQueryBuilder ExceptHoverBackColor()
+        {
+            return ExceptField("hoverBackColor");
+        }
+
+        public ComponentMainCtaMainCtaQueryBuilder WithFlag(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("flag", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentMainCtaMainCtaQueryBuilder ExceptFlag()
+        {
+            return ExceptField("flag");
+        }
+    }
+
+    public partial class ComponentSectionSectionQueryBuilder : GraphQlQueryBuilder<ComponentSectionSectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -2255,63 +2432,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentSimpleUrlSimpleUrlQueryBuilder : GraphQlQueryBuilder<ComponentSimpleUrlSimpleUrlQueryBuilder>
-    {
-        private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
-            new []
-            {
-                new GraphQlFieldMetadata { Name = "id" },
-                new GraphQlFieldMetadata { Name = "name" },
-                new GraphQlFieldMetadata { Name = "url" },
-                new GraphQlFieldMetadata { Name = "newWindow" }
-            };
-
-        protected override string TypeName { get { return "ComponentSimpleUrlSimpleUrl"; } } 
-
-        public override IReadOnlyList<GraphQlFieldMetadata> AllFields { get { return AllFieldMetadata; } } 
-
-        public ComponentSimpleUrlSimpleUrlQueryBuilder WithId(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("id", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentSimpleUrlSimpleUrlQueryBuilder ExceptId()
-        {
-            return ExceptField("id");
-        }
-
-        public ComponentSimpleUrlSimpleUrlQueryBuilder WithName(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("name", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentSimpleUrlSimpleUrlQueryBuilder ExceptName()
-        {
-            return ExceptField("name");
-        }
-
-        public ComponentSimpleUrlSimpleUrlQueryBuilder WithUrl(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("url", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentSimpleUrlSimpleUrlQueryBuilder ExceptUrl()
-        {
-            return ExceptField("url");
-        }
-
-        public ComponentSimpleUrlSimpleUrlQueryBuilder WithNewWindow(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("newWindow", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentSimpleUrlSimpleUrlQueryBuilder ExceptNewWindow()
-        {
-            return ExceptField("newWindow");
-        }
-    }
-
-    public class ComponentOverviewOverviewQueryBuilder : GraphQlQueryBuilder<ComponentOverviewOverviewQueryBuilder>
+    public partial class ComponentOverviewOverviewQueryBuilder : GraphQlQueryBuilder<ComponentOverviewOverviewQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -2367,7 +2488,131 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentIconTextIconTextQueryBuilder : GraphQlQueryBuilder<ComponentIconTextIconTextQueryBuilder>
+    public partial class ComponentHighlightsHighlightsQueryBuilder : GraphQlQueryBuilder<ComponentHighlightsHighlightsQueryBuilder>
+    {
+        private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
+            new []
+            {
+                new GraphQlFieldMetadata { Name = "id" },
+                new GraphQlFieldMetadata { Name = "Value" }
+            };
+
+        protected override string TypeName { get { return "ComponentHighlightsHighlights"; } } 
+
+        public override IReadOnlyList<GraphQlFieldMetadata> AllFields { get { return AllFieldMetadata; } } 
+
+        public ComponentHighlightsHighlightsQueryBuilder WithId(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("id", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentHighlightsHighlightsQueryBuilder ExceptId()
+        {
+            return ExceptField("id");
+        }
+
+        public ComponentHighlightsHighlightsQueryBuilder WithValue(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("Value", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentHighlightsHighlightsQueryBuilder ExceptValue()
+        {
+            return ExceptField("Value");
+        }
+    }
+
+    public partial class ComponentInvestorsInvestorsQueryBuilder : GraphQlQueryBuilder<ComponentInvestorsInvestorsQueryBuilder>
+    {
+        private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
+            new []
+            {
+                new GraphQlFieldMetadata { Name = "id" },
+                new GraphQlFieldMetadata { Name = "investor", IsComplex = true, QueryBuilderType = typeof(InvestorQueryBuilder) },
+                new GraphQlFieldMetadata { Name = "Category" }
+            };
+
+        protected override string TypeName { get { return "ComponentInvestorsInvestors"; } } 
+
+        public override IReadOnlyList<GraphQlFieldMetadata> AllFields { get { return AllFieldMetadata; } } 
+
+        public ComponentInvestorsInvestorsQueryBuilder WithId(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("id", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentInvestorsInvestorsQueryBuilder ExceptId()
+        {
+            return ExceptField("id");
+        }
+
+        public ComponentInvestorsInvestorsQueryBuilder WithInvestor(InvestorQueryBuilder investorQueryBuilder, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithObjectField("investor", alias, investorQueryBuilder, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentInvestorsInvestorsQueryBuilder ExceptInvestor()
+        {
+            return ExceptField("investor");
+        }
+
+        public ComponentInvestorsInvestorsQueryBuilder WithCategory(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("Category", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentInvestorsInvestorsQueryBuilder ExceptCategory()
+        {
+            return ExceptField("Category");
+        }
+    }
+
+    public partial class ComponentHtmlColorTextHtmlColorTextQueryBuilder : GraphQlQueryBuilder<ComponentHtmlColorTextHtmlColorTextQueryBuilder>
+    {
+        private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
+            new []
+            {
+                new GraphQlFieldMetadata { Name = "id" },
+                new GraphQlFieldMetadata { Name = "text" },
+                new GraphQlFieldMetadata { Name = "url" }
+            };
+
+        protected override string TypeName { get { return "ComponentHtmlColorTextHtmlColorText"; } } 
+
+        public override IReadOnlyList<GraphQlFieldMetadata> AllFields { get { return AllFieldMetadata; } } 
+
+        public ComponentHtmlColorTextHtmlColorTextQueryBuilder WithId(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("id", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentHtmlColorTextHtmlColorTextQueryBuilder ExceptId()
+        {
+            return ExceptField("id");
+        }
+
+        public ComponentHtmlColorTextHtmlColorTextQueryBuilder WithText(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("text", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentHtmlColorTextHtmlColorTextQueryBuilder ExceptText()
+        {
+            return ExceptField("text");
+        }
+
+        public ComponentHtmlColorTextHtmlColorTextQueryBuilder WithUrl(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("url", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentHtmlColorTextHtmlColorTextQueryBuilder ExceptUrl()
+        {
+            return ExceptField("url");
+        }
+    }
+
+    public partial class ComponentIconTextIconTextQueryBuilder : GraphQlQueryBuilder<ComponentIconTextIconTextQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -2423,253 +2668,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentInvestorsInvestorsQueryBuilder : GraphQlQueryBuilder<ComponentInvestorsInvestorsQueryBuilder>
-    {
-        private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
-            new []
-            {
-                new GraphQlFieldMetadata { Name = "id" },
-                new GraphQlFieldMetadata { Name = "investor", IsComplex = true, QueryBuilderType = typeof(InvestorQueryBuilder) },
-                new GraphQlFieldMetadata { Name = "Category" }
-            };
-
-        protected override string TypeName { get { return "ComponentInvestorsInvestors"; } } 
-
-        public override IReadOnlyList<GraphQlFieldMetadata> AllFields { get { return AllFieldMetadata; } } 
-
-        public ComponentInvestorsInvestorsQueryBuilder WithId(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("id", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentInvestorsInvestorsQueryBuilder ExceptId()
-        {
-            return ExceptField("id");
-        }
-
-        public ComponentInvestorsInvestorsQueryBuilder WithInvestor(InvestorQueryBuilder investorQueryBuilder, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithObjectField("investor", alias, investorQueryBuilder, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentInvestorsInvestorsQueryBuilder ExceptInvestor()
-        {
-            return ExceptField("investor");
-        }
-
-        public ComponentInvestorsInvestorsQueryBuilder WithCategory(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("Category", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentInvestorsInvestorsQueryBuilder ExceptCategory()
-        {
-            return ExceptField("Category");
-        }
-    }
-
-    public class ComponentMainCtaMainCtaQueryBuilder : GraphQlQueryBuilder<ComponentMainCtaMainCtaQueryBuilder>
-    {
-        private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
-            new []
-            {
-                new GraphQlFieldMetadata { Name = "id" },
-                new GraphQlFieldMetadata { Name = "text" },
-                new GraphQlFieldMetadata { Name = "url" },
-                new GraphQlFieldMetadata { Name = "ctaText" },
-                new GraphQlFieldMetadata { Name = "addText" },
-                new GraphQlFieldMetadata { Name = "backColor" },
-                new GraphQlFieldMetadata { Name = "TextColor" },
-                new GraphQlFieldMetadata { Name = "hoverBackColor" },
-                new GraphQlFieldMetadata { Name = "flag" }
-            };
-
-        protected override string TypeName { get { return "ComponentMainCtaMainCta"; } } 
-
-        public override IReadOnlyList<GraphQlFieldMetadata> AllFields { get { return AllFieldMetadata; } } 
-
-        public ComponentMainCtaMainCtaQueryBuilder WithId(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("id", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentMainCtaMainCtaQueryBuilder ExceptId()
-        {
-            return ExceptField("id");
-        }
-
-        public ComponentMainCtaMainCtaQueryBuilder WithText(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("text", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentMainCtaMainCtaQueryBuilder ExceptText()
-        {
-            return ExceptField("text");
-        }
-
-        public ComponentMainCtaMainCtaQueryBuilder WithUrl(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("url", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentMainCtaMainCtaQueryBuilder ExceptUrl()
-        {
-            return ExceptField("url");
-        }
-
-        public ComponentMainCtaMainCtaQueryBuilder WithCtaText(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("ctaText", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentMainCtaMainCtaQueryBuilder ExceptCtaText()
-        {
-            return ExceptField("ctaText");
-        }
-
-        public ComponentMainCtaMainCtaQueryBuilder WithAddText(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("addText", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentMainCtaMainCtaQueryBuilder ExceptAddText()
-        {
-            return ExceptField("addText");
-        }
-
-        public ComponentMainCtaMainCtaQueryBuilder WithBackColor(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("backColor", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentMainCtaMainCtaQueryBuilder ExceptBackColor()
-        {
-            return ExceptField("backColor");
-        }
-
-        public ComponentMainCtaMainCtaQueryBuilder WithTextColor(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("TextColor", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentMainCtaMainCtaQueryBuilder ExceptTextColor()
-        {
-            return ExceptField("TextColor");
-        }
-
-        public ComponentMainCtaMainCtaQueryBuilder WithHoverBackColor(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("hoverBackColor", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentMainCtaMainCtaQueryBuilder ExceptHoverBackColor()
-        {
-            return ExceptField("hoverBackColor");
-        }
-
-        public ComponentMainCtaMainCtaQueryBuilder WithFlag(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("flag", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentMainCtaMainCtaQueryBuilder ExceptFlag()
-        {
-            return ExceptField("flag");
-        }
-    }
-
-    public class ComponentHtmlColorTextHtmlColorTextQueryBuilder : GraphQlQueryBuilder<ComponentHtmlColorTextHtmlColorTextQueryBuilder>
-    {
-        private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
-            new []
-            {
-                new GraphQlFieldMetadata { Name = "id" },
-                new GraphQlFieldMetadata { Name = "text" },
-                new GraphQlFieldMetadata { Name = "url" }
-            };
-
-        protected override string TypeName { get { return "ComponentHtmlColorTextHtmlColorText"; } } 
-
-        public override IReadOnlyList<GraphQlFieldMetadata> AllFields { get { return AllFieldMetadata; } } 
-
-        public ComponentHtmlColorTextHtmlColorTextQueryBuilder WithId(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("id", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentHtmlColorTextHtmlColorTextQueryBuilder ExceptId()
-        {
-            return ExceptField("id");
-        }
-
-        public ComponentHtmlColorTextHtmlColorTextQueryBuilder WithText(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("text", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentHtmlColorTextHtmlColorTextQueryBuilder ExceptText()
-        {
-            return ExceptField("text");
-        }
-
-        public ComponentHtmlColorTextHtmlColorTextQueryBuilder WithUrl(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("url", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentHtmlColorTextHtmlColorTextQueryBuilder ExceptUrl()
-        {
-            return ExceptField("url");
-        }
-    }
-
-    public class ComponentDictionaryLinksQueryBuilder : GraphQlQueryBuilder<ComponentDictionaryLinksQueryBuilder>
-    {
-        private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
-            new []
-            {
-                new GraphQlFieldMetadata { Name = "id" },
-                new GraphQlFieldMetadata { Name = "name" },
-                new GraphQlFieldMetadata { Name = "url" }
-            };
-
-        protected override string TypeName { get { return "ComponentDictionaryLinks"; } } 
-
-        public override IReadOnlyList<GraphQlFieldMetadata> AllFields { get { return AllFieldMetadata; } } 
-
-        public ComponentDictionaryLinksQueryBuilder WithId(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("id", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentDictionaryLinksQueryBuilder ExceptId()
-        {
-            return ExceptField("id");
-        }
-
-        public ComponentDictionaryLinksQueryBuilder WithName(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("name", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentDictionaryLinksQueryBuilder ExceptName()
-        {
-            return ExceptField("name");
-        }
-
-        public ComponentDictionaryLinksQueryBuilder WithUrl(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("url", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentDictionaryLinksQueryBuilder ExceptUrl()
-        {
-            return ExceptField("url");
-        }
-    }
-
-    public class ComponentHeaderSimpleUrlHeaderSimpleUrlQueryBuilder : GraphQlQueryBuilder<ComponentHeaderSimpleUrlHeaderSimpleUrlQueryBuilder>
+    public partial class ComponentHeaderSimpleUrlHeaderSimpleUrlQueryBuilder : GraphQlQueryBuilder<ComponentHeaderSimpleUrlHeaderSimpleUrlQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -2736,41 +2735,52 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentHighlightsHighlightsQueryBuilder : GraphQlQueryBuilder<ComponentHighlightsHighlightsQueryBuilder>
+    public partial class ComponentDictionaryLinksQueryBuilder : GraphQlQueryBuilder<ComponentDictionaryLinksQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
             {
                 new GraphQlFieldMetadata { Name = "id" },
-                new GraphQlFieldMetadata { Name = "Value" }
+                new GraphQlFieldMetadata { Name = "name" },
+                new GraphQlFieldMetadata { Name = "url" }
             };
 
-        protected override string TypeName { get { return "ComponentHighlightsHighlights"; } } 
+        protected override string TypeName { get { return "ComponentDictionaryLinks"; } } 
 
         public override IReadOnlyList<GraphQlFieldMetadata> AllFields { get { return AllFieldMetadata; } } 
 
-        public ComponentHighlightsHighlightsQueryBuilder WithId(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public ComponentDictionaryLinksQueryBuilder WithId(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             return WithScalarField("id", alias, new GraphQlDirective[] { include, skip });
         }
 
-        public ComponentHighlightsHighlightsQueryBuilder ExceptId()
+        public ComponentDictionaryLinksQueryBuilder ExceptId()
         {
             return ExceptField("id");
         }
 
-        public ComponentHighlightsHighlightsQueryBuilder WithValue(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public ComponentDictionaryLinksQueryBuilder WithName(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
-            return WithScalarField("Value", alias, new GraphQlDirective[] { include, skip });
+            return WithScalarField("name", alias, new GraphQlDirective[] { include, skip });
         }
 
-        public ComponentHighlightsHighlightsQueryBuilder ExceptValue()
+        public ComponentDictionaryLinksQueryBuilder ExceptName()
         {
-            return ExceptField("Value");
+            return ExceptField("name");
+        }
+
+        public ComponentDictionaryLinksQueryBuilder WithUrl(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("url", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentDictionaryLinksQueryBuilder ExceptUrl()
+        {
+            return ExceptField("url");
         }
     }
 
-    public class ComponentFullTokenDistributionFullTokenDistributionQueryBuilder : GraphQlQueryBuilder<ComponentFullTokenDistributionFullTokenDistributionQueryBuilder>
+    public partial class ComponentFullTokenDistributionFullTokenDistributionQueryBuilder : GraphQlQueryBuilder<ComponentFullTokenDistributionFullTokenDistributionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -2858,52 +2868,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentColorIconColorIconQueryBuilder : GraphQlQueryBuilder<ComponentColorIconColorIconQueryBuilder>
-    {
-        private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
-            new []
-            {
-                new GraphQlFieldMetadata { Name = "id" },
-                new GraphQlFieldMetadata { Name = "icon", IsComplex = true, QueryBuilderType = typeof(UploadFileQueryBuilder) },
-                new GraphQlFieldMetadata { Name = "Color" }
-            };
-
-        protected override string TypeName { get { return "ComponentColorIconColorIcon"; } } 
-
-        public override IReadOnlyList<GraphQlFieldMetadata> AllFields { get { return AllFieldMetadata; } } 
-
-        public ComponentColorIconColorIconQueryBuilder WithId(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("id", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentColorIconColorIconQueryBuilder ExceptId()
-        {
-            return ExceptField("id");
-        }
-
-        public ComponentColorIconColorIconQueryBuilder WithIcon(UploadFileQueryBuilder uploadFileQueryBuilder, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithObjectField("icon", alias, uploadFileQueryBuilder, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentColorIconColorIconQueryBuilder ExceptIcon()
-        {
-            return ExceptField("icon");
-        }
-
-        public ComponentColorIconColorIconQueryBuilder WithColor(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithScalarField("Color", alias, new GraphQlDirective[] { include, skip });
-        }
-
-        public ComponentColorIconColorIconQueryBuilder ExceptColor()
-        {
-            return ExceptField("Color");
-        }
-    }
-
-    public class ComponentContractOnChainContractOnChainQueryBuilder : GraphQlQueryBuilder<ComponentContractOnChainContractOnChainQueryBuilder>
+    public partial class ComponentContractOnChainContractOnChainQueryBuilder : GraphQlQueryBuilder<ComponentContractOnChainContractOnChainQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -2959,7 +2924,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentCompilerSettingCompilerSettingsQueryBuilder : GraphQlQueryBuilder<ComponentCompilerSettingCompilerSettingsQueryBuilder>
+    public partial class ComponentCompilerSettingCompilerSettingsQueryBuilder : GraphQlQueryBuilder<ComponentCompilerSettingCompilerSettingsQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -3037,7 +3002,52 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentChainAddressesChainAddressesQueryBuilder : GraphQlQueryBuilder<ComponentChainAddressesChainAddressesQueryBuilder>
+    public partial class ComponentColorIconColorIconQueryBuilder : GraphQlQueryBuilder<ComponentColorIconColorIconQueryBuilder>
+    {
+        private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
+            new []
+            {
+                new GraphQlFieldMetadata { Name = "id" },
+                new GraphQlFieldMetadata { Name = "icon", IsComplex = true, QueryBuilderType = typeof(UploadFileQueryBuilder) },
+                new GraphQlFieldMetadata { Name = "Color" }
+            };
+
+        protected override string TypeName { get { return "ComponentColorIconColorIcon"; } } 
+
+        public override IReadOnlyList<GraphQlFieldMetadata> AllFields { get { return AllFieldMetadata; } } 
+
+        public ComponentColorIconColorIconQueryBuilder WithId(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("id", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentColorIconColorIconQueryBuilder ExceptId()
+        {
+            return ExceptField("id");
+        }
+
+        public ComponentColorIconColorIconQueryBuilder WithIcon(UploadFileQueryBuilder uploadFileQueryBuilder, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithObjectField("icon", alias, uploadFileQueryBuilder, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentColorIconColorIconQueryBuilder ExceptIcon()
+        {
+            return ExceptField("icon");
+        }
+
+        public ComponentColorIconColorIconQueryBuilder WithColor(string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithScalarField("Color", alias, new GraphQlDirective[] { include, skip });
+        }
+
+        public ComponentColorIconColorIconQueryBuilder ExceptColor()
+        {
+            return ExceptField("Color");
+        }
+    }
+
+    public partial class ComponentChainAddressesChainAddressesQueryBuilder : GraphQlQueryBuilder<ComponentChainAddressesChainAddressesQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -3082,7 +3092,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UploadFileQueryBuilder : GraphQlQueryBuilder<UploadFileQueryBuilder>
+    public partial class UploadFileQueryBuilder : GraphQlQueryBuilder<UploadFileQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -3303,7 +3313,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UploadFileEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<UploadFileEntityResponseCollectionQueryBuilder>
+    public partial class UploadFileEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<UploadFileEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -3337,7 +3347,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UploadFileRelationResponseCollectionQueryBuilder : GraphQlQueryBuilder<UploadFileRelationResponseCollectionQueryBuilder>
+    public partial class UploadFileRelationResponseCollectionQueryBuilder : GraphQlQueryBuilder<UploadFileRelationResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -3360,7 +3370,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class I18NLocaleQueryBuilder : GraphQlQueryBuilder<I18NLocaleQueryBuilder>
+    public partial class I18NLocaleQueryBuilder : GraphQlQueryBuilder<I18NLocaleQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -3438,7 +3448,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class I18NLocaleEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<I18NLocaleEntityResponseCollectionQueryBuilder>
+    public partial class I18NLocaleEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<I18NLocaleEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -3472,7 +3482,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ReviewWorkflowsWorkflowQueryBuilder : GraphQlQueryBuilder<ReviewWorkflowsWorkflowQueryBuilder>
+    public partial class ReviewWorkflowsWorkflowQueryBuilder : GraphQlQueryBuilder<ReviewWorkflowsWorkflowQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -3603,7 +3613,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ReviewWorkflowsWorkflowEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<ReviewWorkflowsWorkflowEntityResponseCollectionQueryBuilder>
+    public partial class ReviewWorkflowsWorkflowEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<ReviewWorkflowsWorkflowEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -3637,7 +3647,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ReviewWorkflowsWorkflowStageQueryBuilder : GraphQlQueryBuilder<ReviewWorkflowsWorkflowStageQueryBuilder>
+    public partial class ReviewWorkflowsWorkflowStageQueryBuilder : GraphQlQueryBuilder<ReviewWorkflowsWorkflowStageQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -3726,7 +3736,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ReviewWorkflowsWorkflowStageEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<ReviewWorkflowsWorkflowStageEntityResponseCollectionQueryBuilder>
+    public partial class ReviewWorkflowsWorkflowStageEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<ReviewWorkflowsWorkflowStageEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -3760,7 +3770,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ReviewWorkflowsWorkflowStageRelationResponseCollectionQueryBuilder : GraphQlQueryBuilder<ReviewWorkflowsWorkflowStageRelationResponseCollectionQueryBuilder>
+    public partial class ReviewWorkflowsWorkflowStageRelationResponseCollectionQueryBuilder : GraphQlQueryBuilder<ReviewWorkflowsWorkflowStageRelationResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -3783,7 +3793,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UsersPermissionsPermissionQueryBuilder : GraphQlQueryBuilder<UsersPermissionsPermissionQueryBuilder>
+    public partial class UsersPermissionsPermissionQueryBuilder : GraphQlQueryBuilder<UsersPermissionsPermissionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -3861,7 +3871,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UsersPermissionsPermissionRelationResponseCollectionQueryBuilder : GraphQlQueryBuilder<UsersPermissionsPermissionRelationResponseCollectionQueryBuilder>
+    public partial class UsersPermissionsPermissionRelationResponseCollectionQueryBuilder : GraphQlQueryBuilder<UsersPermissionsPermissionRelationResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -3884,7 +3894,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UsersPermissionsRoleQueryBuilder : GraphQlQueryBuilder<UsersPermissionsRoleQueryBuilder>
+    public partial class UsersPermissionsRoleQueryBuilder : GraphQlQueryBuilder<UsersPermissionsRoleQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -4057,7 +4067,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UsersPermissionsRoleEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<UsersPermissionsRoleEntityResponseCollectionQueryBuilder>
+    public partial class UsersPermissionsRoleEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<UsersPermissionsRoleEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -4091,7 +4101,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UsersPermissionsUserQueryBuilder : GraphQlQueryBuilder<UsersPermissionsUserQueryBuilder>
+    public partial class UsersPermissionsUserQueryBuilder : GraphQlQueryBuilder<UsersPermissionsUserQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -4213,7 +4223,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UsersPermissionsUserEntityResponseQueryBuilder : GraphQlQueryBuilder<UsersPermissionsUserEntityResponseQueryBuilder>
+    public partial class UsersPermissionsUserEntityResponseQueryBuilder : GraphQlQueryBuilder<UsersPermissionsUserEntityResponseQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -4236,7 +4246,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UsersPermissionsUserEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<UsersPermissionsUserEntityResponseCollectionQueryBuilder>
+    public partial class UsersPermissionsUserEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<UsersPermissionsUserEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -4270,7 +4280,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UsersPermissionsUserRelationResponseCollectionQueryBuilder : GraphQlQueryBuilder<UsersPermissionsUserRelationResponseCollectionQueryBuilder>
+    public partial class UsersPermissionsUserRelationResponseCollectionQueryBuilder : GraphQlQueryBuilder<UsersPermissionsUserRelationResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -4293,7 +4303,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AboutUsQueryBuilder : GraphQlQueryBuilder<AboutUsQueryBuilder>
+    public partial class AboutUsQueryBuilder : GraphQlQueryBuilder<AboutUsQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -4487,7 +4497,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AccountQueryBuilder : GraphQlQueryBuilder<AccountQueryBuilder>
+    public partial class AccountQueryBuilder : GraphQlQueryBuilder<AccountQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -4565,7 +4575,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AuthAdministratorQueryBuilder : GraphQlQueryBuilder<AuthAdministratorQueryBuilder>
+    public partial class AuthAdministratorQueryBuilder : GraphQlQueryBuilder<AuthAdministratorQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -4632,7 +4642,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AuthAdministratorEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<AuthAdministratorEntityResponseCollectionQueryBuilder>
+    public partial class AuthAdministratorEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<AuthAdministratorEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -4666,7 +4676,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AuthAdministratorsResourceQueryBuilder : GraphQlQueryBuilder<AuthAdministratorsResourceQueryBuilder>
+    public partial class AuthAdministratorsResourceQueryBuilder : GraphQlQueryBuilder<AuthAdministratorsResourceQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -4764,7 +4774,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AuthResourceQueryBuilder : GraphQlQueryBuilder<AuthResourceQueryBuilder>
+    public partial class AuthResourceQueryBuilder : GraphQlQueryBuilder<AuthResourceQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -4873,7 +4883,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AuthResourceEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<AuthResourceEntityResponseCollectionQueryBuilder>
+    public partial class AuthResourceEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<AuthResourceEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -4907,7 +4917,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AuthResourceRelationResponseCollectionQueryBuilder : GraphQlQueryBuilder<AuthResourceRelationResponseCollectionQueryBuilder>
+    public partial class AuthResourceRelationResponseCollectionQueryBuilder : GraphQlQueryBuilder<AuthResourceRelationResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -4930,7 +4940,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AuthRoleQueryBuilder : GraphQlQueryBuilder<AuthRoleQueryBuilder>
+    public partial class AuthRoleQueryBuilder : GraphQlQueryBuilder<AuthRoleQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -5081,7 +5091,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AuthRoleEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<AuthRoleEntityResponseCollectionQueryBuilder>
+    public partial class AuthRoleEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<AuthRoleEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -5115,7 +5125,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AuthRoleRelationResponseCollectionQueryBuilder : GraphQlQueryBuilder<AuthRoleRelationResponseCollectionQueryBuilder>
+    public partial class AuthRoleRelationResponseCollectionQueryBuilder : GraphQlQueryBuilder<AuthRoleRelationResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -5138,7 +5148,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AuthUserQueryBuilder : GraphQlQueryBuilder<AuthUserQueryBuilder>
+    public partial class AuthUserQueryBuilder : GraphQlQueryBuilder<AuthUserQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -5247,7 +5257,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AuthUserEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<AuthUserEntityResponseCollectionQueryBuilder>
+    public partial class AuthUserEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<AuthUserEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -5281,7 +5291,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AuthUserRelationResponseCollectionQueryBuilder : GraphQlQueryBuilder<AuthUserRelationResponseCollectionQueryBuilder>
+    public partial class AuthUserRelationResponseCollectionQueryBuilder : GraphQlQueryBuilder<AuthUserRelationResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -5304,7 +5314,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class BoostQueryBuilder : GraphQlQueryBuilder<BoostQueryBuilder>
+    public partial class BoostQueryBuilder : GraphQlQueryBuilder<BoostQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -5530,7 +5540,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class BuyPoolzQueryBuilder : GraphQlQueryBuilder<BuyPoolzQueryBuilder>
+    public partial class BuyPoolzQueryBuilder : GraphQlQueryBuilder<BuyPoolzQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -5641,7 +5651,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class BuyPoolzEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<BuyPoolzEntityResponseCollectionQueryBuilder>
+    public partial class BuyPoolzEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<BuyPoolzEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -5675,7 +5685,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class BuyWithQueryBuilder : GraphQlQueryBuilder<BuyWithQueryBuilder>
+    public partial class BuyWithQueryBuilder : GraphQlQueryBuilder<BuyWithQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -5763,7 +5773,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class BuyWithEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<BuyWithEntityResponseCollectionQueryBuilder>
+    public partial class BuyWithEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<BuyWithEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -5797,7 +5807,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ChainQueryBuilder : GraphQlQueryBuilder<ChainQueryBuilder>
+    public partial class ChainQueryBuilder : GraphQlQueryBuilder<ChainQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -5919,7 +5929,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ChainEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<ChainEntityResponseCollectionQueryBuilder>
+    public partial class ChainEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<ChainEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -5953,7 +5963,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ChainSettingQueryBuilder : GraphQlQueryBuilder<ChainSettingQueryBuilder>
+    public partial class ChainSettingQueryBuilder : GraphQlQueryBuilder<ChainSettingQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -6150,7 +6160,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ChainSettingEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<ChainSettingEntityResponseCollectionQueryBuilder>
+    public partial class ChainSettingEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<ChainSettingEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -6184,7 +6194,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ChainSettingRelationResponseCollectionQueryBuilder : GraphQlQueryBuilder<ChainSettingRelationResponseCollectionQueryBuilder>
+    public partial class ChainSettingRelationResponseCollectionQueryBuilder : GraphQlQueryBuilder<ChainSettingRelationResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -6207,7 +6217,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ConditionQueryBuilder : GraphQlQueryBuilder<ConditionQueryBuilder>
+    public partial class ConditionQueryBuilder : GraphQlQueryBuilder<ConditionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -6274,7 +6284,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ContractQueryBuilder : GraphQlQueryBuilder<ContractQueryBuilder>
+    public partial class ContractQueryBuilder : GraphQlQueryBuilder<ContractQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -6396,7 +6406,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ContractEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<ContractEntityResponseCollectionQueryBuilder>
+    public partial class ContractEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<ContractEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -6430,7 +6440,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ContractTypeQueryBuilder : GraphQlQueryBuilder<ContractTypeQueryBuilder>
+    public partial class ContractTypeQueryBuilder : GraphQlQueryBuilder<ContractTypeQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -6519,7 +6529,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ContractTypeEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<ContractTypeEntityResponseCollectionQueryBuilder>
+    public partial class ContractTypeEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<ContractTypeEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -6553,7 +6563,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ContractsOnChainQueryBuilder : GraphQlQueryBuilder<ContractsOnChainQueryBuilder>
+    public partial class ContractsOnChainQueryBuilder : GraphQlQueryBuilder<ContractsOnChainQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -6707,7 +6717,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ContractsOnChainEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<ContractsOnChainEntityResponseCollectionQueryBuilder>
+    public partial class ContractsOnChainEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<ContractsOnChainEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -6741,7 +6751,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class CoverQueryBuilder : GraphQlQueryBuilder<CoverQueryBuilder>
+    public partial class CoverQueryBuilder : GraphQlQueryBuilder<CoverQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -6808,7 +6818,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class CoverEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<CoverEntityResponseCollectionQueryBuilder>
+    public partial class CoverEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<CoverEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -6842,7 +6852,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class DefaultWalletQueryBuilder : GraphQlQueryBuilder<DefaultWalletQueryBuilder>
+    public partial class DefaultWalletQueryBuilder : GraphQlQueryBuilder<DefaultWalletQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -6942,7 +6952,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class DefaultWalletEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<DefaultWalletEntityResponseCollectionQueryBuilder>
+    public partial class DefaultWalletEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<DefaultWalletEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -6976,7 +6986,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class EvmVersionQueryBuilder : GraphQlQueryBuilder<EvmVersionQueryBuilder>
+    public partial class EvmVersionQueryBuilder : GraphQlQueryBuilder<EvmVersionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -7043,7 +7053,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class EvmVersionEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<EvmVersionEntityResponseCollectionQueryBuilder>
+    public partial class EvmVersionEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<EvmVersionEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -7077,7 +7087,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class FooterQueryBuilder : GraphQlQueryBuilder<FooterQueryBuilder>
+    public partial class FooterQueryBuilder : GraphQlQueryBuilder<FooterQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -7238,7 +7248,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class GrowQueryBuilder : GraphQlQueryBuilder<GrowQueryBuilder>
+    public partial class GrowQueryBuilder : GraphQlQueryBuilder<GrowQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -7503,7 +7513,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class GrowEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<GrowEntityResponseCollectionQueryBuilder>
+    public partial class GrowEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<GrowEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -7537,7 +7547,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class GrowBadgeQueryBuilder : GraphQlQueryBuilder<GrowBadgeQueryBuilder>
+    public partial class GrowBadgeQueryBuilder : GraphQlQueryBuilder<GrowBadgeQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -7637,7 +7647,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class GrowBadgeEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<GrowBadgeEntityResponseCollectionQueryBuilder>
+    public partial class GrowBadgeEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<GrowBadgeEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -7671,7 +7681,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class HeaderQueryBuilder : GraphQlQueryBuilder<HeaderQueryBuilder>
+    public partial class HeaderQueryBuilder : GraphQlQueryBuilder<HeaderQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -7748,7 +7758,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class IdoBadgeQueryBuilder : GraphQlQueryBuilder<IdoBadgeQueryBuilder>
+    public partial class IdoBadgeQueryBuilder : GraphQlQueryBuilder<IdoBadgeQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -7837,7 +7847,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class IdoBadgeEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<IdoBadgeEntityResponseCollectionQueryBuilder>
+    public partial class IdoBadgeEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<IdoBadgeEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -7871,7 +7881,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class InvestTermQueryBuilder : GraphQlQueryBuilder<InvestTermQueryBuilder>
+    public partial class InvestTermQueryBuilder : GraphQlQueryBuilder<InvestTermQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -7938,7 +7948,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class InvestorQueryBuilder : GraphQlQueryBuilder<InvestorQueryBuilder>
+    public partial class InvestorQueryBuilder : GraphQlQueryBuilder<InvestorQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -8016,7 +8026,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class InvestorEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<InvestorEntityResponseCollectionQueryBuilder>
+    public partial class InvestorEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<InvestorEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -8050,7 +8060,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class LatestTypeQueryBuilder : GraphQlQueryBuilder<LatestTypeQueryBuilder>
+    public partial class LatestTypeQueryBuilder : GraphQlQueryBuilder<LatestTypeQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -8127,7 +8137,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class LinkTypeQueryBuilder : GraphQlQueryBuilder<LinkTypeQueryBuilder>
+    public partial class LinkTypeQueryBuilder : GraphQlQueryBuilder<LinkTypeQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -8227,7 +8237,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class LinkTypeEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<LinkTypeEntityResponseCollectionQueryBuilder>
+    public partial class LinkTypeEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<LinkTypeEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -8261,7 +8271,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class LockPoolzTermQueryBuilder : GraphQlQueryBuilder<LockPoolzTermQueryBuilder>
+    public partial class LockPoolzTermQueryBuilder : GraphQlQueryBuilder<LockPoolzTermQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -8328,7 +8338,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class LockTokenWhitelistQueryBuilder : GraphQlQueryBuilder<LockTokenWhitelistQueryBuilder>
+    public partial class LockTokenWhitelistQueryBuilder : GraphQlQueryBuilder<LockTokenWhitelistQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -8459,7 +8469,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class LockTokenWhitelistEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<LockTokenWhitelistEntityResponseCollectionQueryBuilder>
+    public partial class LockTokenWhitelistEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<LockTokenWhitelistEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -8493,7 +8503,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class MainQueryBuilder : GraphQlQueryBuilder<MainQueryBuilder>
+    public partial class MainQueryBuilder : GraphQlQueryBuilder<MainQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -8560,7 +8570,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class MarketCapBadgeQueryBuilder : GraphQlQueryBuilder<MarketCapBadgeQueryBuilder>
+    public partial class MarketCapBadgeQueryBuilder : GraphQlQueryBuilder<MarketCapBadgeQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -8638,7 +8648,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class MarketCapBadgeEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<MarketCapBadgeEntityResponseCollectionQueryBuilder>
+    public partial class MarketCapBadgeEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<MarketCapBadgeEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -8672,7 +8682,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class MediaKitQueryBuilder : GraphQlQueryBuilder<MediaKitQueryBuilder>
+    public partial class MediaKitQueryBuilder : GraphQlQueryBuilder<MediaKitQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -8761,7 +8771,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class MediaKitEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<MediaKitEntityResponseCollectionQueryBuilder>
+    public partial class MediaKitEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<MediaKitEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -8795,7 +8805,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class NonEvmChainQueryBuilder : GraphQlQueryBuilder<NonEvmChainQueryBuilder>
+    public partial class NonEvmChainQueryBuilder : GraphQlQueryBuilder<NonEvmChainQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -8884,7 +8894,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class NonEvmChainEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<NonEvmChainEntityResponseCollectionQueryBuilder>
+    public partial class NonEvmChainEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<NonEvmChainEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -8918,7 +8928,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class OpenGrantQueryBuilder : GraphQlQueryBuilder<OpenGrantQueryBuilder>
+    public partial class OpenGrantQueryBuilder : GraphQlQueryBuilder<OpenGrantQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -9018,7 +9028,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class OpenGrantEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<OpenGrantEntityResponseCollectionQueryBuilder>
+    public partial class OpenGrantEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<OpenGrantEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -9052,7 +9062,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class OurPartnerQueryBuilder : GraphQlQueryBuilder<OurPartnerQueryBuilder>
+    public partial class OurPartnerQueryBuilder : GraphQlQueryBuilder<OurPartnerQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -9130,7 +9140,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class OurPartnerEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<OurPartnerEntityResponseCollectionQueryBuilder>
+    public partial class OurPartnerEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<OurPartnerEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -9164,7 +9174,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class PageInfoQueryBuilder : GraphQlQueryBuilder<PageInfoQueryBuilder>
+    public partial class PageInfoQueryBuilder : GraphQlQueryBuilder<PageInfoQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -9253,7 +9263,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class PageInfoEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<PageInfoEntityResponseCollectionQueryBuilder>
+    public partial class PageInfoEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<PageInfoEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -9287,7 +9297,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class PoolzBoutiqueQueryBuilder : GraphQlQueryBuilder<PoolzBoutiqueQueryBuilder>
+    public partial class PoolzBoutiqueQueryBuilder : GraphQlQueryBuilder<PoolzBoutiqueQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -9442,7 +9452,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class PoolzBoutiqueEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<PoolzBoutiqueEntityResponseCollectionQueryBuilder>
+    public partial class PoolzBoutiqueEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<PoolzBoutiqueEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -9476,7 +9486,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class PragmaVersionQueryBuilder : GraphQlQueryBuilder<PragmaVersionQueryBuilder>
+    public partial class PragmaVersionQueryBuilder : GraphQlQueryBuilder<PragmaVersionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -9543,7 +9553,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class PragmaVersionEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<PragmaVersionEntityResponseCollectionQueryBuilder>
+    public partial class PragmaVersionEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<PragmaVersionEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -9577,7 +9587,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class PrivacyQueryBuilder : GraphQlQueryBuilder<PrivacyQueryBuilder>
+    public partial class PrivacyQueryBuilder : GraphQlQueryBuilder<PrivacyQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -9644,7 +9654,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ProjectsInformationQueryBuilder : GraphQlQueryBuilder<ProjectsInformationQueryBuilder>
+    public partial class ProjectsInformationQueryBuilder : GraphQlQueryBuilder<ProjectsInformationQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -9974,7 +9984,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ProjectsInformationEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<ProjectsInformationEntityResponseCollectionQueryBuilder>
+    public partial class ProjectsInformationEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<ProjectsInformationEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -10008,7 +10018,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ProjectsInformationRelationResponseCollectionQueryBuilder : GraphQlQueryBuilder<ProjectsInformationRelationResponseCollectionQueryBuilder>
+    public partial class ProjectsInformationRelationResponseCollectionQueryBuilder : GraphQlQueryBuilder<ProjectsInformationRelationResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -10031,7 +10041,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class StakingCoolDownQueryBuilder : GraphQlQueryBuilder<StakingCoolDownQueryBuilder>
+    public partial class StakingCoolDownQueryBuilder : GraphQlQueryBuilder<StakingCoolDownQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -10131,7 +10141,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class StakingCoolDownEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<StakingCoolDownEntityResponseCollectionQueryBuilder>
+    public partial class StakingCoolDownEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<StakingCoolDownEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -10165,7 +10175,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class VaultFaqQueryBuilder : GraphQlQueryBuilder<VaultFaqQueryBuilder>
+    public partial class VaultFaqQueryBuilder : GraphQlQueryBuilder<VaultFaqQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -10243,7 +10253,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class VaultFaqEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<VaultFaqEntityResponseCollectionQueryBuilder>
+    public partial class VaultFaqEntityResponseCollectionQueryBuilder : GraphQlQueryBuilder<VaultFaqEntityResponseCollectionQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -10277,7 +10287,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class GenericMorphQueryBuilder : GraphQlQueryBuilder<GenericMorphQueryBuilder>
+    public partial class GenericMorphQueryBuilder : GraphQlQueryBuilder<GenericMorphQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata = new GraphQlFieldMetadata[0];
 
@@ -10305,9 +10315,9 @@ namespace Poolz.Finance.CSharp.Strapi
             return WithFragment(componentUploadPoolUploadPoolQueryBuilder, new GraphQlDirective[] { include, skip });
         }
 
-        public GenericMorphQueryBuilder WithComponentTokenDistributionTokenDistributionFragment(ComponentTokenDistributionTokenDistributionQueryBuilder componentTokenDistributionTokenDistributionQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
+        public GenericMorphQueryBuilder WithComponentTokenomicsTokenomicsFragment(ComponentTokenomicsTokenomicsQueryBuilder componentTokenomicsTokenomicsQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
         {
-            return WithFragment(componentTokenDistributionTokenDistributionQueryBuilder, new GraphQlDirective[] { include, skip });
+            return WithFragment(componentTokenomicsTokenomicsQueryBuilder, new GraphQlDirective[] { include, skip });
         }
 
         public GenericMorphQueryBuilder WithComponentSyntheticZoneSynteticFragment(ComponentSyntheticZoneSynteticQueryBuilder componentSyntheticZoneSynteticQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
@@ -10315,9 +10325,9 @@ namespace Poolz.Finance.CSharp.Strapi
             return WithFragment(componentSyntheticZoneSynteticQueryBuilder, new GraphQlDirective[] { include, skip });
         }
 
-        public GenericMorphQueryBuilder WithComponentTokenomicsTokenomicsFragment(ComponentTokenomicsTokenomicsQueryBuilder componentTokenomicsTokenomicsQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
+        public GenericMorphQueryBuilder WithComponentTokenDistributionTokenDistributionFragment(ComponentTokenDistributionTokenDistributionQueryBuilder componentTokenDistributionTokenDistributionQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
         {
-            return WithFragment(componentTokenomicsTokenomicsQueryBuilder, new GraphQlDirective[] { include, skip });
+            return WithFragment(componentTokenDistributionTokenDistributionQueryBuilder, new GraphQlDirective[] { include, skip });
         }
 
         public GenericMorphQueryBuilder WithComponentSmartLinksSmartLinksFragment(ComponentSmartLinksSmartLinksQueryBuilder componentSmartLinksSmartLinksQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
@@ -10325,29 +10335,9 @@ namespace Poolz.Finance.CSharp.Strapi
             return WithFragment(componentSmartLinksSmartLinksQueryBuilder, new GraphQlDirective[] { include, skip });
         }
 
-        public GenericMorphQueryBuilder WithComponentSectionSectionFragment(ComponentSectionSectionQueryBuilder componentSectionSectionQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithFragment(componentSectionSectionQueryBuilder, new GraphQlDirective[] { include, skip });
-        }
-
         public GenericMorphQueryBuilder WithComponentSimpleUrlSimpleUrlFragment(ComponentSimpleUrlSimpleUrlQueryBuilder componentSimpleUrlSimpleUrlQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
         {
             return WithFragment(componentSimpleUrlSimpleUrlQueryBuilder, new GraphQlDirective[] { include, skip });
-        }
-
-        public GenericMorphQueryBuilder WithComponentOverviewOverviewFragment(ComponentOverviewOverviewQueryBuilder componentOverviewOverviewQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithFragment(componentOverviewOverviewQueryBuilder, new GraphQlDirective[] { include, skip });
-        }
-
-        public GenericMorphQueryBuilder WithComponentIconTextIconTextFragment(ComponentIconTextIconTextQueryBuilder componentIconTextIconTextQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithFragment(componentIconTextIconTextQueryBuilder, new GraphQlDirective[] { include, skip });
-        }
-
-        public GenericMorphQueryBuilder WithComponentInvestorsInvestorsFragment(ComponentInvestorsInvestorsQueryBuilder componentInvestorsInvestorsQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithFragment(componentInvestorsInvestorsQueryBuilder, new GraphQlDirective[] { include, skip });
         }
 
         public GenericMorphQueryBuilder WithComponentMainCtaMainCtaFragment(ComponentMainCtaMainCtaQueryBuilder componentMainCtaMainCtaQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
@@ -10355,19 +10345,14 @@ namespace Poolz.Finance.CSharp.Strapi
             return WithFragment(componentMainCtaMainCtaQueryBuilder, new GraphQlDirective[] { include, skip });
         }
 
-        public GenericMorphQueryBuilder WithComponentHtmlColorTextHtmlColorTextFragment(ComponentHtmlColorTextHtmlColorTextQueryBuilder componentHtmlColorTextHtmlColorTextQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
+        public GenericMorphQueryBuilder WithComponentSectionSectionFragment(ComponentSectionSectionQueryBuilder componentSectionSectionQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
         {
-            return WithFragment(componentHtmlColorTextHtmlColorTextQueryBuilder, new GraphQlDirective[] { include, skip });
+            return WithFragment(componentSectionSectionQueryBuilder, new GraphQlDirective[] { include, skip });
         }
 
-        public GenericMorphQueryBuilder WithComponentDictionaryLinksFragment(ComponentDictionaryLinksQueryBuilder componentDictionaryLinksQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
+        public GenericMorphQueryBuilder WithComponentOverviewOverviewFragment(ComponentOverviewOverviewQueryBuilder componentOverviewOverviewQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
         {
-            return WithFragment(componentDictionaryLinksQueryBuilder, new GraphQlDirective[] { include, skip });
-        }
-
-        public GenericMorphQueryBuilder WithComponentHeaderSimpleUrlHeaderSimpleUrlFragment(ComponentHeaderSimpleUrlHeaderSimpleUrlQueryBuilder componentHeaderSimpleUrlHeaderSimpleUrlQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithFragment(componentHeaderSimpleUrlHeaderSimpleUrlQueryBuilder, new GraphQlDirective[] { include, skip });
+            return WithFragment(componentOverviewOverviewQueryBuilder, new GraphQlDirective[] { include, skip });
         }
 
         public GenericMorphQueryBuilder WithComponentHighlightsHighlightsFragment(ComponentHighlightsHighlightsQueryBuilder componentHighlightsHighlightsQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
@@ -10375,14 +10360,34 @@ namespace Poolz.Finance.CSharp.Strapi
             return WithFragment(componentHighlightsHighlightsQueryBuilder, new GraphQlDirective[] { include, skip });
         }
 
+        public GenericMorphQueryBuilder WithComponentInvestorsInvestorsFragment(ComponentInvestorsInvestorsQueryBuilder componentInvestorsInvestorsQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithFragment(componentInvestorsInvestorsQueryBuilder, new GraphQlDirective[] { include, skip });
+        }
+
+        public GenericMorphQueryBuilder WithComponentHtmlColorTextHtmlColorTextFragment(ComponentHtmlColorTextHtmlColorTextQueryBuilder componentHtmlColorTextHtmlColorTextQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithFragment(componentHtmlColorTextHtmlColorTextQueryBuilder, new GraphQlDirective[] { include, skip });
+        }
+
+        public GenericMorphQueryBuilder WithComponentIconTextIconTextFragment(ComponentIconTextIconTextQueryBuilder componentIconTextIconTextQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithFragment(componentIconTextIconTextQueryBuilder, new GraphQlDirective[] { include, skip });
+        }
+
+        public GenericMorphQueryBuilder WithComponentHeaderSimpleUrlHeaderSimpleUrlFragment(ComponentHeaderSimpleUrlHeaderSimpleUrlQueryBuilder componentHeaderSimpleUrlHeaderSimpleUrlQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithFragment(componentHeaderSimpleUrlHeaderSimpleUrlQueryBuilder, new GraphQlDirective[] { include, skip });
+        }
+
+        public GenericMorphQueryBuilder WithComponentDictionaryLinksFragment(ComponentDictionaryLinksQueryBuilder componentDictionaryLinksQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithFragment(componentDictionaryLinksQueryBuilder, new GraphQlDirective[] { include, skip });
+        }
+
         public GenericMorphQueryBuilder WithComponentFullTokenDistributionFullTokenDistributionFragment(ComponentFullTokenDistributionFullTokenDistributionQueryBuilder componentFullTokenDistributionFullTokenDistributionQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
         {
             return WithFragment(componentFullTokenDistributionFullTokenDistributionQueryBuilder, new GraphQlDirective[] { include, skip });
-        }
-
-        public GenericMorphQueryBuilder WithComponentColorIconColorIconFragment(ComponentColorIconColorIconQueryBuilder componentColorIconColorIconQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
-        {
-            return WithFragment(componentColorIconColorIconQueryBuilder, new GraphQlDirective[] { include, skip });
         }
 
         public GenericMorphQueryBuilder WithComponentContractOnChainContractOnChainFragment(ComponentContractOnChainContractOnChainQueryBuilder componentContractOnChainContractOnChainQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
@@ -10393,6 +10398,11 @@ namespace Poolz.Finance.CSharp.Strapi
         public GenericMorphQueryBuilder WithComponentCompilerSettingCompilerSettingsFragment(ComponentCompilerSettingCompilerSettingsQueryBuilder componentCompilerSettingCompilerSettingsQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
         {
             return WithFragment(componentCompilerSettingCompilerSettingsQueryBuilder, new GraphQlDirective[] { include, skip });
+        }
+
+        public GenericMorphQueryBuilder WithComponentColorIconColorIconFragment(ComponentColorIconColorIconQueryBuilder componentColorIconColorIconQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
+        {
+            return WithFragment(componentColorIconColorIconQueryBuilder, new GraphQlDirective[] { include, skip });
         }
 
         public GenericMorphQueryBuilder WithComponentChainAddressesChainAddressesFragment(ComponentChainAddressesChainAddressesQueryBuilder componentChainAddressesChainAddressesQueryBuilder, IncludeDirective include = null, SkipDirective skip = null)
@@ -10651,7 +10661,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UsersPermissionsMeQueryBuilder : GraphQlQueryBuilder<UsersPermissionsMeQueryBuilder>
+    public partial class UsersPermissionsMeQueryBuilder : GraphQlQueryBuilder<UsersPermissionsMeQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -10740,7 +10750,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UsersPermissionsMeRoleQueryBuilder : GraphQlQueryBuilder<UsersPermissionsMeRoleQueryBuilder>
+    public partial class UsersPermissionsMeRoleQueryBuilder : GraphQlQueryBuilder<UsersPermissionsMeRoleQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -10796,7 +10806,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UsersPermissionsPasswordPayloadQueryBuilder : GraphQlQueryBuilder<UsersPermissionsPasswordPayloadQueryBuilder>
+    public partial class UsersPermissionsPasswordPayloadQueryBuilder : GraphQlQueryBuilder<UsersPermissionsPasswordPayloadQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -10819,7 +10829,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UsersPermissionsLoginPayloadQueryBuilder : GraphQlQueryBuilder<UsersPermissionsLoginPayloadQueryBuilder>
+    public partial class UsersPermissionsLoginPayloadQueryBuilder : GraphQlQueryBuilder<UsersPermissionsLoginPayloadQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -10853,7 +10863,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UsersPermissionsCreateRolePayloadQueryBuilder : GraphQlQueryBuilder<UsersPermissionsCreateRolePayloadQueryBuilder>
+    public partial class UsersPermissionsCreateRolePayloadQueryBuilder : GraphQlQueryBuilder<UsersPermissionsCreateRolePayloadQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -10876,7 +10886,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UsersPermissionsUpdateRolePayloadQueryBuilder : GraphQlQueryBuilder<UsersPermissionsUpdateRolePayloadQueryBuilder>
+    public partial class UsersPermissionsUpdateRolePayloadQueryBuilder : GraphQlQueryBuilder<UsersPermissionsUpdateRolePayloadQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -10899,7 +10909,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UsersPermissionsDeleteRolePayloadQueryBuilder : GraphQlQueryBuilder<UsersPermissionsDeleteRolePayloadQueryBuilder>
+    public partial class UsersPermissionsDeleteRolePayloadQueryBuilder : GraphQlQueryBuilder<UsersPermissionsDeleteRolePayloadQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -10922,7 +10932,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class QueryQueryBuilder : GraphQlQueryBuilder<QueryQueryBuilder>
+    public partial class QueryQueryBuilder : GraphQlQueryBuilder<QueryQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -11066,7 +11076,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return WithParameterInternal(parameter);
         }
 
-        public QueryQueryBuilder WithUploadFile(UploadFileQueryBuilder uploadFileQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithUploadFile(UploadFileQueryBuilder uploadFileQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -11127,7 +11137,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("uploadFiles");
         }
 
-        public QueryQueryBuilder WithI18NLocale(I18NLocaleQueryBuilder i18NLocaleQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithI18NLocale(I18NLocaleQueryBuilder i18NLocaleQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -11188,7 +11198,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("i18NLocales");
         }
 
-        public QueryQueryBuilder WithReviewWorkflowsWorkflow(ReviewWorkflowsWorkflowQueryBuilder reviewWorkflowsWorkflowQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithReviewWorkflowsWorkflow(ReviewWorkflowsWorkflowQueryBuilder reviewWorkflowsWorkflowQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -11249,7 +11259,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("reviewWorkflowsWorkflows");
         }
 
-        public QueryQueryBuilder WithReviewWorkflowsWorkflowStage(ReviewWorkflowsWorkflowStageQueryBuilder reviewWorkflowsWorkflowStageQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithReviewWorkflowsWorkflowStage(ReviewWorkflowsWorkflowStageQueryBuilder reviewWorkflowsWorkflowStageQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -11310,7 +11320,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("reviewWorkflowsWorkflowStages");
         }
 
-        public QueryQueryBuilder WithUsersPermissionsRole(UsersPermissionsRoleQueryBuilder usersPermissionsRoleQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithUsersPermissionsRole(UsersPermissionsRoleQueryBuilder usersPermissionsRoleQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -11371,7 +11381,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("usersPermissionsRoles");
         }
 
-        public QueryQueryBuilder WithUsersPermissionsUser(UsersPermissionsUserQueryBuilder usersPermissionsUserQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithUsersPermissionsUser(UsersPermissionsUserQueryBuilder usersPermissionsUserQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -11460,7 +11470,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("account");
         }
 
-        public QueryQueryBuilder WithAuthAdministrator(AuthAdministratorQueryBuilder authAdministratorQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithAuthAdministrator(AuthAdministratorQueryBuilder authAdministratorQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -11535,7 +11545,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("authAdministratorsResource");
         }
 
-        public QueryQueryBuilder WithAuthResource(AuthResourceQueryBuilder authResourceQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithAuthResource(AuthResourceQueryBuilder authResourceQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -11596,7 +11606,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("authResources");
         }
 
-        public QueryQueryBuilder WithAuthRole(AuthRoleQueryBuilder authRoleQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithAuthRole(AuthRoleQueryBuilder authRoleQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -11657,7 +11667,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("authRoles");
         }
 
-        public QueryQueryBuilder WithAuthUser(AuthUserQueryBuilder authUserQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithAuthUser(AuthUserQueryBuilder authUserQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -11732,7 +11742,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("boost");
         }
 
-        public QueryQueryBuilder WithBuyPoolz(BuyPoolzQueryBuilder buyPoolzQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithBuyPoolz(BuyPoolzQueryBuilder buyPoolzQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -11793,7 +11803,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("buyPoolzs");
         }
 
-        public QueryQueryBuilder WithBuyWith(BuyWithQueryBuilder buyWithQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithBuyWith(BuyWithQueryBuilder buyWithQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -11854,7 +11864,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("buyWiths");
         }
 
-        public QueryQueryBuilder WithChain(ChainQueryBuilder chainQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithChain(ChainQueryBuilder chainQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -11915,7 +11925,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("chains");
         }
 
-        public QueryQueryBuilder WithChainSetting(ChainSettingQueryBuilder chainSettingQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithChainSetting(ChainSettingQueryBuilder chainSettingQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -11990,7 +12000,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("condition");
         }
 
-        public QueryQueryBuilder WithContract(ContractQueryBuilder contractQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithContract(ContractQueryBuilder contractQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -12051,7 +12061,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("contracts");
         }
 
-        public QueryQueryBuilder WithContractType(ContractTypeQueryBuilder contractTypeQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithContractType(ContractTypeQueryBuilder contractTypeQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -12112,7 +12122,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("contractTypes");
         }
 
-        public QueryQueryBuilder WithContractsOnChain(ContractsOnChainQueryBuilder contractsOnChainQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithContractsOnChain(ContractsOnChainQueryBuilder contractsOnChainQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -12173,7 +12183,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("contractsOnChains");
         }
 
-        public QueryQueryBuilder WithCover(CoverQueryBuilder coverQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithCover(CoverQueryBuilder coverQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -12234,7 +12244,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("covers");
         }
 
-        public QueryQueryBuilder WithDefaultWallet(DefaultWalletQueryBuilder defaultWalletQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithDefaultWallet(DefaultWalletQueryBuilder defaultWalletQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -12295,7 +12305,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("defaultWallets");
         }
 
-        public QueryQueryBuilder WithEvmVersion(EvmVersionQueryBuilder evmVersionQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithEvmVersion(EvmVersionQueryBuilder evmVersionQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -12370,7 +12380,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("footer");
         }
 
-        public QueryQueryBuilder WithGrow(GrowQueryBuilder growQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithGrow(GrowQueryBuilder growQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -12431,7 +12441,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("grows");
         }
 
-        public QueryQueryBuilder WithGrowBadge(GrowBadgeQueryBuilder growBadgeQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithGrowBadge(GrowBadgeQueryBuilder growBadgeQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -12506,7 +12516,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("header");
         }
 
-        public QueryQueryBuilder WithIdoBadge(IdoBadgeQueryBuilder idoBadgeQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithIdoBadge(IdoBadgeQueryBuilder idoBadgeQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -12581,7 +12591,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("investTerm");
         }
 
-        public QueryQueryBuilder WithInvestor(InvestorQueryBuilder investorQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithInvestor(InvestorQueryBuilder investorQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -12656,7 +12666,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("latestType");
         }
 
-        public QueryQueryBuilder WithLinkType(LinkTypeQueryBuilder linkTypeQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithLinkType(LinkTypeQueryBuilder linkTypeQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -12731,7 +12741,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("lockPoolzTerm");
         }
 
-        public QueryQueryBuilder WithLockTokenWhitelist(LockTokenWhitelistQueryBuilder lockTokenWhitelistQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithLockTokenWhitelist(LockTokenWhitelistQueryBuilder lockTokenWhitelistQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -12806,7 +12816,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("main");
         }
 
-        public QueryQueryBuilder WithMarketCapBadge(MarketCapBadgeQueryBuilder marketCapBadgeQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithMarketCapBadge(MarketCapBadgeQueryBuilder marketCapBadgeQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -12867,7 +12877,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("marketCapBadges");
         }
 
-        public QueryQueryBuilder WithMediaKit(MediaKitQueryBuilder mediaKitQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithMediaKit(MediaKitQueryBuilder mediaKitQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -12928,7 +12938,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("mediaKits");
         }
 
-        public QueryQueryBuilder WithNonEvmChain(NonEvmChainQueryBuilder nonEvmChainQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithNonEvmChain(NonEvmChainQueryBuilder nonEvmChainQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -12989,7 +12999,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("nonEvmChains");
         }
 
-        public QueryQueryBuilder WithOpenGrant(OpenGrantQueryBuilder openGrantQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithOpenGrant(OpenGrantQueryBuilder openGrantQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -13050,7 +13060,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("openGrants");
         }
 
-        public QueryQueryBuilder WithOurPartner(OurPartnerQueryBuilder ourPartnerQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithOurPartner(OurPartnerQueryBuilder ourPartnerQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -13111,7 +13121,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("ourPartners");
         }
 
-        public QueryQueryBuilder WithPageInfo(PageInfoQueryBuilder pageInfoQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithPageInfo(PageInfoQueryBuilder pageInfoQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -13172,7 +13182,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("pageInfos");
         }
 
-        public QueryQueryBuilder WithPoolzBoutique(PoolzBoutiqueQueryBuilder poolzBoutiqueQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithPoolzBoutique(PoolzBoutiqueQueryBuilder poolzBoutiqueQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -13233,7 +13243,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("poolzBoutiques");
         }
 
-        public QueryQueryBuilder WithPragmaVersion(PragmaVersionQueryBuilder pragmaVersionQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithPragmaVersion(PragmaVersionQueryBuilder pragmaVersionQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -13308,7 +13318,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("privacy");
         }
 
-        public QueryQueryBuilder WithProjectsInformation(ProjectsInformationQueryBuilder projectsInformationQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithProjectsInformation(ProjectsInformationQueryBuilder projectsInformationQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -13369,7 +13379,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("projectsInformations");
         }
 
-        public QueryQueryBuilder WithStakingCoolDown(StakingCoolDownQueryBuilder stakingCoolDownQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithStakingCoolDown(StakingCoolDownQueryBuilder stakingCoolDownQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -13430,7 +13440,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("stakingCoolDowns");
         }
 
-        public QueryQueryBuilder WithVaultFaq(VaultFaqQueryBuilder vaultFaqQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public QueryQueryBuilder WithVaultFaq(VaultFaqQueryBuilder vaultFaqQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -13502,7 +13512,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class MutationQueryBuilder : GraphQlQueryBuilder<MutationQueryBuilder>
+    public partial class MutationQueryBuilder : GraphQlQueryBuilder<MutationQueryBuilder>
     {
         private static readonly GraphQlFieldMetadata[] AllFieldMetadata =
             new []
@@ -13674,7 +13684,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createReviewWorkflowsWorkflow");
         }
 
-        public MutationQueryBuilder WithUpdateReviewWorkflowsWorkflow(ReviewWorkflowsWorkflowQueryBuilder reviewWorkflowsWorkflowQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<ReviewWorkflowsWorkflowInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateReviewWorkflowsWorkflow(ReviewWorkflowsWorkflowQueryBuilder reviewWorkflowsWorkflowQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<ReviewWorkflowsWorkflowInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -13690,7 +13700,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateReviewWorkflowsWorkflow");
         }
 
-        public MutationQueryBuilder WithDeleteReviewWorkflowsWorkflow(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteReviewWorkflowsWorkflow(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -13717,7 +13727,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createReviewWorkflowsWorkflowStage");
         }
 
-        public MutationQueryBuilder WithUpdateReviewWorkflowsWorkflowStage(ReviewWorkflowsWorkflowStageQueryBuilder reviewWorkflowsWorkflowStageQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<ReviewWorkflowsWorkflowStageInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateReviewWorkflowsWorkflowStage(ReviewWorkflowsWorkflowStageQueryBuilder reviewWorkflowsWorkflowStageQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<ReviewWorkflowsWorkflowStageInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -13733,7 +13743,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateReviewWorkflowsWorkflowStage");
         }
 
-        public MutationQueryBuilder WithDeleteReviewWorkflowsWorkflowStage(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteReviewWorkflowsWorkflowStage(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -13810,7 +13820,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createAuthAdministrator");
         }
 
-        public MutationQueryBuilder WithUpdateAuthAdministrator(AuthAdministratorQueryBuilder authAdministratorQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<AuthAdministratorInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateAuthAdministrator(AuthAdministratorQueryBuilder authAdministratorQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<AuthAdministratorInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -13826,7 +13836,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateAuthAdministrator");
         }
 
-        public MutationQueryBuilder WithDeleteAuthAdministrator(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteAuthAdministrator(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -13878,7 +13888,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createAuthResource");
         }
 
-        public MutationQueryBuilder WithUpdateAuthResource(AuthResourceQueryBuilder authResourceQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<AuthResourceInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateAuthResource(AuthResourceQueryBuilder authResourceQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<AuthResourceInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -13894,7 +13904,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateAuthResource");
         }
 
-        public MutationQueryBuilder WithDeleteAuthResource(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteAuthResource(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -13921,7 +13931,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createAuthRole");
         }
 
-        public MutationQueryBuilder WithUpdateAuthRole(AuthRoleQueryBuilder authRoleQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<AuthRoleInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateAuthRole(AuthRoleQueryBuilder authRoleQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<AuthRoleInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -13937,7 +13947,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateAuthRole");
         }
 
-        public MutationQueryBuilder WithDeleteAuthRole(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteAuthRole(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -13964,7 +13974,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createAuthUser");
         }
 
-        public MutationQueryBuilder WithUpdateAuthUser(AuthUserQueryBuilder authUserQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<AuthUserInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateAuthUser(AuthUserQueryBuilder authUserQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<AuthUserInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -13980,7 +13990,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateAuthUser");
         }
 
-        public MutationQueryBuilder WithDeleteAuthUser(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteAuthUser(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14032,7 +14042,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createBuyPoolz");
         }
 
-        public MutationQueryBuilder WithUpdateBuyPoolz(BuyPoolzQueryBuilder buyPoolzQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<BuyPoolzInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateBuyPoolz(BuyPoolzQueryBuilder buyPoolzQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<BuyPoolzInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14048,7 +14058,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateBuyPoolz");
         }
 
-        public MutationQueryBuilder WithDeleteBuyPoolz(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteBuyPoolz(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14075,7 +14085,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createBuyWith");
         }
 
-        public MutationQueryBuilder WithUpdateBuyWith(BuyWithQueryBuilder buyWithQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<BuyWithInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateBuyWith(BuyWithQueryBuilder buyWithQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<BuyWithInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14091,7 +14101,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateBuyWith");
         }
 
-        public MutationQueryBuilder WithDeleteBuyWith(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteBuyWith(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14118,7 +14128,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createChain");
         }
 
-        public MutationQueryBuilder WithUpdateChain(ChainQueryBuilder chainQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<ChainInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateChain(ChainQueryBuilder chainQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<ChainInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14134,7 +14144,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateChain");
         }
 
-        public MutationQueryBuilder WithDeleteChain(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteChain(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14161,7 +14171,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createChainSetting");
         }
 
-        public MutationQueryBuilder WithUpdateChainSetting(ChainSettingQueryBuilder chainSettingQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<ChainSettingInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateChainSetting(ChainSettingQueryBuilder chainSettingQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<ChainSettingInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14177,7 +14187,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateChainSetting");
         }
 
-        public MutationQueryBuilder WithDeleteChainSetting(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteChainSetting(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14229,7 +14239,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createContract");
         }
 
-        public MutationQueryBuilder WithUpdateContract(ContractQueryBuilder contractQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<ContractInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateContract(ContractQueryBuilder contractQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<ContractInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14245,7 +14255,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateContract");
         }
 
-        public MutationQueryBuilder WithDeleteContract(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteContract(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14272,7 +14282,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createContractType");
         }
 
-        public MutationQueryBuilder WithUpdateContractType(ContractTypeQueryBuilder contractTypeQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<ContractTypeInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateContractType(ContractTypeQueryBuilder contractTypeQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<ContractTypeInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14288,7 +14298,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateContractType");
         }
 
-        public MutationQueryBuilder WithDeleteContractType(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteContractType(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14315,7 +14325,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createContractsOnChain");
         }
 
-        public MutationQueryBuilder WithUpdateContractsOnChain(ContractsOnChainQueryBuilder contractsOnChainQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<ContractsOnChainInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateContractsOnChain(ContractsOnChainQueryBuilder contractsOnChainQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<ContractsOnChainInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14331,7 +14341,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateContractsOnChain");
         }
 
-        public MutationQueryBuilder WithDeleteContractsOnChain(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteContractsOnChain(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14358,7 +14368,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createCover");
         }
 
-        public MutationQueryBuilder WithUpdateCover(CoverQueryBuilder coverQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<CoverInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateCover(CoverQueryBuilder coverQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<CoverInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14374,7 +14384,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateCover");
         }
 
-        public MutationQueryBuilder WithDeleteCover(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteCover(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14401,7 +14411,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createDefaultWallet");
         }
 
-        public MutationQueryBuilder WithUpdateDefaultWallet(DefaultWalletQueryBuilder defaultWalletQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<DefaultWalletInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateDefaultWallet(DefaultWalletQueryBuilder defaultWalletQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<DefaultWalletInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14417,7 +14427,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateDefaultWallet");
         }
 
-        public MutationQueryBuilder WithDeleteDefaultWallet(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteDefaultWallet(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14444,7 +14454,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createEvmVersion");
         }
 
-        public MutationQueryBuilder WithUpdateEvmVersion(EvmVersionQueryBuilder evmVersionQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<EvmVersionInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateEvmVersion(EvmVersionQueryBuilder evmVersionQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<EvmVersionInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14460,7 +14470,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateEvmVersion");
         }
 
-        public MutationQueryBuilder WithDeleteEvmVersion(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteEvmVersion(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14512,7 +14522,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createGrow");
         }
 
-        public MutationQueryBuilder WithUpdateGrow(GrowQueryBuilder growQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<GrowInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateGrow(GrowQueryBuilder growQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<GrowInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14528,7 +14538,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateGrow");
         }
 
-        public MutationQueryBuilder WithDeleteGrow(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteGrow(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14555,7 +14565,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createGrowBadge");
         }
 
-        public MutationQueryBuilder WithUpdateGrowBadge(GrowBadgeQueryBuilder growBadgeQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<GrowBadgeInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateGrowBadge(GrowBadgeQueryBuilder growBadgeQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<GrowBadgeInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14571,7 +14581,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateGrowBadge");
         }
 
-        public MutationQueryBuilder WithDeleteGrowBadge(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteGrowBadge(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14623,7 +14633,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createIdoBadge");
         }
 
-        public MutationQueryBuilder WithUpdateIdoBadge(IdoBadgeQueryBuilder idoBadgeQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<IdoBadgeInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateIdoBadge(IdoBadgeQueryBuilder idoBadgeQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<IdoBadgeInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14639,7 +14649,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateIdoBadge");
         }
 
-        public MutationQueryBuilder WithDeleteIdoBadge(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteIdoBadge(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14691,7 +14701,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createInvestor");
         }
 
-        public MutationQueryBuilder WithUpdateInvestor(InvestorQueryBuilder investorQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<InvestorInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateInvestor(InvestorQueryBuilder investorQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<InvestorInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14707,7 +14717,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateInvestor");
         }
 
-        public MutationQueryBuilder WithDeleteInvestor(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteInvestor(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14759,7 +14769,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createLinkType");
         }
 
-        public MutationQueryBuilder WithUpdateLinkType(LinkTypeQueryBuilder linkTypeQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<LinkTypeInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateLinkType(LinkTypeQueryBuilder linkTypeQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<LinkTypeInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14775,7 +14785,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateLinkType");
         }
 
-        public MutationQueryBuilder WithDeleteLinkType(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteLinkType(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14827,7 +14837,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createLockTokenWhitelist");
         }
 
-        public MutationQueryBuilder WithUpdateLockTokenWhitelist(LockTokenWhitelistQueryBuilder lockTokenWhitelistQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<LockTokenWhitelistInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateLockTokenWhitelist(LockTokenWhitelistQueryBuilder lockTokenWhitelistQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<LockTokenWhitelistInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14843,7 +14853,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateLockTokenWhitelist");
         }
 
-        public MutationQueryBuilder WithDeleteLockTokenWhitelist(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteLockTokenWhitelist(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14895,7 +14905,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createMarketCapBadge");
         }
 
-        public MutationQueryBuilder WithUpdateMarketCapBadge(MarketCapBadgeQueryBuilder marketCapBadgeQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<MarketCapBadgeInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateMarketCapBadge(MarketCapBadgeQueryBuilder marketCapBadgeQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<MarketCapBadgeInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14911,7 +14921,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateMarketCapBadge");
         }
 
-        public MutationQueryBuilder WithDeleteMarketCapBadge(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteMarketCapBadge(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14938,7 +14948,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createMediaKit");
         }
 
-        public MutationQueryBuilder WithUpdateMediaKit(MediaKitQueryBuilder mediaKitQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<MediaKitInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateMediaKit(MediaKitQueryBuilder mediaKitQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<MediaKitInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14954,7 +14964,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateMediaKit");
         }
 
-        public MutationQueryBuilder WithDeleteMediaKit(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteMediaKit(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14981,7 +14991,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createNonEvmChain");
         }
 
-        public MutationQueryBuilder WithUpdateNonEvmChain(NonEvmChainQueryBuilder nonEvmChainQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<NonEvmChainInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateNonEvmChain(NonEvmChainQueryBuilder nonEvmChainQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<NonEvmChainInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -14997,7 +15007,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateNonEvmChain");
         }
 
-        public MutationQueryBuilder WithDeleteNonEvmChain(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteNonEvmChain(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -15024,7 +15034,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createOpenGrant");
         }
 
-        public MutationQueryBuilder WithUpdateOpenGrant(OpenGrantQueryBuilder openGrantQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<OpenGrantInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateOpenGrant(OpenGrantQueryBuilder openGrantQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<OpenGrantInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -15040,7 +15050,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateOpenGrant");
         }
 
-        public MutationQueryBuilder WithDeleteOpenGrant(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteOpenGrant(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -15067,7 +15077,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createOurPartner");
         }
 
-        public MutationQueryBuilder WithUpdateOurPartner(OurPartnerQueryBuilder ourPartnerQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<OurPartnerInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateOurPartner(OurPartnerQueryBuilder ourPartnerQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<OurPartnerInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -15083,7 +15093,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateOurPartner");
         }
 
-        public MutationQueryBuilder WithDeleteOurPartner(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteOurPartner(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -15110,7 +15120,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createPageInfo");
         }
 
-        public MutationQueryBuilder WithUpdatePageInfo(PageInfoQueryBuilder pageInfoQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PageInfoInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdatePageInfo(PageInfoQueryBuilder pageInfoQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PageInfoInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -15126,7 +15136,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updatePageInfo");
         }
 
-        public MutationQueryBuilder WithDeletePageInfo(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeletePageInfo(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -15153,7 +15163,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createPoolzBoutique");
         }
 
-        public MutationQueryBuilder WithUpdatePoolzBoutique(PoolzBoutiqueQueryBuilder poolzBoutiqueQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PoolzBoutiqueInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdatePoolzBoutique(PoolzBoutiqueQueryBuilder poolzBoutiqueQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PoolzBoutiqueInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -15169,7 +15179,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updatePoolzBoutique");
         }
 
-        public MutationQueryBuilder WithDeletePoolzBoutique(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeletePoolzBoutique(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -15196,7 +15206,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createPragmaVersion");
         }
 
-        public MutationQueryBuilder WithUpdatePragmaVersion(PragmaVersionQueryBuilder pragmaVersionQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<PragmaVersionInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdatePragmaVersion(PragmaVersionQueryBuilder pragmaVersionQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<PragmaVersionInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -15212,7 +15222,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updatePragmaVersion");
         }
 
-        public MutationQueryBuilder WithDeletePragmaVersion(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeletePragmaVersion(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -15264,7 +15274,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createProjectsInformation");
         }
 
-        public MutationQueryBuilder WithUpdateProjectsInformation(ProjectsInformationQueryBuilder projectsInformationQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<ProjectsInformationInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateProjectsInformation(ProjectsInformationQueryBuilder projectsInformationQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<ProjectsInformationInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -15280,7 +15290,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateProjectsInformation");
         }
 
-        public MutationQueryBuilder WithDeleteProjectsInformation(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteProjectsInformation(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -15307,7 +15317,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createStakingCoolDown");
         }
 
-        public MutationQueryBuilder WithUpdateStakingCoolDown(StakingCoolDownQueryBuilder stakingCoolDownQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<StakingCoolDownInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateStakingCoolDown(StakingCoolDownQueryBuilder stakingCoolDownQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<StakingCoolDownInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -15323,7 +15333,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateStakingCoolDown");
         }
 
-        public MutationQueryBuilder WithDeleteStakingCoolDown(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteStakingCoolDown(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -15350,7 +15360,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createVaultFaq");
         }
 
-        public MutationQueryBuilder WithUpdateVaultFaq(VaultFaqQueryBuilder vaultFaqQueryBuilder, QueryBuilderParameter<Guid> documentId, QueryBuilderParameter<VaultFaqInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateVaultFaq(VaultFaqQueryBuilder vaultFaqQueryBuilder, QueryBuilderParameter<string> documentId, QueryBuilderParameter<VaultFaqInput> data, QueryBuilderParameter<PublicationStatus?> status = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -15366,7 +15376,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateVaultFaq");
         }
 
-        public MutationQueryBuilder WithDeleteVaultFaq(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<Guid> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteVaultFaq(DeleteMutationResponseQueryBuilder deleteMutationResponseQueryBuilder, QueryBuilderParameter<string> documentId, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "documentId", ArgumentValue = documentId} );
@@ -15378,7 +15388,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("deleteVaultFaq");
         }
 
-        public MutationQueryBuilder WithUpdateUploadFile(UploadFileQueryBuilder uploadFileQueryBuilder, QueryBuilderParameter<Guid> id, QueryBuilderParameter<FileInfoInput> info = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateUploadFile(UploadFileQueryBuilder uploadFileQueryBuilder, QueryBuilderParameter<string> id, QueryBuilderParameter<FileInfoInput> info = null, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "id", ArgumentValue = id} );
@@ -15393,7 +15403,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateUploadFile");
         }
 
-        public MutationQueryBuilder WithDeleteUploadFile(UploadFileQueryBuilder uploadFileQueryBuilder, QueryBuilderParameter<Guid> id, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteUploadFile(UploadFileQueryBuilder uploadFileQueryBuilder, QueryBuilderParameter<string> id, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "id", ArgumentValue = id} );
@@ -15417,7 +15427,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createUsersPermissionsRole");
         }
 
-        public MutationQueryBuilder WithUpdateUsersPermissionsRole(UsersPermissionsUpdateRolePayloadQueryBuilder usersPermissionsUpdateRolePayloadQueryBuilder, QueryBuilderParameter<Guid> id, QueryBuilderParameter<UsersPermissionsRoleInput> data, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateUsersPermissionsRole(UsersPermissionsUpdateRolePayloadQueryBuilder usersPermissionsUpdateRolePayloadQueryBuilder, QueryBuilderParameter<string> id, QueryBuilderParameter<UsersPermissionsRoleInput> data, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "id", ArgumentValue = id} );
@@ -15430,7 +15440,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateUsersPermissionsRole");
         }
 
-        public MutationQueryBuilder WithDeleteUsersPermissionsRole(UsersPermissionsDeleteRolePayloadQueryBuilder usersPermissionsDeleteRolePayloadQueryBuilder, QueryBuilderParameter<Guid> id, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteUsersPermissionsRole(UsersPermissionsDeleteRolePayloadQueryBuilder usersPermissionsDeleteRolePayloadQueryBuilder, QueryBuilderParameter<string> id, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "id", ArgumentValue = id} );
@@ -15454,7 +15464,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("createUsersPermissionsUser");
         }
 
-        public MutationQueryBuilder WithUpdateUsersPermissionsUser(UsersPermissionsUserEntityResponseQueryBuilder usersPermissionsUserEntityResponseQueryBuilder, QueryBuilderParameter<Guid> id, QueryBuilderParameter<UsersPermissionsUserInput> data, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithUpdateUsersPermissionsUser(UsersPermissionsUserEntityResponseQueryBuilder usersPermissionsUserEntityResponseQueryBuilder, QueryBuilderParameter<string> id, QueryBuilderParameter<UsersPermissionsUserInput> data, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "id", ArgumentValue = id} );
@@ -15467,7 +15477,7 @@ namespace Poolz.Finance.CSharp.Strapi
             return ExceptField("updateUsersPermissionsUser");
         }
 
-        public MutationQueryBuilder WithDeleteUsersPermissionsUser(UsersPermissionsUserEntityResponseQueryBuilder usersPermissionsUserEntityResponseQueryBuilder, QueryBuilderParameter<Guid> id, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
+        public MutationQueryBuilder WithDeleteUsersPermissionsUser(UsersPermissionsUserEntityResponseQueryBuilder usersPermissionsUserEntityResponseQueryBuilder, QueryBuilderParameter<string> id, string alias = null, IncludeDirective include = null, SkipDirective skip = null)
         {
             var args = new List<QueryBuilderArgumentInfo>();
             args.Add(new QueryBuilderArgumentInfo { ArgumentName = "id", ArgumentValue = id} );
@@ -15558,7 +15568,7 @@ namespace Poolz.Finance.CSharp.Strapi
     #endregion
 
     #region input classes
-    public class IdFilterInput : IGraphQlInputObject
+    public partial class IdFilterInput : IGraphQlInputObject
     {
         private InputPropertyInfo _and;
         private InputPropertyInfo _or;
@@ -15584,20 +15594,20 @@ namespace Poolz.Finance.CSharp.Strapi
         private InputPropertyInfo _between;
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<Guid?>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<string>>))]
         #endif
-        public QueryBuilderParameter<ICollection<Guid?>> And
+        public QueryBuilderParameter<ICollection<string>> And
         {
-            get { return (QueryBuilderParameter<ICollection<Guid?>>)_and.Value; }
+            get { return (QueryBuilderParameter<ICollection<string>>)_and.Value; }
             set { _and = new InputPropertyInfo { Name = "and", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<Guid?>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<string>>))]
         #endif
-        public QueryBuilderParameter<ICollection<Guid?>> Or
+        public QueryBuilderParameter<ICollection<string>> Or
         {
-            get { return (QueryBuilderParameter<ICollection<Guid?>>)_or.Value; }
+            get { return (QueryBuilderParameter<ICollection<string>>)_or.Value; }
             set { _or = new InputPropertyInfo { Name = "or", Value = value }; }
         }
 
@@ -15611,128 +15621,128 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Eq
+        public QueryBuilderParameter<string> Eq
         {
-            get { return (QueryBuilderParameter<Guid?>)_eq.Value; }
+            get { return (QueryBuilderParameter<string>)_eq.Value; }
             set { _eq = new InputPropertyInfo { Name = "eq", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Eqi
+        public QueryBuilderParameter<string> Eqi
         {
-            get { return (QueryBuilderParameter<Guid?>)_eqi.Value; }
+            get { return (QueryBuilderParameter<string>)_eqi.Value; }
             set { _eqi = new InputPropertyInfo { Name = "eqi", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Ne
+        public QueryBuilderParameter<string> Ne
         {
-            get { return (QueryBuilderParameter<Guid?>)_ne.Value; }
+            get { return (QueryBuilderParameter<string>)_ne.Value; }
             set { _ne = new InputPropertyInfo { Name = "ne", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Nei
+        public QueryBuilderParameter<string> Nei
         {
-            get { return (QueryBuilderParameter<Guid?>)_nei.Value; }
+            get { return (QueryBuilderParameter<string>)_nei.Value; }
             set { _nei = new InputPropertyInfo { Name = "nei", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> StartsWith
+        public QueryBuilderParameter<string> StartsWith
         {
-            get { return (QueryBuilderParameter<Guid?>)_startsWith.Value; }
+            get { return (QueryBuilderParameter<string>)_startsWith.Value; }
             set { _startsWith = new InputPropertyInfo { Name = "startsWith", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> EndsWith
+        public QueryBuilderParameter<string> EndsWith
         {
-            get { return (QueryBuilderParameter<Guid?>)_endsWith.Value; }
+            get { return (QueryBuilderParameter<string>)_endsWith.Value; }
             set { _endsWith = new InputPropertyInfo { Name = "endsWith", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Contains
+        public QueryBuilderParameter<string> Contains
         {
-            get { return (QueryBuilderParameter<Guid?>)_contains.Value; }
+            get { return (QueryBuilderParameter<string>)_contains.Value; }
             set { _contains = new InputPropertyInfo { Name = "contains", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> NotContains
+        public QueryBuilderParameter<string> NotContains
         {
-            get { return (QueryBuilderParameter<Guid?>)_notContains.Value; }
+            get { return (QueryBuilderParameter<string>)_notContains.Value; }
             set { _notContains = new InputPropertyInfo { Name = "notContains", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Containsi
+        public QueryBuilderParameter<string> Containsi
         {
-            get { return (QueryBuilderParameter<Guid?>)_containsi.Value; }
+            get { return (QueryBuilderParameter<string>)_containsi.Value; }
             set { _containsi = new InputPropertyInfo { Name = "containsi", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> NotContainsi
+        public QueryBuilderParameter<string> NotContainsi
         {
-            get { return (QueryBuilderParameter<Guid?>)_notContainsi.Value; }
+            get { return (QueryBuilderParameter<string>)_notContainsi.Value; }
             set { _notContainsi = new InputPropertyInfo { Name = "notContainsi", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Gt
+        public QueryBuilderParameter<string> Gt
         {
-            get { return (QueryBuilderParameter<Guid?>)_gt.Value; }
+            get { return (QueryBuilderParameter<string>)_gt.Value; }
             set { _gt = new InputPropertyInfo { Name = "gt", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Gte
+        public QueryBuilderParameter<string> Gte
         {
-            get { return (QueryBuilderParameter<Guid?>)_gte.Value; }
+            get { return (QueryBuilderParameter<string>)_gte.Value; }
             set { _gte = new InputPropertyInfo { Name = "gte", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Lt
+        public QueryBuilderParameter<string> Lt
         {
-            get { return (QueryBuilderParameter<Guid?>)_lt.Value; }
+            get { return (QueryBuilderParameter<string>)_lt.Value; }
             set { _lt = new InputPropertyInfo { Name = "lt", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Lte
+        public QueryBuilderParameter<string> Lte
         {
-            get { return (QueryBuilderParameter<Guid?>)_lte.Value; }
+            get { return (QueryBuilderParameter<string>)_lte.Value; }
             set { _lte = new InputPropertyInfo { Name = "lte", Value = value }; }
         }
 
@@ -15755,29 +15765,29 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<Guid?>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<string>>))]
         #endif
-        public QueryBuilderParameter<ICollection<Guid?>> In
+        public QueryBuilderParameter<ICollection<string>> In
         {
-            get { return (QueryBuilderParameter<ICollection<Guid?>>)_in.Value; }
+            get { return (QueryBuilderParameter<ICollection<string>>)_in.Value; }
             set { _in = new InputPropertyInfo { Name = "in", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<Guid?>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<string>>))]
         #endif
-        public QueryBuilderParameter<ICollection<Guid?>> NotIn
+        public QueryBuilderParameter<ICollection<string>> NotIn
         {
-            get { return (QueryBuilderParameter<ICollection<Guid?>>)_notIn.Value; }
+            get { return (QueryBuilderParameter<ICollection<string>>)_notIn.Value; }
             set { _notIn = new InputPropertyInfo { Name = "notIn", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<Guid?>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<string>>))]
         #endif
-        public QueryBuilderParameter<ICollection<Guid?>> Between
+        public QueryBuilderParameter<ICollection<string>> Between
         {
-            get { return (QueryBuilderParameter<ICollection<Guid?>>)_between.Value; }
+            get { return (QueryBuilderParameter<ICollection<string>>)_between.Value; }
             set { _between = new InputPropertyInfo { Name = "between", Value = value }; }
         }
 
@@ -15808,7 +15818,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class BooleanFilterInput : IGraphQlInputObject
+    public partial class BooleanFilterInput : IGraphQlInputObject
     {
         private InputPropertyInfo _and;
         private InputPropertyInfo _or;
@@ -16058,7 +16068,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class StringFilterInput : IGraphQlInputObject
+    public partial class StringFilterInput : IGraphQlInputObject
     {
         private InputPropertyInfo _and;
         private InputPropertyInfo _or;
@@ -16308,7 +16318,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class IntFilterInput : IGraphQlInputObject
+    public partial class IntFilterInput : IGraphQlInputObject
     {
         private InputPropertyInfo _and;
         private InputPropertyInfo _or;
@@ -16558,7 +16568,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class LongFilterInput : IGraphQlInputObject
+    public partial class LongFilterInput : IGraphQlInputObject
     {
         private InputPropertyInfo _and;
         private InputPropertyInfo _or;
@@ -16808,7 +16818,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class FloatFilterInput : IGraphQlInputObject
+    public partial class FloatFilterInput : IGraphQlInputObject
     {
         private InputPropertyInfo _and;
         private InputPropertyInfo _or;
@@ -17058,7 +17068,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class DateTimeFilterInput : IGraphQlInputObject
+    public partial class DateTimeFilterInput : IGraphQlInputObject
     {
         private InputPropertyInfo _and;
         private InputPropertyInfo _or;
@@ -17308,7 +17318,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class JsonFilterInput : IGraphQlInputObject
+    public partial class JsonFilterInput : IGraphQlInputObject
     {
         private InputPropertyInfo _and;
         private InputPropertyInfo _or;
@@ -17558,7 +17568,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentVisualTextVisualTextFiltersInput : IGraphQlInputObject
+    public partial class ComponentVisualTextVisualTextFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _highlights;
         private InputPropertyInfo _overview;
@@ -17643,7 +17653,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentVisualTextVisualTextInput : IGraphQlInputObject
+    public partial class ComponentVisualTextVisualTextInput : IGraphQlInputObject
     {
         private InputPropertyInfo _id;
         private InputPropertyInfo _highlights;
@@ -17652,11 +17662,11 @@ namespace Poolz.Finance.CSharp.Strapi
         private InputPropertyInfo _smartLinks;
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Id
+        public QueryBuilderParameter<string> Id
         {
-            get { return (QueryBuilderParameter<Guid?>)_id.Value; }
+            get { return (QueryBuilderParameter<string>)_id.Value; }
             set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
         }
 
@@ -17706,7 +17716,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentVersionVersionFiltersInput : IGraphQlInputObject
+    public partial class ComponentVersionVersionFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _contractVersion;
         private InputPropertyInfo _contractType;
@@ -17769,36 +17779,36 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentVersionVersionInput : IGraphQlInputObject
+    public partial class ComponentVersionVersionInput : IGraphQlInputObject
     {
         private InputPropertyInfo _id;
         private InputPropertyInfo _contractVersion;
         private InputPropertyInfo _contractType;
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Id
+        public QueryBuilderParameter<string> Id
         {
-            get { return (QueryBuilderParameter<Guid?>)_id.Value; }
+            get { return (QueryBuilderParameter<string>)_id.Value; }
             set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> ContractVersion
+        public QueryBuilderParameter<string> ContractVersion
         {
-            get { return (QueryBuilderParameter<Guid?>)_contractVersion.Value; }
+            get { return (QueryBuilderParameter<string>)_contractVersion.Value; }
             set { _contractVersion = new InputPropertyInfo { Name = "ContractVersion", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> ContractType
+        public QueryBuilderParameter<string> ContractType
         {
-            get { return (QueryBuilderParameter<Guid?>)_contractType.Value; }
+            get { return (QueryBuilderParameter<string>)_contractType.Value; }
             set { _contractType = new InputPropertyInfo { Name = "ContractType", Value = value }; }
         }
 
@@ -17810,7 +17820,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentUploadPoolUploadPoolFiltersInput : IGraphQlInputObject
+    public partial class ComponentUploadPoolUploadPoolFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _whitelistRate;
         private InputPropertyInfo _publicRate;
@@ -17907,7 +17917,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentUploadPoolUploadPoolInput : IGraphQlInputObject
+    public partial class ComponentUploadPoolUploadPoolInput : IGraphQlInputObject
     {
         private InputPropertyInfo _id;
         private InputPropertyInfo _whitelistRate;
@@ -17917,11 +17927,11 @@ namespace Poolz.Finance.CSharp.Strapi
         private InputPropertyInfo _participants;
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Id
+        public QueryBuilderParameter<string> Id
         {
-            get { return (QueryBuilderParameter<Guid?>)_id.Value; }
+            get { return (QueryBuilderParameter<string>)_id.Value; }
             set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
         }
 
@@ -17954,11 +17964,11 @@ namespace Poolz.Finance.CSharp.Strapi
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("buy_with")]
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> BuyWith
+        public QueryBuilderParameter<string> BuyWith
         {
-            get { return (QueryBuilderParameter<Guid?>)_buyWith.Value; }
+            get { return (QueryBuilderParameter<string>)_buyWith.Value; }
             set { _buyWith = new InputPropertyInfo { Name = "buy_with", Value = value }; }
         }
 
@@ -17982,7 +17992,360 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentTokenDistributionTokenDistributionFiltersInput : IGraphQlInputObject
+    public partial class ComponentTokenomicsTokenomicsFiltersInput : IGraphQlInputObject
+    {
+        private InputPropertyInfo _marketCap;
+        private InputPropertyInfo _tgeMarketCap;
+        private InputPropertyInfo _symbol;
+        private InputPropertyInfo _circulationSupply;
+        private InputPropertyInfo _totalSupply;
+        private InputPropertyInfo _usdPrice;
+        private InputPropertyInfo _totalRaise;
+        private InputPropertyInfo _tokenPrice;
+        private InputPropertyInfo _and;
+        private InputPropertyInfo _or;
+        private InputPropertyInfo _not;
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
+        #endif
+        public QueryBuilderParameter<StringFilterInput> MarketCap
+        {
+            get { return (QueryBuilderParameter<StringFilterInput>)_marketCap.Value; }
+            set { _marketCap = new InputPropertyInfo { Name = "MarketCap", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
+        #endif
+        public QueryBuilderParameter<StringFilterInput> TgeMarketCap
+        {
+            get { return (QueryBuilderParameter<StringFilterInput>)_tgeMarketCap.Value; }
+            set { _tgeMarketCap = new InputPropertyInfo { Name = "TGEMarketCap", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
+        #endif
+        public QueryBuilderParameter<StringFilterInput> Symbol
+        {
+            get { return (QueryBuilderParameter<StringFilterInput>)_symbol.Value; }
+            set { _symbol = new InputPropertyInfo { Name = "Symbol", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
+        #endif
+        public QueryBuilderParameter<StringFilterInput> CirculationSupply
+        {
+            get { return (QueryBuilderParameter<StringFilterInput>)_circulationSupply.Value; }
+            set { _circulationSupply = new InputPropertyInfo { Name = "CirculationSupply", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
+        #endif
+        public QueryBuilderParameter<StringFilterInput> TotalSupply
+        {
+            get { return (QueryBuilderParameter<StringFilterInput>)_totalSupply.Value; }
+            set { _totalSupply = new InputPropertyInfo { Name = "TotalSupply", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<FloatFilterInput>))]
+        #endif
+        public QueryBuilderParameter<FloatFilterInput> UsdPrice
+        {
+            get { return (QueryBuilderParameter<FloatFilterInput>)_usdPrice.Value; }
+            set { _usdPrice = new InputPropertyInfo { Name = "USDPrice", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
+        #endif
+        public QueryBuilderParameter<StringFilterInput> TotalRaise
+        {
+            get { return (QueryBuilderParameter<StringFilterInput>)_totalRaise.Value; }
+            set { _totalRaise = new InputPropertyInfo { Name = "TotalRaise", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
+        #endif
+        public QueryBuilderParameter<StringFilterInput> TokenPrice
+        {
+            get { return (QueryBuilderParameter<StringFilterInput>)_tokenPrice.Value; }
+            set { _tokenPrice = new InputPropertyInfo { Name = "TokenPrice", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentTokenomicsTokenomicsFiltersInput>>))]
+        #endif
+        public QueryBuilderParameter<ICollection<ComponentTokenomicsTokenomicsFiltersInput>> And
+        {
+            get { return (QueryBuilderParameter<ICollection<ComponentTokenomicsTokenomicsFiltersInput>>)_and.Value; }
+            set { _and = new InputPropertyInfo { Name = "and", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentTokenomicsTokenomicsFiltersInput>>))]
+        #endif
+        public QueryBuilderParameter<ICollection<ComponentTokenomicsTokenomicsFiltersInput>> Or
+        {
+            get { return (QueryBuilderParameter<ICollection<ComponentTokenomicsTokenomicsFiltersInput>>)_or.Value; }
+            set { _or = new InputPropertyInfo { Name = "or", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ComponentTokenomicsTokenomicsFiltersInput>))]
+        #endif
+        public QueryBuilderParameter<ComponentTokenomicsTokenomicsFiltersInput> Not
+        {
+            get { return (QueryBuilderParameter<ComponentTokenomicsTokenomicsFiltersInput>)_not.Value; }
+            set { _not = new InputPropertyInfo { Name = "not", Value = value }; }
+        }
+
+        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
+        {
+            if (_marketCap.Name != null) yield return _marketCap;
+            if (_tgeMarketCap.Name != null) yield return _tgeMarketCap;
+            if (_symbol.Name != null) yield return _symbol;
+            if (_circulationSupply.Name != null) yield return _circulationSupply;
+            if (_totalSupply.Name != null) yield return _totalSupply;
+            if (_usdPrice.Name != null) yield return _usdPrice;
+            if (_totalRaise.Name != null) yield return _totalRaise;
+            if (_tokenPrice.Name != null) yield return _tokenPrice;
+            if (_and.Name != null) yield return _and;
+            if (_or.Name != null) yield return _or;
+            if (_not.Name != null) yield return _not;
+        }
+    }
+
+    public partial class ComponentTokenomicsTokenomicsInput : IGraphQlInputObject
+    {
+        private InputPropertyInfo _id;
+        private InputPropertyInfo _visualInfo;
+        private InputPropertyInfo _marketCap;
+        private InputPropertyInfo _tgeMarketCap;
+        private InputPropertyInfo _symbol;
+        private InputPropertyInfo _circulationSupply;
+        private InputPropertyInfo _totalSupply;
+        private InputPropertyInfo _usdPrice;
+        private InputPropertyInfo _totalRaise;
+        private InputPropertyInfo _tokenPrice;
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> Id
+        {
+            get { return (QueryBuilderParameter<string>)_id.Value; }
+            set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> VisualInfo
+        {
+            get { return (QueryBuilderParameter<string>)_visualInfo.Value; }
+            set { _visualInfo = new InputPropertyInfo { Name = "VisualInfo", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> MarketCap
+        {
+            get { return (QueryBuilderParameter<string>)_marketCap.Value; }
+            set { _marketCap = new InputPropertyInfo { Name = "MarketCap", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> TgeMarketCap
+        {
+            get { return (QueryBuilderParameter<string>)_tgeMarketCap.Value; }
+            set { _tgeMarketCap = new InputPropertyInfo { Name = "TGEMarketCap", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> Symbol
+        {
+            get { return (QueryBuilderParameter<string>)_symbol.Value; }
+            set { _symbol = new InputPropertyInfo { Name = "Symbol", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> CirculationSupply
+        {
+            get { return (QueryBuilderParameter<string>)_circulationSupply.Value; }
+            set { _circulationSupply = new InputPropertyInfo { Name = "CirculationSupply", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> TotalSupply
+        {
+            get { return (QueryBuilderParameter<string>)_totalSupply.Value; }
+            set { _totalSupply = new InputPropertyInfo { Name = "TotalSupply", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<decimal?>))]
+        #endif
+        public QueryBuilderParameter<decimal?> UsdPrice
+        {
+            get { return (QueryBuilderParameter<decimal?>)_usdPrice.Value; }
+            set { _usdPrice = new InputPropertyInfo { Name = "USDPrice", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> TotalRaise
+        {
+            get { return (QueryBuilderParameter<string>)_totalRaise.Value; }
+            set { _totalRaise = new InputPropertyInfo { Name = "TotalRaise", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> TokenPrice
+        {
+            get { return (QueryBuilderParameter<string>)_tokenPrice.Value; }
+            set { _tokenPrice = new InputPropertyInfo { Name = "TokenPrice", Value = value }; }
+        }
+
+        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
+        {
+            if (_id.Name != null) yield return _id;
+            if (_visualInfo.Name != null) yield return _visualInfo;
+            if (_marketCap.Name != null) yield return _marketCap;
+            if (_tgeMarketCap.Name != null) yield return _tgeMarketCap;
+            if (_symbol.Name != null) yield return _symbol;
+            if (_circulationSupply.Name != null) yield return _circulationSupply;
+            if (_totalSupply.Name != null) yield return _totalSupply;
+            if (_usdPrice.Name != null) yield return _usdPrice;
+            if (_totalRaise.Name != null) yield return _totalRaise;
+            if (_tokenPrice.Name != null) yield return _tokenPrice;
+        }
+    }
+
+    public partial class ComponentSyntheticZoneSynteticFiltersInput : IGraphQlInputObject
+    {
+        private InputPropertyInfo _tokenAddress;
+        private InputPropertyInfo _chainSetting;
+        private InputPropertyInfo _and;
+        private InputPropertyInfo _or;
+        private InputPropertyInfo _not;
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
+        #endif
+        public QueryBuilderParameter<StringFilterInput> TokenAddress
+        {
+            get { return (QueryBuilderParameter<StringFilterInput>)_tokenAddress.Value; }
+            set { _tokenAddress = new InputPropertyInfo { Name = "TokenAddress", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonProperty("chain_setting")]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ChainSettingFiltersInput>))]
+        #endif
+        public QueryBuilderParameter<ChainSettingFiltersInput> ChainSetting
+        {
+            get { return (QueryBuilderParameter<ChainSettingFiltersInput>)_chainSetting.Value; }
+            set { _chainSetting = new InputPropertyInfo { Name = "chain_setting", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentSyntheticZoneSynteticFiltersInput>>))]
+        #endif
+        public QueryBuilderParameter<ICollection<ComponentSyntheticZoneSynteticFiltersInput>> And
+        {
+            get { return (QueryBuilderParameter<ICollection<ComponentSyntheticZoneSynteticFiltersInput>>)_and.Value; }
+            set { _and = new InputPropertyInfo { Name = "and", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentSyntheticZoneSynteticFiltersInput>>))]
+        #endif
+        public QueryBuilderParameter<ICollection<ComponentSyntheticZoneSynteticFiltersInput>> Or
+        {
+            get { return (QueryBuilderParameter<ICollection<ComponentSyntheticZoneSynteticFiltersInput>>)_or.Value; }
+            set { _or = new InputPropertyInfo { Name = "or", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ComponentSyntheticZoneSynteticFiltersInput>))]
+        #endif
+        public QueryBuilderParameter<ComponentSyntheticZoneSynteticFiltersInput> Not
+        {
+            get { return (QueryBuilderParameter<ComponentSyntheticZoneSynteticFiltersInput>)_not.Value; }
+            set { _not = new InputPropertyInfo { Name = "not", Value = value }; }
+        }
+
+        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
+        {
+            if (_tokenAddress.Name != null) yield return _tokenAddress;
+            if (_chainSetting.Name != null) yield return _chainSetting;
+            if (_and.Name != null) yield return _and;
+            if (_or.Name != null) yield return _or;
+            if (_not.Name != null) yield return _not;
+        }
+    }
+
+    public partial class ComponentSyntheticZoneSynteticInput : IGraphQlInputObject
+    {
+        private InputPropertyInfo _id;
+        private InputPropertyInfo _tokenAddress;
+        private InputPropertyInfo _chainSetting;
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> Id
+        {
+            get { return (QueryBuilderParameter<string>)_id.Value; }
+            set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> TokenAddress
+        {
+            get { return (QueryBuilderParameter<string>)_tokenAddress.Value; }
+            set { _tokenAddress = new InputPropertyInfo { Name = "TokenAddress", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonProperty("chain_setting")]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> ChainSetting
+        {
+            get { return (QueryBuilderParameter<string>)_chainSetting.Value; }
+            set { _chainSetting = new InputPropertyInfo { Name = "chain_setting", Value = value }; }
+        }
+
+        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
+        {
+            if (_id.Name != null) yield return _id;
+            if (_tokenAddress.Name != null) yield return _tokenAddress;
+            if (_chainSetting.Name != null) yield return _chainSetting;
+        }
+    }
+
+    public partial class ComponentTokenDistributionTokenDistributionFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _unlock;
         private InputPropertyInfo _ratio;
@@ -18067,7 +18430,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentTokenDistributionTokenDistributionInput : IGraphQlInputObject
+    public partial class ComponentTokenDistributionTokenDistributionInput : IGraphQlInputObject
     {
         private InputPropertyInfo _id;
         private InputPropertyInfo _unlock;
@@ -18076,11 +18439,11 @@ namespace Poolz.Finance.CSharp.Strapi
         private InputPropertyInfo _startTime;
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Id
+        public QueryBuilderParameter<string> Id
         {
-            get { return (QueryBuilderParameter<Guid?>)_id.Value; }
+            get { return (QueryBuilderParameter<string>)_id.Value; }
             set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
         }
 
@@ -18130,338 +18493,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentSyntheticZoneSynteticFiltersInput : IGraphQlInputObject
-    {
-        private InputPropertyInfo _tokenAddress;
-        private InputPropertyInfo _chainSetting;
-        private InputPropertyInfo _and;
-        private InputPropertyInfo _or;
-        private InputPropertyInfo _not;
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
-        #endif
-        public QueryBuilderParameter<StringFilterInput> TokenAddress
-        {
-            get { return (QueryBuilderParameter<StringFilterInput>)_tokenAddress.Value; }
-            set { _tokenAddress = new InputPropertyInfo { Name = "TokenAddress", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonProperty("chain_setting")]
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ChainSettingFiltersInput>))]
-        #endif
-        public QueryBuilderParameter<ChainSettingFiltersInput> ChainSetting
-        {
-            get { return (QueryBuilderParameter<ChainSettingFiltersInput>)_chainSetting.Value; }
-            set { _chainSetting = new InputPropertyInfo { Name = "chain_setting", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentSyntheticZoneSynteticFiltersInput>>))]
-        #endif
-        public QueryBuilderParameter<ICollection<ComponentSyntheticZoneSynteticFiltersInput>> And
-        {
-            get { return (QueryBuilderParameter<ICollection<ComponentSyntheticZoneSynteticFiltersInput>>)_and.Value; }
-            set { _and = new InputPropertyInfo { Name = "and", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentSyntheticZoneSynteticFiltersInput>>))]
-        #endif
-        public QueryBuilderParameter<ICollection<ComponentSyntheticZoneSynteticFiltersInput>> Or
-        {
-            get { return (QueryBuilderParameter<ICollection<ComponentSyntheticZoneSynteticFiltersInput>>)_or.Value; }
-            set { _or = new InputPropertyInfo { Name = "or", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ComponentSyntheticZoneSynteticFiltersInput>))]
-        #endif
-        public QueryBuilderParameter<ComponentSyntheticZoneSynteticFiltersInput> Not
-        {
-            get { return (QueryBuilderParameter<ComponentSyntheticZoneSynteticFiltersInput>)_not.Value; }
-            set { _not = new InputPropertyInfo { Name = "not", Value = value }; }
-        }
-
-        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
-        {
-            if (_tokenAddress.Name != null) yield return _tokenAddress;
-            if (_chainSetting.Name != null) yield return _chainSetting;
-            if (_and.Name != null) yield return _and;
-            if (_or.Name != null) yield return _or;
-            if (_not.Name != null) yield return _not;
-        }
-    }
-
-    public class ComponentSyntheticZoneSynteticInput : IGraphQlInputObject
-    {
-        private InputPropertyInfo _id;
-        private InputPropertyInfo _tokenAddress;
-        private InputPropertyInfo _chainSetting;
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
-        #endif
-        public QueryBuilderParameter<Guid?> Id
-        {
-            get { return (QueryBuilderParameter<Guid?>)_id.Value; }
-            set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
-        #endif
-        public QueryBuilderParameter<string> TokenAddress
-        {
-            get { return (QueryBuilderParameter<string>)_tokenAddress.Value; }
-            set { _tokenAddress = new InputPropertyInfo { Name = "TokenAddress", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonProperty("chain_setting")]
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
-        #endif
-        public QueryBuilderParameter<Guid?> ChainSetting
-        {
-            get { return (QueryBuilderParameter<Guid?>)_chainSetting.Value; }
-            set { _chainSetting = new InputPropertyInfo { Name = "chain_setting", Value = value }; }
-        }
-
-        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
-        {
-            if (_id.Name != null) yield return _id;
-            if (_tokenAddress.Name != null) yield return _tokenAddress;
-            if (_chainSetting.Name != null) yield return _chainSetting;
-        }
-    }
-
-    public class ComponentTokenomicsTokenomicsFiltersInput : IGraphQlInputObject
-    {
-        private InputPropertyInfo _marketCap;
-        private InputPropertyInfo _tgeMarketCap;
-        private InputPropertyInfo _symbol;
-        private InputPropertyInfo _circulationSupply;
-        private InputPropertyInfo _totalSupply;
-        private InputPropertyInfo _usdPrice;
-        private InputPropertyInfo _totalRaise;
-        private InputPropertyInfo _and;
-        private InputPropertyInfo _or;
-        private InputPropertyInfo _not;
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
-        #endif
-        public QueryBuilderParameter<StringFilterInput> MarketCap
-        {
-            get { return (QueryBuilderParameter<StringFilterInput>)_marketCap.Value; }
-            set { _marketCap = new InputPropertyInfo { Name = "MarketCap", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
-        #endif
-        public QueryBuilderParameter<StringFilterInput> TgeMarketCap
-        {
-            get { return (QueryBuilderParameter<StringFilterInput>)_tgeMarketCap.Value; }
-            set { _tgeMarketCap = new InputPropertyInfo { Name = "TGEMarketCap", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
-        #endif
-        public QueryBuilderParameter<StringFilterInput> Symbol
-        {
-            get { return (QueryBuilderParameter<StringFilterInput>)_symbol.Value; }
-            set { _symbol = new InputPropertyInfo { Name = "Symbol", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
-        #endif
-        public QueryBuilderParameter<StringFilterInput> CirculationSupply
-        {
-            get { return (QueryBuilderParameter<StringFilterInput>)_circulationSupply.Value; }
-            set { _circulationSupply = new InputPropertyInfo { Name = "CirculationSupply", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
-        #endif
-        public QueryBuilderParameter<StringFilterInput> TotalSupply
-        {
-            get { return (QueryBuilderParameter<StringFilterInput>)_totalSupply.Value; }
-            set { _totalSupply = new InputPropertyInfo { Name = "TotalSupply", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<FloatFilterInput>))]
-        #endif
-        public QueryBuilderParameter<FloatFilterInput> UsdPrice
-        {
-            get { return (QueryBuilderParameter<FloatFilterInput>)_usdPrice.Value; }
-            set { _usdPrice = new InputPropertyInfo { Name = "USDPrice", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
-        #endif
-        public QueryBuilderParameter<StringFilterInput> TotalRaise
-        {
-            get { return (QueryBuilderParameter<StringFilterInput>)_totalRaise.Value; }
-            set { _totalRaise = new InputPropertyInfo { Name = "TotalRaise", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentTokenomicsTokenomicsFiltersInput>>))]
-        #endif
-        public QueryBuilderParameter<ICollection<ComponentTokenomicsTokenomicsFiltersInput>> And
-        {
-            get { return (QueryBuilderParameter<ICollection<ComponentTokenomicsTokenomicsFiltersInput>>)_and.Value; }
-            set { _and = new InputPropertyInfo { Name = "and", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentTokenomicsTokenomicsFiltersInput>>))]
-        #endif
-        public QueryBuilderParameter<ICollection<ComponentTokenomicsTokenomicsFiltersInput>> Or
-        {
-            get { return (QueryBuilderParameter<ICollection<ComponentTokenomicsTokenomicsFiltersInput>>)_or.Value; }
-            set { _or = new InputPropertyInfo { Name = "or", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ComponentTokenomicsTokenomicsFiltersInput>))]
-        #endif
-        public QueryBuilderParameter<ComponentTokenomicsTokenomicsFiltersInput> Not
-        {
-            get { return (QueryBuilderParameter<ComponentTokenomicsTokenomicsFiltersInput>)_not.Value; }
-            set { _not = new InputPropertyInfo { Name = "not", Value = value }; }
-        }
-
-        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
-        {
-            if (_marketCap.Name != null) yield return _marketCap;
-            if (_tgeMarketCap.Name != null) yield return _tgeMarketCap;
-            if (_symbol.Name != null) yield return _symbol;
-            if (_circulationSupply.Name != null) yield return _circulationSupply;
-            if (_totalSupply.Name != null) yield return _totalSupply;
-            if (_usdPrice.Name != null) yield return _usdPrice;
-            if (_totalRaise.Name != null) yield return _totalRaise;
-            if (_and.Name != null) yield return _and;
-            if (_or.Name != null) yield return _or;
-            if (_not.Name != null) yield return _not;
-        }
-    }
-
-    public class ComponentTokenomicsTokenomicsInput : IGraphQlInputObject
-    {
-        private InputPropertyInfo _id;
-        private InputPropertyInfo _visualInfo;
-        private InputPropertyInfo _marketCap;
-        private InputPropertyInfo _tgeMarketCap;
-        private InputPropertyInfo _symbol;
-        private InputPropertyInfo _circulationSupply;
-        private InputPropertyInfo _totalSupply;
-        private InputPropertyInfo _usdPrice;
-        private InputPropertyInfo _totalRaise;
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
-        #endif
-        public QueryBuilderParameter<Guid?> Id
-        {
-            get { return (QueryBuilderParameter<Guid?>)_id.Value; }
-            set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
-        #endif
-        public QueryBuilderParameter<Guid?> VisualInfo
-        {
-            get { return (QueryBuilderParameter<Guid?>)_visualInfo.Value; }
-            set { _visualInfo = new InputPropertyInfo { Name = "VisualInfo", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
-        #endif
-        public QueryBuilderParameter<string> MarketCap
-        {
-            get { return (QueryBuilderParameter<string>)_marketCap.Value; }
-            set { _marketCap = new InputPropertyInfo { Name = "MarketCap", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
-        #endif
-        public QueryBuilderParameter<string> TgeMarketCap
-        {
-            get { return (QueryBuilderParameter<string>)_tgeMarketCap.Value; }
-            set { _tgeMarketCap = new InputPropertyInfo { Name = "TGEMarketCap", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
-        #endif
-        public QueryBuilderParameter<string> Symbol
-        {
-            get { return (QueryBuilderParameter<string>)_symbol.Value; }
-            set { _symbol = new InputPropertyInfo { Name = "Symbol", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
-        #endif
-        public QueryBuilderParameter<string> CirculationSupply
-        {
-            get { return (QueryBuilderParameter<string>)_circulationSupply.Value; }
-            set { _circulationSupply = new InputPropertyInfo { Name = "CirculationSupply", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
-        #endif
-        public QueryBuilderParameter<string> TotalSupply
-        {
-            get { return (QueryBuilderParameter<string>)_totalSupply.Value; }
-            set { _totalSupply = new InputPropertyInfo { Name = "TotalSupply", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<decimal?>))]
-        #endif
-        public QueryBuilderParameter<decimal?> UsdPrice
-        {
-            get { return (QueryBuilderParameter<decimal?>)_usdPrice.Value; }
-            set { _usdPrice = new InputPropertyInfo { Name = "USDPrice", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
-        #endif
-        public QueryBuilderParameter<string> TotalRaise
-        {
-            get { return (QueryBuilderParameter<string>)_totalRaise.Value; }
-            set { _totalRaise = new InputPropertyInfo { Name = "TotalRaise", Value = value }; }
-        }
-
-        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
-        {
-            if (_id.Name != null) yield return _id;
-            if (_visualInfo.Name != null) yield return _visualInfo;
-            if (_marketCap.Name != null) yield return _marketCap;
-            if (_tgeMarketCap.Name != null) yield return _tgeMarketCap;
-            if (_symbol.Name != null) yield return _symbol;
-            if (_circulationSupply.Name != null) yield return _circulationSupply;
-            if (_totalSupply.Name != null) yield return _totalSupply;
-            if (_usdPrice.Name != null) yield return _usdPrice;
-            if (_totalRaise.Name != null) yield return _totalRaise;
-        }
-    }
-
-    public class ComponentSmartLinksSmartLinksFiltersInput : IGraphQlInputObject
+    public partial class ComponentSmartLinksSmartLinksFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _url;
         private InputPropertyInfo _linkType;
@@ -18525,18 +18557,18 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentSmartLinksSmartLinksInput : IGraphQlInputObject
+    public partial class ComponentSmartLinksSmartLinksInput : IGraphQlInputObject
     {
         private InputPropertyInfo _id;
         private InputPropertyInfo _url;
         private InputPropertyInfo _linkType;
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Id
+        public QueryBuilderParameter<string> Id
         {
-            get { return (QueryBuilderParameter<Guid?>)_id.Value; }
+            get { return (QueryBuilderParameter<string>)_id.Value; }
             set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
         }
 
@@ -18551,11 +18583,11 @@ namespace Poolz.Finance.CSharp.Strapi
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("link_type")]
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> LinkType
+        public QueryBuilderParameter<string> LinkType
         {
-            get { return (QueryBuilderParameter<Guid?>)_linkType.Value; }
+            get { return (QueryBuilderParameter<string>)_linkType.Value; }
             set { _linkType = new InputPropertyInfo { Name = "link_type", Value = value }; }
         }
 
@@ -18567,125 +18599,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentSectionSectionInput : IGraphQlInputObject
-    {
-        private InputPropertyInfo _id;
-        private InputPropertyInfo _title;
-        private InputPropertyInfo _smallText;
-        private InputPropertyInfo _topBgUrl;
-        private InputPropertyInfo _topBg;
-        private InputPropertyInfo _htmlColorText;
-        private InputPropertyInfo _mainCta;
-        private InputPropertyInfo _secondCta;
-        private InputPropertyInfo _secondTitle;
-        private InputPropertyInfo _secondSmallText;
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
-        #endif
-        public QueryBuilderParameter<Guid?> Id
-        {
-            get { return (QueryBuilderParameter<Guid?>)_id.Value; }
-            set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
-        #endif
-        public QueryBuilderParameter<string> Title
-        {
-            get { return (QueryBuilderParameter<string>)_title.Value; }
-            set { _title = new InputPropertyInfo { Name = "Title", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
-        #endif
-        public QueryBuilderParameter<string> SmallText
-        {
-            get { return (QueryBuilderParameter<string>)_smallText.Value; }
-            set { _smallText = new InputPropertyInfo { Name = "smallText", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
-        #endif
-        public QueryBuilderParameter<string> TopBgUrl
-        {
-            get { return (QueryBuilderParameter<string>)_topBgUrl.Value; }
-            set { _topBgUrl = new InputPropertyInfo { Name = "TopBgUrl", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
-        #endif
-        public QueryBuilderParameter<Guid?> TopBg
-        {
-            get { return (QueryBuilderParameter<Guid?>)_topBg.Value; }
-            set { _topBg = new InputPropertyInfo { Name = "TopBg", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ComponentHtmlColorTextHtmlColorTextInput>))]
-        #endif
-        public QueryBuilderParameter<ComponentHtmlColorTextHtmlColorTextInput> HtmlColorText
-        {
-            get { return (QueryBuilderParameter<ComponentHtmlColorTextHtmlColorTextInput>)_htmlColorText.Value; }
-            set { _htmlColorText = new InputPropertyInfo { Name = "htmlColorText", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentMainCtaMainCtaInput>>))]
-        #endif
-        public QueryBuilderParameter<ICollection<ComponentMainCtaMainCtaInput>> MainCta
-        {
-            get { return (QueryBuilderParameter<ICollection<ComponentMainCtaMainCtaInput>>)_mainCta.Value; }
-            set { _mainCta = new InputPropertyInfo { Name = "MainCTA", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentMainCtaMainCtaInput>>))]
-        #endif
-        public QueryBuilderParameter<ICollection<ComponentMainCtaMainCtaInput>> SecondCta
-        {
-            get { return (QueryBuilderParameter<ICollection<ComponentMainCtaMainCtaInput>>)_secondCta.Value; }
-            set { _secondCta = new InputPropertyInfo { Name = "secondCta", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
-        #endif
-        public QueryBuilderParameter<string> SecondTitle
-        {
-            get { return (QueryBuilderParameter<string>)_secondTitle.Value; }
-            set { _secondTitle = new InputPropertyInfo { Name = "secondTitle", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
-        #endif
-        public QueryBuilderParameter<string> SecondSmallText
-        {
-            get { return (QueryBuilderParameter<string>)_secondSmallText.Value; }
-            set { _secondSmallText = new InputPropertyInfo { Name = "SecondSmallText", Value = value }; }
-        }
-
-        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
-        {
-            if (_id.Name != null) yield return _id;
-            if (_title.Name != null) yield return _title;
-            if (_smallText.Name != null) yield return _smallText;
-            if (_topBgUrl.Name != null) yield return _topBgUrl;
-            if (_topBg.Name != null) yield return _topBg;
-            if (_htmlColorText.Name != null) yield return _htmlColorText;
-            if (_mainCta.Name != null) yield return _mainCta;
-            if (_secondCta.Name != null) yield return _secondCta;
-            if (_secondTitle.Name != null) yield return _secondTitle;
-            if (_secondSmallText.Name != null) yield return _secondSmallText;
-        }
-    }
-
-    public class ComponentSimpleUrlSimpleUrlFiltersInput : IGraphQlInputObject
+    public partial class ComponentSimpleUrlSimpleUrlFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _name;
         private InputPropertyInfo _url;
@@ -18759,7 +18673,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentSimpleUrlSimpleUrlInput : IGraphQlInputObject
+    public partial class ComponentSimpleUrlSimpleUrlInput : IGraphQlInputObject
     {
         private InputPropertyInfo _id;
         private InputPropertyInfo _name;
@@ -18767,11 +18681,11 @@ namespace Poolz.Finance.CSharp.Strapi
         private InputPropertyInfo _newWindow;
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Id
+        public QueryBuilderParameter<string> Id
         {
-            get { return (QueryBuilderParameter<Guid?>)_id.Value; }
+            get { return (QueryBuilderParameter<string>)_id.Value; }
             set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
         }
 
@@ -18811,352 +18725,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentOverviewOverviewFiltersInput : IGraphQlInputObject
-    {
-        private InputPropertyInfo _name;
-        private InputPropertyInfo _boldText;
-        private InputPropertyInfo _text;
-        private InputPropertyInfo _and;
-        private InputPropertyInfo _or;
-        private InputPropertyInfo _not;
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
-        #endif
-        public QueryBuilderParameter<StringFilterInput> Name
-        {
-            get { return (QueryBuilderParameter<StringFilterInput>)_name.Value; }
-            set { _name = new InputPropertyInfo { Name = "Name", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
-        #endif
-        public QueryBuilderParameter<StringFilterInput> BoldText
-        {
-            get { return (QueryBuilderParameter<StringFilterInput>)_boldText.Value; }
-            set { _boldText = new InputPropertyInfo { Name = "BoldText", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
-        #endif
-        public QueryBuilderParameter<StringFilterInput> Text
-        {
-            get { return (QueryBuilderParameter<StringFilterInput>)_text.Value; }
-            set { _text = new InputPropertyInfo { Name = "Text", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentOverviewOverviewFiltersInput>>))]
-        #endif
-        public QueryBuilderParameter<ICollection<ComponentOverviewOverviewFiltersInput>> And
-        {
-            get { return (QueryBuilderParameter<ICollection<ComponentOverviewOverviewFiltersInput>>)_and.Value; }
-            set { _and = new InputPropertyInfo { Name = "and", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentOverviewOverviewFiltersInput>>))]
-        #endif
-        public QueryBuilderParameter<ICollection<ComponentOverviewOverviewFiltersInput>> Or
-        {
-            get { return (QueryBuilderParameter<ICollection<ComponentOverviewOverviewFiltersInput>>)_or.Value; }
-            set { _or = new InputPropertyInfo { Name = "or", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ComponentOverviewOverviewFiltersInput>))]
-        #endif
-        public QueryBuilderParameter<ComponentOverviewOverviewFiltersInput> Not
-        {
-            get { return (QueryBuilderParameter<ComponentOverviewOverviewFiltersInput>)_not.Value; }
-            set { _not = new InputPropertyInfo { Name = "not", Value = value }; }
-        }
-
-        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
-        {
-            if (_name.Name != null) yield return _name;
-            if (_boldText.Name != null) yield return _boldText;
-            if (_text.Name != null) yield return _text;
-            if (_and.Name != null) yield return _and;
-            if (_or.Name != null) yield return _or;
-            if (_not.Name != null) yield return _not;
-        }
-    }
-
-    public class ComponentOverviewOverviewInput : IGraphQlInputObject
-    {
-        private InputPropertyInfo _id;
-        private InputPropertyInfo _name;
-        private InputPropertyInfo _boldText;
-        private InputPropertyInfo _text;
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
-        #endif
-        public QueryBuilderParameter<Guid?> Id
-        {
-            get { return (QueryBuilderParameter<Guid?>)_id.Value; }
-            set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
-        #endif
-        public QueryBuilderParameter<string> Name
-        {
-            get { return (QueryBuilderParameter<string>)_name.Value; }
-            set { _name = new InputPropertyInfo { Name = "Name", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
-        #endif
-        public QueryBuilderParameter<string> BoldText
-        {
-            get { return (QueryBuilderParameter<string>)_boldText.Value; }
-            set { _boldText = new InputPropertyInfo { Name = "BoldText", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
-        #endif
-        public QueryBuilderParameter<string> Text
-        {
-            get { return (QueryBuilderParameter<string>)_text.Value; }
-            set { _text = new InputPropertyInfo { Name = "Text", Value = value }; }
-        }
-
-        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
-        {
-            if (_id.Name != null) yield return _id;
-            if (_name.Name != null) yield return _name;
-            if (_boldText.Name != null) yield return _boldText;
-            if (_text.Name != null) yield return _text;
-        }
-    }
-
-    public class ComponentIconTextIconTextFiltersInput : IGraphQlInputObject
-    {
-        private InputPropertyInfo _text;
-        private InputPropertyInfo _smallText;
-        private InputPropertyInfo _and;
-        private InputPropertyInfo _or;
-        private InputPropertyInfo _not;
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
-        #endif
-        public QueryBuilderParameter<StringFilterInput> Text
-        {
-            get { return (QueryBuilderParameter<StringFilterInput>)_text.Value; }
-            set { _text = new InputPropertyInfo { Name = "text", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
-        #endif
-        public QueryBuilderParameter<StringFilterInput> SmallText
-        {
-            get { return (QueryBuilderParameter<StringFilterInput>)_smallText.Value; }
-            set { _smallText = new InputPropertyInfo { Name = "smallText", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentIconTextIconTextFiltersInput>>))]
-        #endif
-        public QueryBuilderParameter<ICollection<ComponentIconTextIconTextFiltersInput>> And
-        {
-            get { return (QueryBuilderParameter<ICollection<ComponentIconTextIconTextFiltersInput>>)_and.Value; }
-            set { _and = new InputPropertyInfo { Name = "and", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentIconTextIconTextFiltersInput>>))]
-        #endif
-        public QueryBuilderParameter<ICollection<ComponentIconTextIconTextFiltersInput>> Or
-        {
-            get { return (QueryBuilderParameter<ICollection<ComponentIconTextIconTextFiltersInput>>)_or.Value; }
-            set { _or = new InputPropertyInfo { Name = "or", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ComponentIconTextIconTextFiltersInput>))]
-        #endif
-        public QueryBuilderParameter<ComponentIconTextIconTextFiltersInput> Not
-        {
-            get { return (QueryBuilderParameter<ComponentIconTextIconTextFiltersInput>)_not.Value; }
-            set { _not = new InputPropertyInfo { Name = "not", Value = value }; }
-        }
-
-        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
-        {
-            if (_text.Name != null) yield return _text;
-            if (_smallText.Name != null) yield return _smallText;
-            if (_and.Name != null) yield return _and;
-            if (_or.Name != null) yield return _or;
-            if (_not.Name != null) yield return _not;
-        }
-    }
-
-    public class ComponentIconTextIconTextInput : IGraphQlInputObject
-    {
-        private InputPropertyInfo _id;
-        private InputPropertyInfo _text;
-        private InputPropertyInfo _smallText;
-        private InputPropertyInfo _icon;
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
-        #endif
-        public QueryBuilderParameter<Guid?> Id
-        {
-            get { return (QueryBuilderParameter<Guid?>)_id.Value; }
-            set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
-        #endif
-        public QueryBuilderParameter<string> Text
-        {
-            get { return (QueryBuilderParameter<string>)_text.Value; }
-            set { _text = new InputPropertyInfo { Name = "text", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
-        #endif
-        public QueryBuilderParameter<string> SmallText
-        {
-            get { return (QueryBuilderParameter<string>)_smallText.Value; }
-            set { _smallText = new InputPropertyInfo { Name = "smallText", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
-        #endif
-        public QueryBuilderParameter<Guid?> Icon
-        {
-            get { return (QueryBuilderParameter<Guid?>)_icon.Value; }
-            set { _icon = new InputPropertyInfo { Name = "icon", Value = value }; }
-        }
-
-        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
-        {
-            if (_id.Name != null) yield return _id;
-            if (_text.Name != null) yield return _text;
-            if (_smallText.Name != null) yield return _smallText;
-            if (_icon.Name != null) yield return _icon;
-        }
-    }
-
-    public class ComponentInvestorsInvestorsFiltersInput : IGraphQlInputObject
-    {
-        private InputPropertyInfo _investor;
-        private InputPropertyInfo _category;
-        private InputPropertyInfo _and;
-        private InputPropertyInfo _or;
-        private InputPropertyInfo _not;
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<InvestorFiltersInput>))]
-        #endif
-        public QueryBuilderParameter<InvestorFiltersInput> Investor
-        {
-            get { return (QueryBuilderParameter<InvestorFiltersInput>)_investor.Value; }
-            set { _investor = new InputPropertyInfo { Name = "investor", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
-        #endif
-        public QueryBuilderParameter<StringFilterInput> Category
-        {
-            get { return (QueryBuilderParameter<StringFilterInput>)_category.Value; }
-            set { _category = new InputPropertyInfo { Name = "Category", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentInvestorsInvestorsFiltersInput>>))]
-        #endif
-        public QueryBuilderParameter<ICollection<ComponentInvestorsInvestorsFiltersInput>> And
-        {
-            get { return (QueryBuilderParameter<ICollection<ComponentInvestorsInvestorsFiltersInput>>)_and.Value; }
-            set { _and = new InputPropertyInfo { Name = "and", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentInvestorsInvestorsFiltersInput>>))]
-        #endif
-        public QueryBuilderParameter<ICollection<ComponentInvestorsInvestorsFiltersInput>> Or
-        {
-            get { return (QueryBuilderParameter<ICollection<ComponentInvestorsInvestorsFiltersInput>>)_or.Value; }
-            set { _or = new InputPropertyInfo { Name = "or", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ComponentInvestorsInvestorsFiltersInput>))]
-        #endif
-        public QueryBuilderParameter<ComponentInvestorsInvestorsFiltersInput> Not
-        {
-            get { return (QueryBuilderParameter<ComponentInvestorsInvestorsFiltersInput>)_not.Value; }
-            set { _not = new InputPropertyInfo { Name = "not", Value = value }; }
-        }
-
-        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
-        {
-            if (_investor.Name != null) yield return _investor;
-            if (_category.Name != null) yield return _category;
-            if (_and.Name != null) yield return _and;
-            if (_or.Name != null) yield return _or;
-            if (_not.Name != null) yield return _not;
-        }
-    }
-
-    public class ComponentInvestorsInvestorsInput : IGraphQlInputObject
-    {
-        private InputPropertyInfo _id;
-        private InputPropertyInfo _investor;
-        private InputPropertyInfo _category;
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
-        #endif
-        public QueryBuilderParameter<Guid?> Id
-        {
-            get { return (QueryBuilderParameter<Guid?>)_id.Value; }
-            set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
-        #endif
-        public QueryBuilderParameter<Guid?> Investor
-        {
-            get { return (QueryBuilderParameter<Guid?>)_investor.Value; }
-            set { _investor = new InputPropertyInfo { Name = "investor", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
-        #endif
-        public QueryBuilderParameter<string> Category
-        {
-            get { return (QueryBuilderParameter<string>)_category.Value; }
-            set { _category = new InputPropertyInfo { Name = "Category", Value = value }; }
-        }
-
-        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
-        {
-            if (_id.Name != null) yield return _id;
-            if (_investor.Name != null) yield return _investor;
-            if (_category.Name != null) yield return _category;
-        }
-    }
-
-    public class ComponentMainCtaMainCtaFiltersInput : IGraphQlInputObject
+    public partial class ComponentMainCtaMainCtaFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _text;
         private InputPropertyInfo _url;
@@ -19285,7 +18854,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentMainCtaMainCtaInput : IGraphQlInputObject
+    public partial class ComponentMainCtaMainCtaInput : IGraphQlInputObject
     {
         private InputPropertyInfo _id;
         private InputPropertyInfo _text;
@@ -19298,11 +18867,11 @@ namespace Poolz.Finance.CSharp.Strapi
         private InputPropertyInfo _flag;
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Id
+        public QueryBuilderParameter<string> Id
         {
-            get { return (QueryBuilderParameter<Guid?>)_id.Value; }
+            get { return (QueryBuilderParameter<string>)_id.Value; }
             set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
         }
 
@@ -19392,7 +18961,437 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentHtmlColorTextHtmlColorTextFiltersInput : IGraphQlInputObject
+    public partial class ComponentSectionSectionInput : IGraphQlInputObject
+    {
+        private InputPropertyInfo _id;
+        private InputPropertyInfo _title;
+        private InputPropertyInfo _smallText;
+        private InputPropertyInfo _topBgUrl;
+        private InputPropertyInfo _topBg;
+        private InputPropertyInfo _htmlColorText;
+        private InputPropertyInfo _mainCta;
+        private InputPropertyInfo _secondCta;
+        private InputPropertyInfo _secondTitle;
+        private InputPropertyInfo _secondSmallText;
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> Id
+        {
+            get { return (QueryBuilderParameter<string>)_id.Value; }
+            set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> Title
+        {
+            get { return (QueryBuilderParameter<string>)_title.Value; }
+            set { _title = new InputPropertyInfo { Name = "Title", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> SmallText
+        {
+            get { return (QueryBuilderParameter<string>)_smallText.Value; }
+            set { _smallText = new InputPropertyInfo { Name = "smallText", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> TopBgUrl
+        {
+            get { return (QueryBuilderParameter<string>)_topBgUrl.Value; }
+            set { _topBgUrl = new InputPropertyInfo { Name = "TopBgUrl", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> TopBg
+        {
+            get { return (QueryBuilderParameter<string>)_topBg.Value; }
+            set { _topBg = new InputPropertyInfo { Name = "TopBg", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ComponentHtmlColorTextHtmlColorTextInput>))]
+        #endif
+        public QueryBuilderParameter<ComponentHtmlColorTextHtmlColorTextInput> HtmlColorText
+        {
+            get { return (QueryBuilderParameter<ComponentHtmlColorTextHtmlColorTextInput>)_htmlColorText.Value; }
+            set { _htmlColorText = new InputPropertyInfo { Name = "htmlColorText", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentMainCtaMainCtaInput>>))]
+        #endif
+        public QueryBuilderParameter<ICollection<ComponentMainCtaMainCtaInput>> MainCta
+        {
+            get { return (QueryBuilderParameter<ICollection<ComponentMainCtaMainCtaInput>>)_mainCta.Value; }
+            set { _mainCta = new InputPropertyInfo { Name = "MainCTA", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentMainCtaMainCtaInput>>))]
+        #endif
+        public QueryBuilderParameter<ICollection<ComponentMainCtaMainCtaInput>> SecondCta
+        {
+            get { return (QueryBuilderParameter<ICollection<ComponentMainCtaMainCtaInput>>)_secondCta.Value; }
+            set { _secondCta = new InputPropertyInfo { Name = "secondCta", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> SecondTitle
+        {
+            get { return (QueryBuilderParameter<string>)_secondTitle.Value; }
+            set { _secondTitle = new InputPropertyInfo { Name = "secondTitle", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> SecondSmallText
+        {
+            get { return (QueryBuilderParameter<string>)_secondSmallText.Value; }
+            set { _secondSmallText = new InputPropertyInfo { Name = "SecondSmallText", Value = value }; }
+        }
+
+        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
+        {
+            if (_id.Name != null) yield return _id;
+            if (_title.Name != null) yield return _title;
+            if (_smallText.Name != null) yield return _smallText;
+            if (_topBgUrl.Name != null) yield return _topBgUrl;
+            if (_topBg.Name != null) yield return _topBg;
+            if (_htmlColorText.Name != null) yield return _htmlColorText;
+            if (_mainCta.Name != null) yield return _mainCta;
+            if (_secondCta.Name != null) yield return _secondCta;
+            if (_secondTitle.Name != null) yield return _secondTitle;
+            if (_secondSmallText.Name != null) yield return _secondSmallText;
+        }
+    }
+
+    public partial class ComponentOverviewOverviewFiltersInput : IGraphQlInputObject
+    {
+        private InputPropertyInfo _name;
+        private InputPropertyInfo _boldText;
+        private InputPropertyInfo _text;
+        private InputPropertyInfo _and;
+        private InputPropertyInfo _or;
+        private InputPropertyInfo _not;
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
+        #endif
+        public QueryBuilderParameter<StringFilterInput> Name
+        {
+            get { return (QueryBuilderParameter<StringFilterInput>)_name.Value; }
+            set { _name = new InputPropertyInfo { Name = "Name", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
+        #endif
+        public QueryBuilderParameter<StringFilterInput> BoldText
+        {
+            get { return (QueryBuilderParameter<StringFilterInput>)_boldText.Value; }
+            set { _boldText = new InputPropertyInfo { Name = "BoldText", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
+        #endif
+        public QueryBuilderParameter<StringFilterInput> Text
+        {
+            get { return (QueryBuilderParameter<StringFilterInput>)_text.Value; }
+            set { _text = new InputPropertyInfo { Name = "Text", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentOverviewOverviewFiltersInput>>))]
+        #endif
+        public QueryBuilderParameter<ICollection<ComponentOverviewOverviewFiltersInput>> And
+        {
+            get { return (QueryBuilderParameter<ICollection<ComponentOverviewOverviewFiltersInput>>)_and.Value; }
+            set { _and = new InputPropertyInfo { Name = "and", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentOverviewOverviewFiltersInput>>))]
+        #endif
+        public QueryBuilderParameter<ICollection<ComponentOverviewOverviewFiltersInput>> Or
+        {
+            get { return (QueryBuilderParameter<ICollection<ComponentOverviewOverviewFiltersInput>>)_or.Value; }
+            set { _or = new InputPropertyInfo { Name = "or", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ComponentOverviewOverviewFiltersInput>))]
+        #endif
+        public QueryBuilderParameter<ComponentOverviewOverviewFiltersInput> Not
+        {
+            get { return (QueryBuilderParameter<ComponentOverviewOverviewFiltersInput>)_not.Value; }
+            set { _not = new InputPropertyInfo { Name = "not", Value = value }; }
+        }
+
+        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
+        {
+            if (_name.Name != null) yield return _name;
+            if (_boldText.Name != null) yield return _boldText;
+            if (_text.Name != null) yield return _text;
+            if (_and.Name != null) yield return _and;
+            if (_or.Name != null) yield return _or;
+            if (_not.Name != null) yield return _not;
+        }
+    }
+
+    public partial class ComponentOverviewOverviewInput : IGraphQlInputObject
+    {
+        private InputPropertyInfo _id;
+        private InputPropertyInfo _name;
+        private InputPropertyInfo _boldText;
+        private InputPropertyInfo _text;
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> Id
+        {
+            get { return (QueryBuilderParameter<string>)_id.Value; }
+            set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> Name
+        {
+            get { return (QueryBuilderParameter<string>)_name.Value; }
+            set { _name = new InputPropertyInfo { Name = "Name", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> BoldText
+        {
+            get { return (QueryBuilderParameter<string>)_boldText.Value; }
+            set { _boldText = new InputPropertyInfo { Name = "BoldText", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> Text
+        {
+            get { return (QueryBuilderParameter<string>)_text.Value; }
+            set { _text = new InputPropertyInfo { Name = "Text", Value = value }; }
+        }
+
+        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
+        {
+            if (_id.Name != null) yield return _id;
+            if (_name.Name != null) yield return _name;
+            if (_boldText.Name != null) yield return _boldText;
+            if (_text.Name != null) yield return _text;
+        }
+    }
+
+    public partial class ComponentHighlightsHighlightsFiltersInput : IGraphQlInputObject
+    {
+        private InputPropertyInfo _value;
+        private InputPropertyInfo _and;
+        private InputPropertyInfo _or;
+        private InputPropertyInfo _not;
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
+        #endif
+        public QueryBuilderParameter<StringFilterInput> Value
+        {
+            get { return (QueryBuilderParameter<StringFilterInput>)_value.Value; }
+            set { _value = new InputPropertyInfo { Name = "Value", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentHighlightsHighlightsFiltersInput>>))]
+        #endif
+        public QueryBuilderParameter<ICollection<ComponentHighlightsHighlightsFiltersInput>> And
+        {
+            get { return (QueryBuilderParameter<ICollection<ComponentHighlightsHighlightsFiltersInput>>)_and.Value; }
+            set { _and = new InputPropertyInfo { Name = "and", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentHighlightsHighlightsFiltersInput>>))]
+        #endif
+        public QueryBuilderParameter<ICollection<ComponentHighlightsHighlightsFiltersInput>> Or
+        {
+            get { return (QueryBuilderParameter<ICollection<ComponentHighlightsHighlightsFiltersInput>>)_or.Value; }
+            set { _or = new InputPropertyInfo { Name = "or", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ComponentHighlightsHighlightsFiltersInput>))]
+        #endif
+        public QueryBuilderParameter<ComponentHighlightsHighlightsFiltersInput> Not
+        {
+            get { return (QueryBuilderParameter<ComponentHighlightsHighlightsFiltersInput>)_not.Value; }
+            set { _not = new InputPropertyInfo { Name = "not", Value = value }; }
+        }
+
+        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
+        {
+            if (_value.Name != null) yield return _value;
+            if (_and.Name != null) yield return _and;
+            if (_or.Name != null) yield return _or;
+            if (_not.Name != null) yield return _not;
+        }
+    }
+
+    public partial class ComponentHighlightsHighlightsInput : IGraphQlInputObject
+    {
+        private InputPropertyInfo _id;
+        private InputPropertyInfo _value;
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> Id
+        {
+            get { return (QueryBuilderParameter<string>)_id.Value; }
+            set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> Value
+        {
+            get { return (QueryBuilderParameter<string>)_value.Value; }
+            set { _value = new InputPropertyInfo { Name = "Value", Value = value }; }
+        }
+
+        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
+        {
+            if (_id.Name != null) yield return _id;
+            if (_value.Name != null) yield return _value;
+        }
+    }
+
+    public partial class ComponentInvestorsInvestorsFiltersInput : IGraphQlInputObject
+    {
+        private InputPropertyInfo _investor;
+        private InputPropertyInfo _category;
+        private InputPropertyInfo _and;
+        private InputPropertyInfo _or;
+        private InputPropertyInfo _not;
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<InvestorFiltersInput>))]
+        #endif
+        public QueryBuilderParameter<InvestorFiltersInput> Investor
+        {
+            get { return (QueryBuilderParameter<InvestorFiltersInput>)_investor.Value; }
+            set { _investor = new InputPropertyInfo { Name = "investor", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
+        #endif
+        public QueryBuilderParameter<StringFilterInput> Category
+        {
+            get { return (QueryBuilderParameter<StringFilterInput>)_category.Value; }
+            set { _category = new InputPropertyInfo { Name = "Category", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentInvestorsInvestorsFiltersInput>>))]
+        #endif
+        public QueryBuilderParameter<ICollection<ComponentInvestorsInvestorsFiltersInput>> And
+        {
+            get { return (QueryBuilderParameter<ICollection<ComponentInvestorsInvestorsFiltersInput>>)_and.Value; }
+            set { _and = new InputPropertyInfo { Name = "and", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentInvestorsInvestorsFiltersInput>>))]
+        #endif
+        public QueryBuilderParameter<ICollection<ComponentInvestorsInvestorsFiltersInput>> Or
+        {
+            get { return (QueryBuilderParameter<ICollection<ComponentInvestorsInvestorsFiltersInput>>)_or.Value; }
+            set { _or = new InputPropertyInfo { Name = "or", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ComponentInvestorsInvestorsFiltersInput>))]
+        #endif
+        public QueryBuilderParameter<ComponentInvestorsInvestorsFiltersInput> Not
+        {
+            get { return (QueryBuilderParameter<ComponentInvestorsInvestorsFiltersInput>)_not.Value; }
+            set { _not = new InputPropertyInfo { Name = "not", Value = value }; }
+        }
+
+        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
+        {
+            if (_investor.Name != null) yield return _investor;
+            if (_category.Name != null) yield return _category;
+            if (_and.Name != null) yield return _and;
+            if (_or.Name != null) yield return _or;
+            if (_not.Name != null) yield return _not;
+        }
+    }
+
+    public partial class ComponentInvestorsInvestorsInput : IGraphQlInputObject
+    {
+        private InputPropertyInfo _id;
+        private InputPropertyInfo _investor;
+        private InputPropertyInfo _category;
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> Id
+        {
+            get { return (QueryBuilderParameter<string>)_id.Value; }
+            set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> Investor
+        {
+            get { return (QueryBuilderParameter<string>)_investor.Value; }
+            set { _investor = new InputPropertyInfo { Name = "investor", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> Category
+        {
+            get { return (QueryBuilderParameter<string>)_category.Value; }
+            set { _category = new InputPropertyInfo { Name = "Category", Value = value }; }
+        }
+
+        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
+        {
+            if (_id.Name != null) yield return _id;
+            if (_investor.Name != null) yield return _investor;
+            if (_category.Name != null) yield return _category;
+        }
+    }
+
+    public partial class ComponentHtmlColorTextHtmlColorTextFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _text;
         private InputPropertyInfo _url;
@@ -19455,18 +19454,18 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentHtmlColorTextHtmlColorTextInput : IGraphQlInputObject
+    public partial class ComponentHtmlColorTextHtmlColorTextInput : IGraphQlInputObject
     {
         private InputPropertyInfo _id;
         private InputPropertyInfo _text;
         private InputPropertyInfo _url;
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Id
+        public QueryBuilderParameter<string> Id
         {
-            get { return (QueryBuilderParameter<Guid?>)_id.Value; }
+            get { return (QueryBuilderParameter<string>)_id.Value; }
             set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
         }
 
@@ -19496,10 +19495,10 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentDictionaryLinksFiltersInput : IGraphQlInputObject
+    public partial class ComponentIconTextIconTextFiltersInput : IGraphQlInputObject
     {
-        private InputPropertyInfo _name;
-        private InputPropertyInfo _url;
+        private InputPropertyInfo _text;
+        private InputPropertyInfo _smallText;
         private InputPropertyInfo _and;
         private InputPropertyInfo _or;
         private InputPropertyInfo _not;
@@ -19507,100 +19506,111 @@ namespace Poolz.Finance.CSharp.Strapi
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
         #endif
-        public QueryBuilderParameter<StringFilterInput> Name
+        public QueryBuilderParameter<StringFilterInput> Text
         {
-            get { return (QueryBuilderParameter<StringFilterInput>)_name.Value; }
-            set { _name = new InputPropertyInfo { Name = "name", Value = value }; }
+            get { return (QueryBuilderParameter<StringFilterInput>)_text.Value; }
+            set { _text = new InputPropertyInfo { Name = "text", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
         #endif
-        public QueryBuilderParameter<StringFilterInput> Url
+        public QueryBuilderParameter<StringFilterInput> SmallText
         {
-            get { return (QueryBuilderParameter<StringFilterInput>)_url.Value; }
-            set { _url = new InputPropertyInfo { Name = "url", Value = value }; }
+            get { return (QueryBuilderParameter<StringFilterInput>)_smallText.Value; }
+            set { _smallText = new InputPropertyInfo { Name = "smallText", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentDictionaryLinksFiltersInput>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentIconTextIconTextFiltersInput>>))]
         #endif
-        public QueryBuilderParameter<ICollection<ComponentDictionaryLinksFiltersInput>> And
+        public QueryBuilderParameter<ICollection<ComponentIconTextIconTextFiltersInput>> And
         {
-            get { return (QueryBuilderParameter<ICollection<ComponentDictionaryLinksFiltersInput>>)_and.Value; }
+            get { return (QueryBuilderParameter<ICollection<ComponentIconTextIconTextFiltersInput>>)_and.Value; }
             set { _and = new InputPropertyInfo { Name = "and", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentDictionaryLinksFiltersInput>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentIconTextIconTextFiltersInput>>))]
         #endif
-        public QueryBuilderParameter<ICollection<ComponentDictionaryLinksFiltersInput>> Or
+        public QueryBuilderParameter<ICollection<ComponentIconTextIconTextFiltersInput>> Or
         {
-            get { return (QueryBuilderParameter<ICollection<ComponentDictionaryLinksFiltersInput>>)_or.Value; }
+            get { return (QueryBuilderParameter<ICollection<ComponentIconTextIconTextFiltersInput>>)_or.Value; }
             set { _or = new InputPropertyInfo { Name = "or", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ComponentDictionaryLinksFiltersInput>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ComponentIconTextIconTextFiltersInput>))]
         #endif
-        public QueryBuilderParameter<ComponentDictionaryLinksFiltersInput> Not
+        public QueryBuilderParameter<ComponentIconTextIconTextFiltersInput> Not
         {
-            get { return (QueryBuilderParameter<ComponentDictionaryLinksFiltersInput>)_not.Value; }
+            get { return (QueryBuilderParameter<ComponentIconTextIconTextFiltersInput>)_not.Value; }
             set { _not = new InputPropertyInfo { Name = "not", Value = value }; }
         }
 
         IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
         {
-            if (_name.Name != null) yield return _name;
-            if (_url.Name != null) yield return _url;
+            if (_text.Name != null) yield return _text;
+            if (_smallText.Name != null) yield return _smallText;
             if (_and.Name != null) yield return _and;
             if (_or.Name != null) yield return _or;
             if (_not.Name != null) yield return _not;
         }
     }
 
-    public class ComponentDictionaryLinksInput : IGraphQlInputObject
+    public partial class ComponentIconTextIconTextInput : IGraphQlInputObject
     {
         private InputPropertyInfo _id;
-        private InputPropertyInfo _name;
-        private InputPropertyInfo _url;
+        private InputPropertyInfo _text;
+        private InputPropertyInfo _smallText;
+        private InputPropertyInfo _icon;
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Id
+        public QueryBuilderParameter<string> Id
         {
-            get { return (QueryBuilderParameter<Guid?>)_id.Value; }
+            get { return (QueryBuilderParameter<string>)_id.Value; }
             set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<string> Name
+        public QueryBuilderParameter<string> Text
         {
-            get { return (QueryBuilderParameter<string>)_name.Value; }
-            set { _name = new InputPropertyInfo { Name = "name", Value = value }; }
+            get { return (QueryBuilderParameter<string>)_text.Value; }
+            set { _text = new InputPropertyInfo { Name = "text", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<string> Url
+        public QueryBuilderParameter<string> SmallText
         {
-            get { return (QueryBuilderParameter<string>)_url.Value; }
-            set { _url = new InputPropertyInfo { Name = "url", Value = value }; }
+            get { return (QueryBuilderParameter<string>)_smallText.Value; }
+            set { _smallText = new InputPropertyInfo { Name = "smallText", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> Icon
+        {
+            get { return (QueryBuilderParameter<string>)_icon.Value; }
+            set { _icon = new InputPropertyInfo { Name = "icon", Value = value }; }
         }
 
         IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
         {
             if (_id.Name != null) yield return _id;
-            if (_name.Name != null) yield return _name;
-            if (_url.Name != null) yield return _url;
+            if (_text.Name != null) yield return _text;
+            if (_smallText.Name != null) yield return _smallText;
+            if (_icon.Name != null) yield return _icon;
         }
     }
 
-    public class ComponentHeaderSimpleUrlHeaderSimpleUrlFiltersInput : IGraphQlInputObject
+    public partial class ComponentHeaderSimpleUrlHeaderSimpleUrlFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _text;
         private InputPropertyInfo _url;
@@ -19685,7 +19695,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentHeaderSimpleUrlHeaderSimpleUrlInput : IGraphQlInputObject
+    public partial class ComponentHeaderSimpleUrlHeaderSimpleUrlInput : IGraphQlInputObject
     {
         private InputPropertyInfo _id;
         private InputPropertyInfo _text;
@@ -19694,11 +19704,11 @@ namespace Poolz.Finance.CSharp.Strapi
         private InputPropertyInfo _textColor;
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Id
+        public QueryBuilderParameter<string> Id
         {
-            get { return (QueryBuilderParameter<Guid?>)_id.Value; }
+            get { return (QueryBuilderParameter<string>)_id.Value; }
             set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
         }
 
@@ -19748,9 +19758,10 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentHighlightsHighlightsFiltersInput : IGraphQlInputObject
+    public partial class ComponentDictionaryLinksFiltersInput : IGraphQlInputObject
     {
-        private InputPropertyInfo _value;
+        private InputPropertyInfo _name;
+        private InputPropertyInfo _url;
         private InputPropertyInfo _and;
         private InputPropertyInfo _or;
         private InputPropertyInfo _not;
@@ -19758,79 +19769,100 @@ namespace Poolz.Finance.CSharp.Strapi
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
         #endif
-        public QueryBuilderParameter<StringFilterInput> Value
+        public QueryBuilderParameter<StringFilterInput> Name
         {
-            get { return (QueryBuilderParameter<StringFilterInput>)_value.Value; }
-            set { _value = new InputPropertyInfo { Name = "Value", Value = value }; }
+            get { return (QueryBuilderParameter<StringFilterInput>)_name.Value; }
+            set { _name = new InputPropertyInfo { Name = "name", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentHighlightsHighlightsFiltersInput>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
         #endif
-        public QueryBuilderParameter<ICollection<ComponentHighlightsHighlightsFiltersInput>> And
+        public QueryBuilderParameter<StringFilterInput> Url
         {
-            get { return (QueryBuilderParameter<ICollection<ComponentHighlightsHighlightsFiltersInput>>)_and.Value; }
+            get { return (QueryBuilderParameter<StringFilterInput>)_url.Value; }
+            set { _url = new InputPropertyInfo { Name = "url", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentDictionaryLinksFiltersInput>>))]
+        #endif
+        public QueryBuilderParameter<ICollection<ComponentDictionaryLinksFiltersInput>> And
+        {
+            get { return (QueryBuilderParameter<ICollection<ComponentDictionaryLinksFiltersInput>>)_and.Value; }
             set { _and = new InputPropertyInfo { Name = "and", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentHighlightsHighlightsFiltersInput>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentDictionaryLinksFiltersInput>>))]
         #endif
-        public QueryBuilderParameter<ICollection<ComponentHighlightsHighlightsFiltersInput>> Or
+        public QueryBuilderParameter<ICollection<ComponentDictionaryLinksFiltersInput>> Or
         {
-            get { return (QueryBuilderParameter<ICollection<ComponentHighlightsHighlightsFiltersInput>>)_or.Value; }
+            get { return (QueryBuilderParameter<ICollection<ComponentDictionaryLinksFiltersInput>>)_or.Value; }
             set { _or = new InputPropertyInfo { Name = "or", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ComponentHighlightsHighlightsFiltersInput>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ComponentDictionaryLinksFiltersInput>))]
         #endif
-        public QueryBuilderParameter<ComponentHighlightsHighlightsFiltersInput> Not
+        public QueryBuilderParameter<ComponentDictionaryLinksFiltersInput> Not
         {
-            get { return (QueryBuilderParameter<ComponentHighlightsHighlightsFiltersInput>)_not.Value; }
+            get { return (QueryBuilderParameter<ComponentDictionaryLinksFiltersInput>)_not.Value; }
             set { _not = new InputPropertyInfo { Name = "not", Value = value }; }
         }
 
         IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
         {
-            if (_value.Name != null) yield return _value;
+            if (_name.Name != null) yield return _name;
+            if (_url.Name != null) yield return _url;
             if (_and.Name != null) yield return _and;
             if (_or.Name != null) yield return _or;
             if (_not.Name != null) yield return _not;
         }
     }
 
-    public class ComponentHighlightsHighlightsInput : IGraphQlInputObject
+    public partial class ComponentDictionaryLinksInput : IGraphQlInputObject
     {
         private InputPropertyInfo _id;
-        private InputPropertyInfo _value;
+        private InputPropertyInfo _name;
+        private InputPropertyInfo _url;
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Id
+        public QueryBuilderParameter<string> Id
         {
-            get { return (QueryBuilderParameter<Guid?>)_id.Value; }
+            get { return (QueryBuilderParameter<string>)_id.Value; }
             set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<string> Value
+        public QueryBuilderParameter<string> Name
         {
-            get { return (QueryBuilderParameter<string>)_value.Value; }
-            set { _value = new InputPropertyInfo { Name = "Value", Value = value }; }
+            get { return (QueryBuilderParameter<string>)_name.Value; }
+            set { _name = new InputPropertyInfo { Name = "name", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> Url
+        {
+            get { return (QueryBuilderParameter<string>)_url.Value; }
+            set { _url = new InputPropertyInfo { Name = "url", Value = value }; }
         }
 
         IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
         {
             if (_id.Name != null) yield return _id;
-            if (_value.Name != null) yield return _value;
+            if (_name.Name != null) yield return _name;
+            if (_url.Name != null) yield return _url;
         }
     }
 
-    public class ComponentFullTokenDistributionFullTokenDistributionFiltersInput : IGraphQlInputObject
+    public partial class ComponentFullTokenDistributionFullTokenDistributionFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _tge;
         private InputPropertyInfo _monthly;
@@ -19927,7 +19959,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentFullTokenDistributionFullTokenDistributionInput : IGraphQlInputObject
+    public partial class ComponentFullTokenDistributionFullTokenDistributionInput : IGraphQlInputObject
     {
         private InputPropertyInfo _id;
         private InputPropertyInfo _tge;
@@ -19937,11 +19969,11 @@ namespace Poolz.Finance.CSharp.Strapi
         private InputPropertyInfo _nonEvmChain;
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Id
+        public QueryBuilderParameter<string> Id
         {
-            get { return (QueryBuilderParameter<Guid?>)_id.Value; }
+            get { return (QueryBuilderParameter<string>)_id.Value; }
             set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
         }
 
@@ -19983,11 +20015,11 @@ namespace Poolz.Finance.CSharp.Strapi
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("non_evm_chain")]
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> NonEvmChain
+        public QueryBuilderParameter<string> NonEvmChain
         {
-            get { return (QueryBuilderParameter<Guid?>)_nonEvmChain.Value; }
+            get { return (QueryBuilderParameter<string>)_nonEvmChain.Value; }
             set { _nonEvmChain = new InputPropertyInfo { Name = "non_evm_chain", Value = value }; }
         }
 
@@ -20002,100 +20034,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentColorIconColorIconFiltersInput : IGraphQlInputObject
-    {
-        private InputPropertyInfo _color;
-        private InputPropertyInfo _and;
-        private InputPropertyInfo _or;
-        private InputPropertyInfo _not;
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
-        #endif
-        public QueryBuilderParameter<StringFilterInput> Color
-        {
-            get { return (QueryBuilderParameter<StringFilterInput>)_color.Value; }
-            set { _color = new InputPropertyInfo { Name = "Color", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentColorIconColorIconFiltersInput>>))]
-        #endif
-        public QueryBuilderParameter<ICollection<ComponentColorIconColorIconFiltersInput>> And
-        {
-            get { return (QueryBuilderParameter<ICollection<ComponentColorIconColorIconFiltersInput>>)_and.Value; }
-            set { _and = new InputPropertyInfo { Name = "and", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentColorIconColorIconFiltersInput>>))]
-        #endif
-        public QueryBuilderParameter<ICollection<ComponentColorIconColorIconFiltersInput>> Or
-        {
-            get { return (QueryBuilderParameter<ICollection<ComponentColorIconColorIconFiltersInput>>)_or.Value; }
-            set { _or = new InputPropertyInfo { Name = "or", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ComponentColorIconColorIconFiltersInput>))]
-        #endif
-        public QueryBuilderParameter<ComponentColorIconColorIconFiltersInput> Not
-        {
-            get { return (QueryBuilderParameter<ComponentColorIconColorIconFiltersInput>)_not.Value; }
-            set { _not = new InputPropertyInfo { Name = "not", Value = value }; }
-        }
-
-        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
-        {
-            if (_color.Name != null) yield return _color;
-            if (_and.Name != null) yield return _and;
-            if (_or.Name != null) yield return _or;
-            if (_not.Name != null) yield return _not;
-        }
-    }
-
-    public class ComponentColorIconColorIconInput : IGraphQlInputObject
-    {
-        private InputPropertyInfo _id;
-        private InputPropertyInfo _icon;
-        private InputPropertyInfo _color;
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
-        #endif
-        public QueryBuilderParameter<Guid?> Id
-        {
-            get { return (QueryBuilderParameter<Guid?>)_id.Value; }
-            set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
-        #endif
-        public QueryBuilderParameter<Guid?> Icon
-        {
-            get { return (QueryBuilderParameter<Guid?>)_icon.Value; }
-            set { _icon = new InputPropertyInfo { Name = "icon", Value = value }; }
-        }
-
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
-        #endif
-        public QueryBuilderParameter<string> Color
-        {
-            get { return (QueryBuilderParameter<string>)_color.Value; }
-            set { _color = new InputPropertyInfo { Name = "Color", Value = value }; }
-        }
-
-        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
-        {
-            if (_id.Name != null) yield return _id;
-            if (_icon.Name != null) yield return _icon;
-            if (_color.Name != null) yield return _color;
-        }
-    }
-
-    public class ComponentContractOnChainContractOnChainFiltersInput : IGraphQlInputObject
+    public partial class ComponentContractOnChainContractOnChainFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _contractVersion;
         private InputPropertyInfo _address;
@@ -20169,7 +20108,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentContractOnChainContractOnChainInput : IGraphQlInputObject
+    public partial class ComponentContractOnChainContractOnChainInput : IGraphQlInputObject
     {
         private InputPropertyInfo _id;
         private InputPropertyInfo _contractVersion;
@@ -20177,20 +20116,20 @@ namespace Poolz.Finance.CSharp.Strapi
         private InputPropertyInfo _contractType;
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Id
+        public QueryBuilderParameter<string> Id
         {
-            get { return (QueryBuilderParameter<Guid?>)_id.Value; }
+            get { return (QueryBuilderParameter<string>)_id.Value; }
             set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> ContractVersion
+        public QueryBuilderParameter<string> ContractVersion
         {
-            get { return (QueryBuilderParameter<Guid?>)_contractVersion.Value; }
+            get { return (QueryBuilderParameter<string>)_contractVersion.Value; }
             set { _contractVersion = new InputPropertyInfo { Name = "ContractVersion", Value = value }; }
         }
 
@@ -20204,11 +20143,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> ContractType
+        public QueryBuilderParameter<string> ContractType
         {
-            get { return (QueryBuilderParameter<Guid?>)_contractType.Value; }
+            get { return (QueryBuilderParameter<string>)_contractType.Value; }
             set { _contractType = new InputPropertyInfo { Name = "ContractType", Value = value }; }
         }
 
@@ -20221,7 +20160,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentCompilerSettingCompilerSettingsFiltersInput : IGraphQlInputObject
+    public partial class ComponentCompilerSettingCompilerSettingsFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _evmVersion;
         private InputPropertyInfo _supportedPragmaVersion;
@@ -20319,7 +20258,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentCompilerSettingCompilerSettingsInput : IGraphQlInputObject
+    public partial class ComponentCompilerSettingCompilerSettingsInput : IGraphQlInputObject
     {
         private InputPropertyInfo _id;
         private InputPropertyInfo _evmVersion;
@@ -20329,31 +20268,31 @@ namespace Poolz.Finance.CSharp.Strapi
         private InputPropertyInfo _viaIr;
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Id
+        public QueryBuilderParameter<string> Id
         {
-            get { return (QueryBuilderParameter<Guid?>)_id.Value; }
+            get { return (QueryBuilderParameter<string>)_id.Value; }
             set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("evm_version")]
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> EvmVersion
+        public QueryBuilderParameter<string> EvmVersion
         {
-            get { return (QueryBuilderParameter<Guid?>)_evmVersion.Value; }
+            get { return (QueryBuilderParameter<string>)_evmVersion.Value; }
             set { _evmVersion = new InputPropertyInfo { Name = "evm_version", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("supported_pragma_version")]
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> SupportedPragmaVersion
+        public QueryBuilderParameter<string> SupportedPragmaVersion
         {
-            get { return (QueryBuilderParameter<Guid?>)_supportedPragmaVersion.Value; }
+            get { return (QueryBuilderParameter<string>)_supportedPragmaVersion.Value; }
             set { _supportedPragmaVersion = new InputPropertyInfo { Name = "supported_pragma_version", Value = value }; }
         }
 
@@ -20395,7 +20334,100 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentChainAddressesChainAddressesFiltersInput : IGraphQlInputObject
+    public partial class ComponentColorIconColorIconFiltersInput : IGraphQlInputObject
+    {
+        private InputPropertyInfo _color;
+        private InputPropertyInfo _and;
+        private InputPropertyInfo _or;
+        private InputPropertyInfo _not;
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<StringFilterInput>))]
+        #endif
+        public QueryBuilderParameter<StringFilterInput> Color
+        {
+            get { return (QueryBuilderParameter<StringFilterInput>)_color.Value; }
+            set { _color = new InputPropertyInfo { Name = "Color", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentColorIconColorIconFiltersInput>>))]
+        #endif
+        public QueryBuilderParameter<ICollection<ComponentColorIconColorIconFiltersInput>> And
+        {
+            get { return (QueryBuilderParameter<ICollection<ComponentColorIconColorIconFiltersInput>>)_and.Value; }
+            set { _and = new InputPropertyInfo { Name = "and", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<ComponentColorIconColorIconFiltersInput>>))]
+        #endif
+        public QueryBuilderParameter<ICollection<ComponentColorIconColorIconFiltersInput>> Or
+        {
+            get { return (QueryBuilderParameter<ICollection<ComponentColorIconColorIconFiltersInput>>)_or.Value; }
+            set { _or = new InputPropertyInfo { Name = "or", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ComponentColorIconColorIconFiltersInput>))]
+        #endif
+        public QueryBuilderParameter<ComponentColorIconColorIconFiltersInput> Not
+        {
+            get { return (QueryBuilderParameter<ComponentColorIconColorIconFiltersInput>)_not.Value; }
+            set { _not = new InputPropertyInfo { Name = "not", Value = value }; }
+        }
+
+        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
+        {
+            if (_color.Name != null) yield return _color;
+            if (_and.Name != null) yield return _and;
+            if (_or.Name != null) yield return _or;
+            if (_not.Name != null) yield return _not;
+        }
+    }
+
+    public partial class ComponentColorIconColorIconInput : IGraphQlInputObject
+    {
+        private InputPropertyInfo _id;
+        private InputPropertyInfo _icon;
+        private InputPropertyInfo _color;
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> Id
+        {
+            get { return (QueryBuilderParameter<string>)_id.Value; }
+            set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> Icon
+        {
+            get { return (QueryBuilderParameter<string>)_icon.Value; }
+            set { _icon = new InputPropertyInfo { Name = "icon", Value = value }; }
+        }
+
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
+        #endif
+        public QueryBuilderParameter<string> Color
+        {
+            get { return (QueryBuilderParameter<string>)_color.Value; }
+            set { _color = new InputPropertyInfo { Name = "Color", Value = value }; }
+        }
+
+        IEnumerable<InputPropertyInfo> IGraphQlInputObject.GetPropertyValues()
+        {
+            if (_id.Name != null) yield return _id;
+            if (_icon.Name != null) yield return _icon;
+            if (_color.Name != null) yield return _color;
+        }
+    }
+
+    public partial class ComponentChainAddressesChainAddressesFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _chainSetting;
         private InputPropertyInfo _address;
@@ -20459,28 +20491,28 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ComponentChainAddressesChainAddressesInput : IGraphQlInputObject
+    public partial class ComponentChainAddressesChainAddressesInput : IGraphQlInputObject
     {
         private InputPropertyInfo _id;
         private InputPropertyInfo _chainSetting;
         private InputPropertyInfo _address;
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Id
+        public QueryBuilderParameter<string> Id
         {
-            get { return (QueryBuilderParameter<Guid?>)_id.Value; }
+            get { return (QueryBuilderParameter<string>)_id.Value; }
             set { _id = new InputPropertyInfo { Name = "id", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("chain_setting")]
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> ChainSetting
+        public QueryBuilderParameter<string> ChainSetting
         {
-            get { return (QueryBuilderParameter<Guid?>)_chainSetting.Value; }
+            get { return (QueryBuilderParameter<string>)_chainSetting.Value; }
             set { _chainSetting = new InputPropertyInfo { Name = "chain_setting", Value = value }; }
         }
 
@@ -20501,7 +20533,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UploadFileFiltersInput : IGraphQlInputObject
+    public partial class UploadFileFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _name;
@@ -20741,7 +20773,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class I18NLocaleFiltersInput : IGraphQlInputObject
+    public partial class I18NLocaleFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _name;
@@ -20848,7 +20880,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ReviewWorkflowsWorkflowFiltersInput : IGraphQlInputObject
+    public partial class ReviewWorkflowsWorkflowFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _name;
@@ -20977,7 +21009,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ReviewWorkflowsWorkflowInput : IGraphQlInputObject
+    public partial class ReviewWorkflowsWorkflowInput : IGraphQlInputObject
     {
         private InputPropertyInfo _name;
         private InputPropertyInfo _stages;
@@ -20995,20 +21027,20 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<Guid?>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<string>>))]
         #endif
-        public QueryBuilderParameter<ICollection<Guid?>> Stages
+        public QueryBuilderParameter<ICollection<string>> Stages
         {
-            get { return (QueryBuilderParameter<ICollection<Guid?>>)_stages.Value; }
+            get { return (QueryBuilderParameter<ICollection<string>>)_stages.Value; }
             set { _stages = new InputPropertyInfo { Name = "stages", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> StageRequiredToPublish
+        public QueryBuilderParameter<string> StageRequiredToPublish
         {
-            get { return (QueryBuilderParameter<Guid?>)_stageRequiredToPublish.Value; }
+            get { return (QueryBuilderParameter<string>)_stageRequiredToPublish.Value; }
             set { _stageRequiredToPublish = new InputPropertyInfo { Name = "stageRequiredToPublish", Value = value }; }
         }
 
@@ -21040,7 +21072,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ReviewWorkflowsWorkflowStageFiltersInput : IGraphQlInputObject
+    public partial class ReviewWorkflowsWorkflowStageFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _name;
@@ -21158,7 +21190,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ReviewWorkflowsWorkflowStageInput : IGraphQlInputObject
+    public partial class ReviewWorkflowsWorkflowStageInput : IGraphQlInputObject
     {
         private InputPropertyInfo _name;
         private InputPropertyInfo _color;
@@ -21184,11 +21216,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Workflow
+        public QueryBuilderParameter<string> Workflow
         {
-            get { return (QueryBuilderParameter<Guid?>)_workflow.Value; }
+            get { return (QueryBuilderParameter<string>)_workflow.Value; }
             set { _workflow = new InputPropertyInfo { Name = "workflow", Value = value }; }
         }
 
@@ -21210,7 +21242,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UsersPermissionsPermissionFiltersInput : IGraphQlInputObject
+    public partial class UsersPermissionsPermissionFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _action;
@@ -21317,7 +21349,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UsersPermissionsRoleFiltersInput : IGraphQlInputObject
+    public partial class UsersPermissionsRoleFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _name;
@@ -21457,7 +21489,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UsersPermissionsRoleInput : IGraphQlInputObject
+    public partial class UsersPermissionsRoleInput : IGraphQlInputObject
     {
         private InputPropertyInfo _name;
         private InputPropertyInfo _description;
@@ -21494,20 +21526,20 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<Guid?>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<string>>))]
         #endif
-        public QueryBuilderParameter<ICollection<Guid?>> Permissions
+        public QueryBuilderParameter<ICollection<string>> Permissions
         {
-            get { return (QueryBuilderParameter<ICollection<Guid?>>)_permissions.Value; }
+            get { return (QueryBuilderParameter<ICollection<string>>)_permissions.Value; }
             set { _permissions = new InputPropertyInfo { Name = "permissions", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<Guid?>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<string>>))]
         #endif
-        public QueryBuilderParameter<ICollection<Guid?>> Users
+        public QueryBuilderParameter<ICollection<string>> Users
         {
-            get { return (QueryBuilderParameter<ICollection<Guid?>>)_users.Value; }
+            get { return (QueryBuilderParameter<ICollection<string>>)_users.Value; }
             set { _users = new InputPropertyInfo { Name = "users", Value = value }; }
         }
 
@@ -21531,7 +21563,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UsersPermissionsUserFiltersInput : IGraphQlInputObject
+    public partial class UsersPermissionsUserFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _username;
@@ -21682,7 +21714,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UsersPermissionsUserInput : IGraphQlInputObject
+    public partial class UsersPermissionsUserInput : IGraphQlInputObject
     {
         private InputPropertyInfo _username;
         private InputPropertyInfo _email;
@@ -21739,11 +21771,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Role
+        public QueryBuilderParameter<string> Role
         {
-            get { return (QueryBuilderParameter<Guid?>)_role.Value; }
+            get { return (QueryBuilderParameter<string>)_role.Value; }
             set { _role = new InputPropertyInfo { Name = "role", Value = value }; }
         }
 
@@ -21778,7 +21810,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AboutUsInput : IGraphQlInputObject
+    public partial class AboutUsInput : IGraphQlInputObject
     {
         private InputPropertyInfo _title;
         private InputPropertyInfo _smallText;
@@ -21845,11 +21877,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<Guid?>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<string>>))]
         #endif
-        public QueryBuilderParameter<ICollection<Guid?>> Sliders
+        public QueryBuilderParameter<ICollection<string>> Sliders
         {
-            get { return (QueryBuilderParameter<ICollection<Guid?>>)_sliders.Value; }
+            get { return (QueryBuilderParameter<ICollection<string>>)_sliders.Value; }
             set { _sliders = new InputPropertyInfo { Name = "sliders", Value = value }; }
         }
 
@@ -21875,7 +21907,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AccountInput : IGraphQlInputObject
+    public partial class AccountInput : IGraphQlInputObject
     {
         private InputPropertyInfo _title;
         private InputPropertyInfo _smallText;
@@ -21916,7 +21948,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AuthAdministratorFiltersInput : IGraphQlInputObject
+    public partial class AuthAdministratorFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _wallet;
@@ -22012,7 +22044,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AuthAdministratorInput : IGraphQlInputObject
+    public partial class AuthAdministratorInput : IGraphQlInputObject
     {
         private InputPropertyInfo _wallet;
         private InputPropertyInfo _publishedAt;
@@ -22042,17 +22074,17 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AuthAdministratorsResourceInput : IGraphQlInputObject
+    public partial class AuthAdministratorsResourceInput : IGraphQlInputObject
     {
         private InputPropertyInfo _onlyAdminResources;
         private InputPropertyInfo _publishedAt;
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<Guid?>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<string>>))]
         #endif
-        public QueryBuilderParameter<ICollection<Guid?>> OnlyAdminResources
+        public QueryBuilderParameter<ICollection<string>> OnlyAdminResources
         {
-            get { return (QueryBuilderParameter<ICollection<Guid?>>)_onlyAdminResources.Value; }
+            get { return (QueryBuilderParameter<ICollection<string>>)_onlyAdminResources.Value; }
             set { _onlyAdminResources = new InputPropertyInfo { Name = "OnlyAdminResources", Value = value }; }
         }
 
@@ -22072,7 +22104,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AuthResourceFiltersInput : IGraphQlInputObject
+    public partial class AuthResourceFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _name;
@@ -22179,7 +22211,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AuthResourceInput : IGraphQlInputObject
+    public partial class AuthResourceInput : IGraphQlInputObject
     {
         private InputPropertyInfo _name;
         private InputPropertyInfo _roleIDs;
@@ -22195,11 +22227,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<Guid?>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<string>>))]
         #endif
-        public QueryBuilderParameter<ICollection<Guid?>> RoleIDs
+        public QueryBuilderParameter<ICollection<string>> RoleIDs
         {
-            get { return (QueryBuilderParameter<ICollection<Guid?>>)_roleIDs.Value; }
+            get { return (QueryBuilderParameter<ICollection<string>>)_roleIDs.Value; }
             set { _roleIDs = new InputPropertyInfo { Name = "RoleIDs", Value = value }; }
         }
 
@@ -22220,7 +22252,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AuthRoleFiltersInput : IGraphQlInputObject
+    public partial class AuthRoleFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _name;
@@ -22338,7 +22370,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AuthRoleInput : IGraphQlInputObject
+    public partial class AuthRoleInput : IGraphQlInputObject
     {
         private InputPropertyInfo _name;
         private InputPropertyInfo _userIDs;
@@ -22355,20 +22387,20 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<Guid?>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<string>>))]
         #endif
-        public QueryBuilderParameter<ICollection<Guid?>> UserIDs
+        public QueryBuilderParameter<ICollection<string>> UserIDs
         {
-            get { return (QueryBuilderParameter<ICollection<Guid?>>)_userIDs.Value; }
+            get { return (QueryBuilderParameter<ICollection<string>>)_userIDs.Value; }
             set { _userIDs = new InputPropertyInfo { Name = "UserIDs", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<Guid?>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<string>>))]
         #endif
-        public QueryBuilderParameter<ICollection<Guid?>> ResourceIDs
+        public QueryBuilderParameter<ICollection<string>> ResourceIDs
         {
-            get { return (QueryBuilderParameter<ICollection<Guid?>>)_resourceIDs.Value; }
+            get { return (QueryBuilderParameter<ICollection<string>>)_resourceIDs.Value; }
             set { _resourceIDs = new InputPropertyInfo { Name = "ResourceIDs", Value = value }; }
         }
 
@@ -22390,7 +22422,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AuthUserFiltersInput : IGraphQlInputObject
+    public partial class AuthUserFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _wallet;
@@ -22497,7 +22529,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class AuthUserInput : IGraphQlInputObject
+    public partial class AuthUserInput : IGraphQlInputObject
     {
         private InputPropertyInfo _wallet;
         private InputPropertyInfo _roleIDs;
@@ -22513,11 +22545,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<Guid?>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<string>>))]
         #endif
-        public QueryBuilderParameter<ICollection<Guid?>> RoleIDs
+        public QueryBuilderParameter<ICollection<string>> RoleIDs
         {
-            get { return (QueryBuilderParameter<ICollection<Guid?>>)_roleIDs.Value; }
+            get { return (QueryBuilderParameter<ICollection<string>>)_roleIDs.Value; }
             set { _roleIDs = new InputPropertyInfo { Name = "RoleIDs", Value = value }; }
         }
 
@@ -22538,7 +22570,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class BoostInput : IGraphQlInputObject
+    public partial class BoostInput : IGraphQlInputObject
     {
         private InputPropertyInfo _title;
         private InputPropertyInfo _smallText;
@@ -22606,20 +22638,20 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<Guid?>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<string>>))]
         #endif
-        public QueryBuilderParameter<ICollection<Guid?>> Sliders
+        public QueryBuilderParameter<ICollection<string>> Sliders
         {
-            get { return (QueryBuilderParameter<ICollection<Guid?>>)_sliders.Value; }
+            get { return (QueryBuilderParameter<ICollection<string>>)_sliders.Value; }
             set { _sliders = new InputPropertyInfo { Name = "sliders", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<Guid?>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<string>>))]
         #endif
-        public QueryBuilderParameter<ICollection<Guid?>> TopBg
+        public QueryBuilderParameter<ICollection<string>> TopBg
         {
-            get { return (QueryBuilderParameter<ICollection<Guid?>>)_topBg.Value; }
+            get { return (QueryBuilderParameter<ICollection<string>>)_topBg.Value; }
             set { _topBg = new InputPropertyInfo { Name = "TopBg", Value = value }; }
         }
 
@@ -22646,7 +22678,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class BuyPoolzFiltersInput : IGraphQlInputObject
+    public partial class BuyPoolzFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _name;
@@ -22775,7 +22807,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class BuyPoolzInput : IGraphQlInputObject
+    public partial class BuyPoolzInput : IGraphQlInputObject
     {
         private InputPropertyInfo _name;
         private InputPropertyInfo _url;
@@ -22803,11 +22835,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Icon
+        public QueryBuilderParameter<string> Icon
         {
-            get { return (QueryBuilderParameter<Guid?>)_icon.Value; }
+            get { return (QueryBuilderParameter<string>)_icon.Value; }
             set { _icon = new InputPropertyInfo { Name = "Icon", Value = value }; }
         }
 
@@ -22849,7 +22881,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class BuyWithFiltersInput : IGraphQlInputObject
+    public partial class BuyWithFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _name;
@@ -22956,7 +22988,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class BuyWithInput : IGraphQlInputObject
+    public partial class BuyWithInput : IGraphQlInputObject
     {
         private InputPropertyInfo _name;
         private InputPropertyInfo _chainAddresses;
@@ -22997,7 +23029,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ChainFiltersInput : IGraphQlInputObject
+    public partial class ChainFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _name;
@@ -23150,7 +23182,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ChainInput : IGraphQlInputObject
+    public partial class ChainInput : IGraphQlInputObject
     {
         private InputPropertyInfo _name;
         private InputPropertyInfo _symbol;
@@ -23198,21 +23230,21 @@ namespace Poolz.Finance.CSharp.Strapi
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("chain_setting")]
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> ChainSetting
+        public QueryBuilderParameter<string> ChainSetting
         {
-            get { return (QueryBuilderParameter<Guid?>)_chainSetting.Value; }
+            get { return (QueryBuilderParameter<string>)_chainSetting.Value; }
             set { _chainSetting = new InputPropertyInfo { Name = "chain_setting", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("contracts_on_chain")]
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> ContractsOnChain
+        public QueryBuilderParameter<string> ContractsOnChain
         {
-            get { return (QueryBuilderParameter<Guid?>)_contractsOnChain.Value; }
+            get { return (QueryBuilderParameter<string>)_contractsOnChain.Value; }
             set { _contractsOnChain = new InputPropertyInfo { Name = "contracts_on_chain", Value = value }; }
         }
 
@@ -23237,7 +23269,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ChainSettingFiltersInput : IGraphQlInputObject
+    public partial class ChainSettingFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _isEvm;
@@ -23423,7 +23455,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ChainSettingInput : IGraphQlInputObject
+    public partial class ChainSettingInput : IGraphQlInputObject
     {
         private InputPropertyInfo _isEvm;
         private InputPropertyInfo _displayText;
@@ -23456,11 +23488,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> WhiteLogo
+        public QueryBuilderParameter<string> WhiteLogo
         {
-            get { return (QueryBuilderParameter<Guid?>)_whiteLogo.Value; }
+            get { return (QueryBuilderParameter<string>)_whiteLogo.Value; }
             set { _whiteLogo = new InputPropertyInfo { Name = "WhiteLogo", Value = value }; }
         }
 
@@ -23501,31 +23533,31 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Chain
+        public QueryBuilderParameter<string> Chain
         {
-            get { return (QueryBuilderParameter<Guid?>)_chain.Value; }
+            get { return (QueryBuilderParameter<string>)_chain.Value; }
             set { _chain = new InputPropertyInfo { Name = "chain", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("lock_token_whitelist")]
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> LockTokenWhitelist
+        public QueryBuilderParameter<string> LockTokenWhitelist
         {
-            get { return (QueryBuilderParameter<Guid?>)_lockTokenWhitelist.Value; }
+            get { return (QueryBuilderParameter<string>)_lockTokenWhitelist.Value; }
             set { _lockTokenWhitelist = new InputPropertyInfo { Name = "lock_token_whitelist", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("projects_informations")]
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<Guid?>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<string>>))]
         #endif
-        public QueryBuilderParameter<ICollection<Guid?>> ProjectsInformations
+        public QueryBuilderParameter<ICollection<string>> ProjectsInformations
         {
-            get { return (QueryBuilderParameter<ICollection<Guid?>>)_projectsInformations.Value; }
+            get { return (QueryBuilderParameter<ICollection<string>>)_projectsInformations.Value; }
             set { _projectsInformations = new InputPropertyInfo { Name = "projects_informations", Value = value }; }
         }
 
@@ -23554,7 +23586,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ConditionInput : IGraphQlInputObject
+    public partial class ConditionInput : IGraphQlInputObject
     {
         private InputPropertyInfo _value;
         private InputPropertyInfo _publishedAt;
@@ -23584,7 +23616,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ContractFiltersInput : IGraphQlInputObject
+    public partial class ContractFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _nameVersion;
@@ -23735,7 +23767,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ContractInput : IGraphQlInputObject
+    public partial class ContractInput : IGraphQlInputObject
     {
         private InputPropertyInfo _nameVersion;
         private InputPropertyInfo _abi;
@@ -23820,7 +23852,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ContractTypeFiltersInput : IGraphQlInputObject
+    public partial class ContractTypeFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _contractType;
@@ -23938,7 +23970,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ContractTypeInput : IGraphQlInputObject
+    public partial class ContractTypeInput : IGraphQlInputObject
     {
         private InputPropertyInfo _contractType;
         private InputPropertyInfo _order;
@@ -23990,7 +24022,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ContractsOnChainFiltersInput : IGraphQlInputObject
+    public partial class ContractsOnChainFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _chain;
@@ -24163,7 +24195,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ContractsOnChainInput : IGraphQlInputObject
+    public partial class ContractsOnChainInput : IGraphQlInputObject
     {
         private InputPropertyInfo _chain;
         private InputPropertyInfo _contracts;
@@ -24176,11 +24208,11 @@ namespace Poolz.Finance.CSharp.Strapi
         private InputPropertyInfo _publishedAt;
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Chain
+        public QueryBuilderParameter<string> Chain
         {
-            get { return (QueryBuilderParameter<Guid?>)_chain.Value; }
+            get { return (QueryBuilderParameter<string>)_chain.Value; }
             set { _chain = new InputPropertyInfo { Name = "Chain", Value = value }; }
         }
 
@@ -24270,7 +24302,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class CoverFiltersInput : IGraphQlInputObject
+    public partial class CoverFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _createdAt;
@@ -24355,17 +24387,17 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class CoverInput : IGraphQlInputObject
+    public partial class CoverInput : IGraphQlInputObject
     {
         private InputPropertyInfo _picture;
         private InputPropertyInfo _publishedAt;
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Picture
+        public QueryBuilderParameter<string> Picture
         {
-            get { return (QueryBuilderParameter<Guid?>)_picture.Value; }
+            get { return (QueryBuilderParameter<string>)_picture.Value; }
             set { _picture = new InputPropertyInfo { Name = "picture", Value = value }; }
         }
 
@@ -24385,7 +24417,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class DefaultWalletFiltersInput : IGraphQlInputObject
+    public partial class DefaultWalletFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _name;
@@ -24503,7 +24535,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class DefaultWalletInput : IGraphQlInputObject
+    public partial class DefaultWalletInput : IGraphQlInputObject
     {
         private InputPropertyInfo _name;
         private InputPropertyInfo _link;
@@ -24539,11 +24571,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Icon
+        public QueryBuilderParameter<string> Icon
         {
-            get { return (QueryBuilderParameter<Guid?>)_icon.Value; }
+            get { return (QueryBuilderParameter<string>)_icon.Value; }
             set { _icon = new InputPropertyInfo { Name = "Icon", Value = value }; }
         }
 
@@ -24566,7 +24598,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class EvmVersionFiltersInput : IGraphQlInputObject
+    public partial class EvmVersionFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _evmVersion;
@@ -24662,7 +24694,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class EvmVersionInput : IGraphQlInputObject
+    public partial class EvmVersionInput : IGraphQlInputObject
     {
         private InputPropertyInfo _evmVersion;
         private InputPropertyInfo _publishedAt;
@@ -24692,7 +24724,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class FooterInput : IGraphQlInputObject
+    public partial class FooterInput : IGraphQlInputObject
     {
         private InputPropertyInfo _company;
         private InputPropertyInfo _help;
@@ -24767,7 +24799,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class GrowFiltersInput : IGraphQlInputObject
+    public partial class GrowFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _reward;
@@ -25030,7 +25062,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class GrowInput : IGraphQlInputObject
+    public partial class GrowInput : IGraphQlInputObject
     {
         private InputPropertyInfo _reward;
         private InputPropertyInfo _text;
@@ -25072,11 +25104,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> MainIcon
+        public QueryBuilderParameter<string> MainIcon
         {
-            get { return (QueryBuilderParameter<Guid?>)_mainIcon.Value; }
+            get { return (QueryBuilderParameter<string>)_mainIcon.Value; }
             set { _mainIcon = new InputPropertyInfo { Name = "mainIcon", Value = value }; }
         }
 
@@ -25099,11 +25131,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> MainPicture
+        public QueryBuilderParameter<string> MainPicture
         {
-            get { return (QueryBuilderParameter<Guid?>)_mainPicture.Value; }
+            get { return (QueryBuilderParameter<string>)_mainPicture.Value; }
             set { _mainPicture = new InputPropertyInfo { Name = "mainPicture", Value = value }; }
         }
 
@@ -25163,11 +25195,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Banner
+        public QueryBuilderParameter<string> Banner
         {
-            get { return (QueryBuilderParameter<Guid?>)_banner.Value; }
+            get { return (QueryBuilderParameter<string>)_banner.Value; }
             set { _banner = new InputPropertyInfo { Name = "Banner", Value = value }; }
         }
 
@@ -25218,11 +25250,11 @@ namespace Poolz.Finance.CSharp.Strapi
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("grow_badge")]
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> GrowBadge
+        public QueryBuilderParameter<string> GrowBadge
         {
-            get { return (QueryBuilderParameter<Guid?>)_growBadge.Value; }
+            get { return (QueryBuilderParameter<string>)_growBadge.Value; }
             set { _growBadge = new InputPropertyInfo { Name = "grow_badge", Value = value }; }
         }
 
@@ -25260,7 +25292,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class GrowBadgeFiltersInput : IGraphQlInputObject
+    public partial class GrowBadgeFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _name;
@@ -25389,7 +25421,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class GrowBadgeInput : IGraphQlInputObject
+    public partial class GrowBadgeInput : IGraphQlInputObject
     {
         private InputPropertyInfo _name;
         private InputPropertyInfo _backgroundColor;
@@ -25452,7 +25484,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class HeaderInput : IGraphQlInputObject
+    public partial class HeaderInput : IGraphQlInputObject
     {
         private InputPropertyInfo _headerList;
         private InputPropertyInfo _publishedAt;
@@ -25482,7 +25514,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class IdoBadgeFiltersInput : IGraphQlInputObject
+    public partial class IdoBadgeFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _name;
@@ -25600,7 +25632,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class IdoBadgeInput : IGraphQlInputObject
+    public partial class IdoBadgeInput : IGraphQlInputObject
     {
         private InputPropertyInfo _name;
         private InputPropertyInfo _explainText;
@@ -25652,7 +25684,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class InvestTermInput : IGraphQlInputObject
+    public partial class InvestTermInput : IGraphQlInputObject
     {
         private InputPropertyInfo _value;
         private InputPropertyInfo _publishedAt;
@@ -25682,7 +25714,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class InvestorFiltersInput : IGraphQlInputObject
+    public partial class InvestorFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _name;
@@ -25778,7 +25810,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class InvestorInput : IGraphQlInputObject
+    public partial class InvestorInput : IGraphQlInputObject
     {
         private InputPropertyInfo _name;
         private InputPropertyInfo _icon;
@@ -25794,11 +25826,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Icon
+        public QueryBuilderParameter<string> Icon
         {
-            get { return (QueryBuilderParameter<Guid?>)_icon.Value; }
+            get { return (QueryBuilderParameter<string>)_icon.Value; }
             set { _icon = new InputPropertyInfo { Name = "Icon", Value = value }; }
         }
 
@@ -25819,7 +25851,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class LatestTypeInput : IGraphQlInputObject
+    public partial class LatestTypeInput : IGraphQlInputObject
     {
         private InputPropertyInfo _version;
         private InputPropertyInfo _publishedAt;
@@ -25849,7 +25881,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class LinkTypeFiltersInput : IGraphQlInputObject
+    public partial class LinkTypeFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _name;
@@ -25956,7 +25988,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class LinkTypeInput : IGraphQlInputObject
+    public partial class LinkTypeInput : IGraphQlInputObject
     {
         private InputPropertyInfo _name;
         private InputPropertyInfo _isOnTop;
@@ -25983,20 +26015,20 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> DarkIcon
+        public QueryBuilderParameter<string> DarkIcon
         {
-            get { return (QueryBuilderParameter<Guid?>)_darkIcon.Value; }
+            get { return (QueryBuilderParameter<string>)_darkIcon.Value; }
             set { _darkIcon = new InputPropertyInfo { Name = "DarkIcon", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> LightIcon
+        public QueryBuilderParameter<string> LightIcon
         {
-            get { return (QueryBuilderParameter<Guid?>)_lightIcon.Value; }
+            get { return (QueryBuilderParameter<string>)_lightIcon.Value; }
             set { _lightIcon = new InputPropertyInfo { Name = "LightIcon", Value = value }; }
         }
 
@@ -26019,7 +26051,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class LockPoolzTermInput : IGraphQlInputObject
+    public partial class LockPoolzTermInput : IGraphQlInputObject
     {
         private InputPropertyInfo _value;
         private InputPropertyInfo _publishedAt;
@@ -26049,7 +26081,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class LockTokenWhitelistFiltersInput : IGraphQlInputObject
+    public partial class LockTokenWhitelistFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _name;
@@ -26179,7 +26211,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class LockTokenWhitelistInput : IGraphQlInputObject
+    public partial class LockTokenWhitelistInput : IGraphQlInputObject
     {
         private InputPropertyInfo _name;
         private InputPropertyInfo _address;
@@ -26216,11 +26248,11 @@ namespace Poolz.Finance.CSharp.Strapi
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("chain_settings")]
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<Guid?>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<string>>))]
         #endif
-        public QueryBuilderParameter<ICollection<Guid?>> ChainSettings
+        public QueryBuilderParameter<ICollection<string>> ChainSettings
         {
-            get { return (QueryBuilderParameter<ICollection<Guid?>>)_chainSettings.Value; }
+            get { return (QueryBuilderParameter<ICollection<string>>)_chainSettings.Value; }
             set { _chainSettings = new InputPropertyInfo { Name = "chain_settings", Value = value }; }
         }
 
@@ -26243,7 +26275,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class MainInput : IGraphQlInputObject
+    public partial class MainInput : IGraphQlInputObject
     {
         private InputPropertyInfo _sections;
         private InputPropertyInfo _publishedAt;
@@ -26273,7 +26305,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class MarketCapBadgeFiltersInput : IGraphQlInputObject
+    public partial class MarketCapBadgeFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _link;
@@ -26369,7 +26401,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class MarketCapBadgeInput : IGraphQlInputObject
+    public partial class MarketCapBadgeInput : IGraphQlInputObject
     {
         private InputPropertyInfo _link;
         private InputPropertyInfo _icon;
@@ -26385,11 +26417,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Icon
+        public QueryBuilderParameter<string> Icon
         {
-            get { return (QueryBuilderParameter<Guid?>)_icon.Value; }
+            get { return (QueryBuilderParameter<string>)_icon.Value; }
             set { _icon = new InputPropertyInfo { Name = "icon", Value = value }; }
         }
 
@@ -26410,7 +26442,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class MediaKitFiltersInput : IGraphQlInputObject
+    public partial class MediaKitFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _name;
@@ -26528,7 +26560,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class MediaKitInput : IGraphQlInputObject
+    public partial class MediaKitInput : IGraphQlInputObject
     {
         private InputPropertyInfo _name;
         private InputPropertyInfo _text;
@@ -26580,7 +26612,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class NonEvmChainFiltersInput : IGraphQlInputObject
+    public partial class NonEvmChainFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _displayText;
@@ -26687,7 +26719,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class NonEvmChainInput : IGraphQlInputObject
+    public partial class NonEvmChainInput : IGraphQlInputObject
     {
         private InputPropertyInfo _icon;
         private InputPropertyInfo _displayText;
@@ -26695,11 +26727,11 @@ namespace Poolz.Finance.CSharp.Strapi
         private InputPropertyInfo _publishedAt;
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Icon
+        public QueryBuilderParameter<string> Icon
         {
-            get { return (QueryBuilderParameter<Guid?>)_icon.Value; }
+            get { return (QueryBuilderParameter<string>)_icon.Value; }
             set { _icon = new InputPropertyInfo { Name = "Icon", Value = value }; }
         }
 
@@ -26739,7 +26771,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class OpenGrantFiltersInput : IGraphQlInputObject
+    public partial class OpenGrantFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _name;
@@ -26857,7 +26889,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class OpenGrantInput : IGraphQlInputObject
+    public partial class OpenGrantInput : IGraphQlInputObject
     {
         private InputPropertyInfo _name;
         private InputPropertyInfo _text;
@@ -26893,11 +26925,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Icon
+        public QueryBuilderParameter<string> Icon
         {
-            get { return (QueryBuilderParameter<Guid?>)_icon.Value; }
+            get { return (QueryBuilderParameter<string>)_icon.Value; }
             set { _icon = new InputPropertyInfo { Name = "icon", Value = value }; }
         }
 
@@ -26920,7 +26952,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class OurPartnerFiltersInput : IGraphQlInputObject
+    public partial class OurPartnerFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _name;
@@ -27016,7 +27048,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class OurPartnerInput : IGraphQlInputObject
+    public partial class OurPartnerInput : IGraphQlInputObject
     {
         private InputPropertyInfo _name;
         private InputPropertyInfo _darkLogo;
@@ -27032,11 +27064,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> DarkLogo
+        public QueryBuilderParameter<string> DarkLogo
         {
-            get { return (QueryBuilderParameter<Guid?>)_darkLogo.Value; }
+            get { return (QueryBuilderParameter<string>)_darkLogo.Value; }
             set { _darkLogo = new InputPropertyInfo { Name = "DarkLogo", Value = value }; }
         }
 
@@ -27057,7 +27089,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class PageInfoFiltersInput : IGraphQlInputObject
+    public partial class PageInfoFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _link;
@@ -27175,7 +27207,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class PageInfoInput : IGraphQlInputObject
+    public partial class PageInfoInput : IGraphQlInputObject
     {
         private InputPropertyInfo _link;
         private InputPropertyInfo _title;
@@ -27227,7 +27259,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class PoolzBoutiqueFiltersInput : IGraphQlInputObject
+    public partial class PoolzBoutiqueFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _projectName;
@@ -27400,7 +27432,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class PoolzBoutiqueInput : IGraphQlInputObject
+    public partial class PoolzBoutiqueInput : IGraphQlInputObject
     {
         private InputPropertyInfo _projectName;
         private InputPropertyInfo _tokenAddress;
@@ -27441,11 +27473,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Logo
+        public QueryBuilderParameter<string> Logo
         {
-            get { return (QueryBuilderParameter<Guid?>)_logo.Value; }
+            get { return (QueryBuilderParameter<string>)_logo.Value; }
             set { _logo = new InputPropertyInfo { Name = "Logo", Value = value }; }
         }
 
@@ -27518,7 +27550,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class PragmaVersionFiltersInput : IGraphQlInputObject
+    public partial class PragmaVersionFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _pragmaVersion;
@@ -27614,7 +27646,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class PragmaVersionInput : IGraphQlInputObject
+    public partial class PragmaVersionInput : IGraphQlInputObject
     {
         private InputPropertyInfo _pragmaVersion;
         private InputPropertyInfo _publishedAt;
@@ -27644,7 +27676,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class PrivacyInput : IGraphQlInputObject
+    public partial class PrivacyInput : IGraphQlInputObject
     {
         private InputPropertyInfo _value;
         private InputPropertyInfo _publishedAt;
@@ -27674,7 +27706,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ProjectsInformationFiltersInput : IGraphQlInputObject
+    public partial class ProjectsInformationFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _cryptorankKey;
@@ -28004,7 +28036,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class ProjectsInformationInput : IGraphQlInputObject
+    public partial class ProjectsInformationInput : IGraphQlInputObject
     {
         private InputPropertyInfo _cryptorankKey;
         private InputPropertyInfo _poolzBackId;
@@ -28069,20 +28101,20 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Logo
+        public QueryBuilderParameter<string> Logo
         {
-            get { return (QueryBuilderParameter<Guid?>)_logo.Value; }
+            get { return (QueryBuilderParameter<string>)_logo.Value; }
             set { _logo = new InputPropertyInfo { Name = "Logo", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> Block
+        public QueryBuilderParameter<string> Block
         {
-            get { return (QueryBuilderParameter<Guid?>)_block.Value; }
+            get { return (QueryBuilderParameter<string>)_block.Value; }
             set { _block = new InputPropertyInfo { Name = "Block", Value = value }; }
         }
 
@@ -28214,21 +28246,21 @@ namespace Poolz.Finance.CSharp.Strapi
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("chain_setting")]
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> ChainSetting
+        public QueryBuilderParameter<string> ChainSetting
         {
-            get { return (QueryBuilderParameter<Guid?>)_chainSetting.Value; }
+            get { return (QueryBuilderParameter<string>)_chainSetting.Value; }
             set { _chainSetting = new InputPropertyInfo { Name = "chain_setting", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("ido_badge")]
-        [JsonConverter(typeof(QueryBuilderParameterConverter<Guid?>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<string>))]
         #endif
-        public QueryBuilderParameter<Guid?> IdoBadge
+        public QueryBuilderParameter<string> IdoBadge
         {
-            get { return (QueryBuilderParameter<Guid?>)_idoBadge.Value; }
+            get { return (QueryBuilderParameter<string>)_idoBadge.Value; }
             set { _idoBadge = new InputPropertyInfo { Name = "ido_badge", Value = value }; }
         }
 
@@ -28290,7 +28322,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class StakingCoolDownFiltersInput : IGraphQlInputObject
+    public partial class StakingCoolDownFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _amount;
@@ -28419,7 +28451,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class StakingCoolDownInput : IGraphQlInputObject
+    public partial class StakingCoolDownInput : IGraphQlInputObject
     {
         private InputPropertyInfo _amount;
         private InputPropertyInfo _coolDownPeriod;
@@ -28482,7 +28514,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class VaultFaqFiltersInput : IGraphQlInputObject
+    public partial class VaultFaqFiltersInput : IGraphQlInputObject
     {
         private InputPropertyInfo _documentId;
         private InputPropertyInfo _shortText;
@@ -28589,7 +28621,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class VaultFaqInput : IGraphQlInputObject
+    public partial class VaultFaqInput : IGraphQlInputObject
     {
         private InputPropertyInfo _shortText;
         private InputPropertyInfo _longText;
@@ -28630,7 +28662,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class FileInfoInput : IGraphQlInputObject
+    public partial class FileInfoInput : IGraphQlInputObject
     {
         private InputPropertyInfo _name;
         private InputPropertyInfo _alternativeText;
@@ -28671,7 +28703,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UsersPermissionsRegisterInput : IGraphQlInputObject
+    public partial class UsersPermissionsRegisterInput : IGraphQlInputObject
     {
         private InputPropertyInfo _username;
         private InputPropertyInfo _email;
@@ -28712,7 +28744,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class UsersPermissionsLoginInput : IGraphQlInputObject
+    public partial class UsersPermissionsLoginInput : IGraphQlInputObject
     {
         private InputPropertyInfo _identifier;
         private InputPropertyInfo _password;
@@ -28753,7 +28785,7 @@ namespace Poolz.Finance.CSharp.Strapi
         }
     }
 
-    public class PaginationArg : IGraphQlInputObject
+    public partial class PaginationArg : IGraphQlInputObject
     {
         private InputPropertyInfo _page;
         private InputPropertyInfo _pageSize;
@@ -28807,7 +28839,7 @@ namespace Poolz.Finance.CSharp.Strapi
     #endregion
 
     #region data classes
-    public class Pagination
+    public partial class Pagination
     {
         public int? Total { get; set; }
         public int? Page { get; set; }
@@ -28815,15 +28847,15 @@ namespace Poolz.Finance.CSharp.Strapi
         public int? PageCount { get; set; }
     }
 
-    public class DeleteMutationResponse
+    public partial class DeleteMutationResponse
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
     }
 
     [GraphQlObjectType("ComponentVisualTextVisualText")]
-    public class ComponentVisualTextVisualText : IGenericMorph
+    public partial class ComponentVisualTextVisualText : IGenericMorph
     {
-        public Guid? Id { get; set; }
+        public string Id { get; set; }
         public ICollection<ComponentHighlightsHighlights> Highlights { get; set; }
         public ICollection<ComponentOverviewOverview> Overview { get; set; }
         public ComponentTokenomicsTokenomics Tokenomics { get; set; }
@@ -28831,17 +28863,17 @@ namespace Poolz.Finance.CSharp.Strapi
     }
 
     [GraphQlObjectType("ComponentVersionVersion")]
-    public class ComponentVersionVersion : IGenericMorph
+    public partial class ComponentVersionVersion : IGenericMorph
     {
-        public Guid? Id { get; set; }
+        public string Id { get; set; }
         public Contract ContractVersion { get; set; }
         public ContractTypeData ContractType { get; set; }
     }
 
     [GraphQlObjectType("ComponentUploadPoolUploadPool")]
-    public class ComponentUploadPoolUploadPool : IGenericMorph
+    public partial class ComponentUploadPoolUploadPool : IGenericMorph
     {
-        public Guid? Id { get; set; }
+        public string Id { get; set; }
         public decimal? WhitelistRate { get; set; }
         public decimal? PublicRate { get; set; }
         public decimal? TotalTokens { get; set; }
@@ -28852,31 +28884,10 @@ namespace Poolz.Finance.CSharp.Strapi
         public int? Participants { get; set; }
     }
 
-    [GraphQlObjectType("ComponentTokenDistributionTokenDistribution")]
-    public class ComponentTokenDistributionTokenDistribution : IGenericMorph
-    {
-        public Guid? Id { get; set; }
-        public object Unlock { get; set; }
-        public decimal? Ratio { get; set; }
-        public bool? IsTimeTba { get; set; }
-        public object StartTime { get; set; }
-    }
-
-    [GraphQlObjectType("ComponentSyntheticZoneSyntetic")]
-    public class ComponentSyntheticZoneSyntetic : IGenericMorph
-    {
-        public Guid? Id { get; set; }
-        public string TokenAddress { get; set; }
-        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonProperty("chain_setting")]
-        #endif
-        public ChainSetting ChainSetting { get; set; }
-    }
-
     [GraphQlObjectType("ComponentTokenomicsTokenomics")]
-    public class ComponentTokenomicsTokenomics : IGenericMorph
+    public partial class ComponentTokenomicsTokenomics : IGenericMorph
     {
-        public Guid? Id { get; set; }
+        public string Id { get; set; }
         public UploadFile VisualInfo { get; set; }
         public string MarketCap { get; set; }
         public string TgeMarketCap { get; set; }
@@ -28885,12 +28896,34 @@ namespace Poolz.Finance.CSharp.Strapi
         public string TotalSupply { get; set; }
         public decimal? UsdPrice { get; set; }
         public string TotalRaise { get; set; }
+        public string TokenPrice { get; set; }
+    }
+
+    [GraphQlObjectType("ComponentSyntheticZoneSyntetic")]
+    public partial class ComponentSyntheticZoneSyntetic : IGenericMorph
+    {
+        public string Id { get; set; }
+        public string TokenAddress { get; set; }
+        #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
+        [JsonProperty("chain_setting")]
+        #endif
+        public ChainSetting ChainSetting { get; set; }
+    }
+
+    [GraphQlObjectType("ComponentTokenDistributionTokenDistribution")]
+    public partial class ComponentTokenDistributionTokenDistribution : IGenericMorph
+    {
+        public string Id { get; set; }
+        public object Unlock { get; set; }
+        public decimal? Ratio { get; set; }
+        public bool? IsTimeTba { get; set; }
+        public object StartTime { get; set; }
     }
 
     [GraphQlObjectType("ComponentSmartLinksSmartLinks")]
-    public class ComponentSmartLinksSmartLinks : IGenericMorph
+    public partial class ComponentSmartLinksSmartLinks : IGenericMorph
     {
-        public Guid? Id { get; set; }
+        public string Id { get; set; }
         public string Url { get; set; }
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("link_type")]
@@ -28898,10 +28931,33 @@ namespace Poolz.Finance.CSharp.Strapi
         public LinkType LinkType { get; set; }
     }
 
-    [GraphQlObjectType("ComponentSectionSection")]
-    public class ComponentSectionSection : IGenericMorph
+    [GraphQlObjectType("ComponentSimpleUrlSimpleUrl")]
+    public partial class ComponentSimpleUrlSimpleUrl : IGenericMorph
     {
-        public Guid? Id { get; set; }
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public string Url { get; set; }
+        public bool? NewWindow { get; set; }
+    }
+
+    [GraphQlObjectType("ComponentMainCtaMainCta")]
+    public partial class ComponentMainCtaMainCta : IGenericMorph
+    {
+        public string Id { get; set; }
+        public string Text { get; set; }
+        public string Url { get; set; }
+        public string CtaText { get; set; }
+        public string AddText { get; set; }
+        public string BackColor { get; set; }
+        public string TextColor { get; set; }
+        public string HoverBackColor { get; set; }
+        public bool? Flag { get; set; }
+    }
+
+    [GraphQlObjectType("ComponentSectionSection")]
+    public partial class ComponentSectionSection : IGenericMorph
+    {
+        public string Id { get; set; }
         public string Title { get; set; }
         public string SmallText { get; set; }
         public string TopBgUrl { get; set; }
@@ -28913,92 +28969,69 @@ namespace Poolz.Finance.CSharp.Strapi
         public string SecondSmallText { get; set; }
     }
 
-    [GraphQlObjectType("ComponentSimpleUrlSimpleUrl")]
-    public class ComponentSimpleUrlSimpleUrl : IGenericMorph
-    {
-        public Guid? Id { get; set; }
-        public string Name { get; set; }
-        public string Url { get; set; }
-        public bool? NewWindow { get; set; }
-    }
-
     [GraphQlObjectType("ComponentOverviewOverview")]
-    public class ComponentOverviewOverview : IGenericMorph
+    public partial class ComponentOverviewOverview : IGenericMorph
     {
-        public Guid? Id { get; set; }
+        public string Id { get; set; }
         public string Name { get; set; }
         public string BoldText { get; set; }
         public string Text { get; set; }
     }
 
-    [GraphQlObjectType("ComponentIconTextIconText")]
-    public class ComponentIconTextIconText : IGenericMorph
+    [GraphQlObjectType("ComponentHighlightsHighlights")]
+    public partial class ComponentHighlightsHighlights : IGenericMorph
     {
-        public Guid? Id { get; set; }
+        public string Id { get; set; }
+        public string Value { get; set; }
+    }
+
+    [GraphQlObjectType("ComponentInvestorsInvestors")]
+    public partial class ComponentInvestorsInvestors : IGenericMorph
+    {
+        public string Id { get; set; }
+        public Investor Investor { get; set; }
+        public string Category { get; set; }
+    }
+
+    [GraphQlObjectType("ComponentHtmlColorTextHtmlColorText")]
+    public partial class ComponentHtmlColorTextHtmlColorText : IGenericMorph
+    {
+        public string Id { get; set; }
+        public string Text { get; set; }
+        public string Url { get; set; }
+    }
+
+    [GraphQlObjectType("ComponentIconTextIconText")]
+    public partial class ComponentIconTextIconText : IGenericMorph
+    {
+        public string Id { get; set; }
         public string Text { get; set; }
         public string SmallText { get; set; }
         public UploadFile Icon { get; set; }
     }
 
-    [GraphQlObjectType("ComponentInvestorsInvestors")]
-    public class ComponentInvestorsInvestors : IGenericMorph
+    [GraphQlObjectType("ComponentHeaderSimpleUrlHeaderSimpleUrl")]
+    public partial class ComponentHeaderSimpleUrlHeaderSimpleUrl : IGenericMorph
     {
-        public Guid? Id { get; set; }
-        public Investor Investor { get; set; }
-        public string Category { get; set; }
-    }
-
-    [GraphQlObjectType("ComponentMainCtaMainCta")]
-    public class ComponentMainCtaMainCta : IGenericMorph
-    {
-        public Guid? Id { get; set; }
+        public string Id { get; set; }
         public string Text { get; set; }
         public string Url { get; set; }
         public string CtaText { get; set; }
-        public string AddText { get; set; }
-        public string BackColor { get; set; }
         public string TextColor { get; set; }
-        public string HoverBackColor { get; set; }
-        public bool? Flag { get; set; }
-    }
-
-    [GraphQlObjectType("ComponentHtmlColorTextHtmlColorText")]
-    public class ComponentHtmlColorTextHtmlColorText : IGenericMorph
-    {
-        public Guid? Id { get; set; }
-        public string Text { get; set; }
-        public string Url { get; set; }
     }
 
     [GraphQlObjectType("ComponentDictionaryLinks")]
-    public class ComponentDictionaryLinks : IGenericMorph
+    public partial class ComponentDictionaryLinks : IGenericMorph
     {
-        public Guid? Id { get; set; }
+        public string Id { get; set; }
         public string Name { get; set; }
         public string Url { get; set; }
     }
 
-    [GraphQlObjectType("ComponentHeaderSimpleUrlHeaderSimpleUrl")]
-    public class ComponentHeaderSimpleUrlHeaderSimpleUrl : IGenericMorph
-    {
-        public Guid? Id { get; set; }
-        public string Text { get; set; }
-        public string Url { get; set; }
-        public string CtaText { get; set; }
-        public string TextColor { get; set; }
-    }
-
-    [GraphQlObjectType("ComponentHighlightsHighlights")]
-    public class ComponentHighlightsHighlights : IGenericMorph
-    {
-        public Guid? Id { get; set; }
-        public string Value { get; set; }
-    }
-
     [GraphQlObjectType("ComponentFullTokenDistributionFullTokenDistribution")]
-    public class ComponentFullTokenDistributionFullTokenDistribution : IGenericMorph
+    public partial class ComponentFullTokenDistributionFullTokenDistribution : IGenericMorph
     {
-        public Guid? Id { get; set; }
+        public string Id { get; set; }
         public ComponentTokenDistributionTokenDistribution Tge { get; set; }
         public ICollection<ComponentTokenDistributionTokenDistribution> Monthly { get; set; }
         public string Text { get; set; }
@@ -29009,27 +29042,19 @@ namespace Poolz.Finance.CSharp.Strapi
         public NonEvmChain NonEvmChain { get; set; }
     }
 
-    [GraphQlObjectType("ComponentColorIconColorIcon")]
-    public class ComponentColorIconColorIcon : IGenericMorph
-    {
-        public Guid? Id { get; set; }
-        public UploadFile Icon { get; set; }
-        public string Color { get; set; }
-    }
-
     [GraphQlObjectType("ComponentContractOnChainContractOnChain")]
-    public class ComponentContractOnChainContractOnChain : IGenericMorph
+    public partial class ComponentContractOnChainContractOnChain : IGenericMorph
     {
-        public Guid? Id { get; set; }
+        public string Id { get; set; }
         public Contract ContractVersion { get; set; }
         public string Address { get; set; }
         public ContractTypeData ContractType { get; set; }
     }
 
     [GraphQlObjectType("ComponentCompilerSettingCompilerSettings")]
-    public class ComponentCompilerSettingCompilerSettings : IGenericMorph
+    public partial class ComponentCompilerSettingCompilerSettings : IGenericMorph
     {
-        public Guid? Id { get; set; }
+        public string Id { get; set; }
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("evm_version")]
         #endif
@@ -29043,10 +29068,18 @@ namespace Poolz.Finance.CSharp.Strapi
         public bool? ViaIr { get; set; }
     }
 
-    [GraphQlObjectType("ComponentChainAddressesChainAddresses")]
-    public class ComponentChainAddressesChainAddresses : IGenericMorph
+    [GraphQlObjectType("ComponentColorIconColorIcon")]
+    public partial class ComponentColorIconColorIcon : IGenericMorph
     {
-        public Guid? Id { get; set; }
+        public string Id { get; set; }
+        public UploadFile Icon { get; set; }
+        public string Color { get; set; }
+    }
+
+    [GraphQlObjectType("ComponentChainAddressesChainAddresses")]
+    public partial class ComponentChainAddressesChainAddresses : IGenericMorph
+    {
+        public string Id { get; set; }
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("chain_setting")]
         #endif
@@ -29055,9 +29088,9 @@ namespace Poolz.Finance.CSharp.Strapi
     }
 
     [GraphQlObjectType("UploadFile")]
-    public class UploadFile : IGenericMorph
+    public partial class UploadFile : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Name { get; set; }
         public string AlternativeText { get; set; }
         public string Caption { get; set; }
@@ -29084,21 +29117,21 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class UploadFileEntityResponseCollection
+    public partial class UploadFileEntityResponseCollection
     {
         public ICollection<UploadFile> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
-    public class UploadFileRelationResponseCollection
+    public partial class UploadFileRelationResponseCollection
     {
         public ICollection<UploadFile> Nodes { get; set; }
     }
 
     [GraphQlObjectType("I18NLocale")]
-    public class I18NLocale : IGenericMorph
+    public partial class I18NLocale : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Name { get; set; }
         public string Code { get; set; }
         public DateTimeOffset? CreatedAt { get; set; }
@@ -29106,16 +29139,16 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class I18NLocaleEntityResponseCollection
+    public partial class I18NLocaleEntityResponseCollection
     {
         public ICollection<I18NLocale> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("ReviewWorkflowsWorkflow")]
-    public class ReviewWorkflowsWorkflow : IGenericMorph
+    public partial class ReviewWorkflowsWorkflow : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Name { get; set; }
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("stages_connection")]
@@ -29129,16 +29162,16 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class ReviewWorkflowsWorkflowEntityResponseCollection
+    public partial class ReviewWorkflowsWorkflowEntityResponseCollection
     {
         public ICollection<ReviewWorkflowsWorkflow> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("ReviewWorkflowsWorkflowStage")]
-    public class ReviewWorkflowsWorkflowStage : IGenericMorph
+    public partial class ReviewWorkflowsWorkflowStage : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Name { get; set; }
         public string Color { get; set; }
         public ReviewWorkflowsWorkflow Workflow { get; set; }
@@ -29147,21 +29180,21 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class ReviewWorkflowsWorkflowStageEntityResponseCollection
+    public partial class ReviewWorkflowsWorkflowStageEntityResponseCollection
     {
         public ICollection<ReviewWorkflowsWorkflowStage> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
-    public class ReviewWorkflowsWorkflowStageRelationResponseCollection
+    public partial class ReviewWorkflowsWorkflowStageRelationResponseCollection
     {
         public ICollection<ReviewWorkflowsWorkflowStage> Nodes { get; set; }
     }
 
     [GraphQlObjectType("UsersPermissionsPermission")]
-    public class UsersPermissionsPermission : IGenericMorph
+    public partial class UsersPermissionsPermission : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Action { get; set; }
         public UsersPermissionsRole Role { get; set; }
         public DateTimeOffset? CreatedAt { get; set; }
@@ -29169,15 +29202,15 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class UsersPermissionsPermissionRelationResponseCollection
+    public partial class UsersPermissionsPermissionRelationResponseCollection
     {
         public ICollection<UsersPermissionsPermission> Nodes { get; set; }
     }
 
     [GraphQlObjectType("UsersPermissionsRole")]
-    public class UsersPermissionsRole : IGenericMorph
+    public partial class UsersPermissionsRole : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string Type { get; set; }
@@ -29196,16 +29229,16 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class UsersPermissionsRoleEntityResponseCollection
+    public partial class UsersPermissionsRoleEntityResponseCollection
     {
         public ICollection<UsersPermissionsRole> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("UsersPermissionsUser")]
-    public class UsersPermissionsUser : IGenericMorph
+    public partial class UsersPermissionsUser : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Username { get; set; }
         public string Email { get; set; }
         public string Provider { get; set; }
@@ -29217,26 +29250,26 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class UsersPermissionsUserEntityResponse
+    public partial class UsersPermissionsUserEntityResponse
     {
         public UsersPermissionsUser Data { get; set; }
     }
 
-    public class UsersPermissionsUserEntityResponseCollection
+    public partial class UsersPermissionsUserEntityResponseCollection
     {
         public ICollection<UsersPermissionsUser> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
-    public class UsersPermissionsUserRelationResponseCollection
+    public partial class UsersPermissionsUserRelationResponseCollection
     {
         public ICollection<UsersPermissionsUser> Nodes { get; set; }
     }
 
     [GraphQlObjectType("AboutUs")]
-    public class AboutUs : IGenericMorph
+    public partial class AboutUs : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Title { get; set; }
         public string SmallText { get; set; }
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
@@ -29257,9 +29290,9 @@ namespace Poolz.Finance.CSharp.Strapi
     }
 
     [GraphQlObjectType("Account")]
-    public class Account : IGenericMorph
+    public partial class Account : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Title { get; set; }
         public string SmallText { get; set; }
         public DateTimeOffset? CreatedAt { get; set; }
@@ -29268,25 +29301,25 @@ namespace Poolz.Finance.CSharp.Strapi
     }
 
     [GraphQlObjectType("AuthAdministrator")]
-    public class AuthAdministrator : IGenericMorph
+    public partial class AuthAdministrator : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Wallet { get; set; }
         public DateTimeOffset? CreatedAt { get; set; }
         public DateTimeOffset? UpdatedAt { get; set; }
         public object PublishedAt { get; set; }
     }
 
-    public class AuthAdministratorEntityResponseCollection
+    public partial class AuthAdministratorEntityResponseCollection
     {
         public ICollection<AuthAdministrator> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("AuthAdministratorsResource")]
-    public class AuthAdministratorsResource : IGenericMorph
+    public partial class AuthAdministratorsResource : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("OnlyAdminResources_connection")]
         #endif
@@ -29298,9 +29331,9 @@ namespace Poolz.Finance.CSharp.Strapi
     }
 
     [GraphQlObjectType("AuthResource")]
-    public class AuthResource : IGenericMorph
+    public partial class AuthResource : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Name { get; set; }
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("RoleIDs_connection")]
@@ -29312,21 +29345,21 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class AuthResourceEntityResponseCollection
+    public partial class AuthResourceEntityResponseCollection
     {
         public ICollection<AuthResource> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
-    public class AuthResourceRelationResponseCollection
+    public partial class AuthResourceRelationResponseCollection
     {
         public ICollection<AuthResource> Nodes { get; set; }
     }
 
     [GraphQlObjectType("AuthRole")]
-    public class AuthRole : IGenericMorph
+    public partial class AuthRole : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Name { get; set; }
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("UserIDs_connection")]
@@ -29343,21 +29376,21 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class AuthRoleEntityResponseCollection
+    public partial class AuthRoleEntityResponseCollection
     {
         public ICollection<AuthRole> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
-    public class AuthRoleRelationResponseCollection
+    public partial class AuthRoleRelationResponseCollection
     {
         public ICollection<AuthRole> Nodes { get; set; }
     }
 
     [GraphQlObjectType("AuthUser")]
-    public class AuthUser : IGenericMorph
+    public partial class AuthUser : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Wallet { get; set; }
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("RoleIDs_connection")]
@@ -29369,21 +29402,21 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class AuthUserEntityResponseCollection
+    public partial class AuthUserEntityResponseCollection
     {
         public ICollection<AuthUser> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
-    public class AuthUserRelationResponseCollection
+    public partial class AuthUserRelationResponseCollection
     {
         public ICollection<AuthUser> Nodes { get; set; }
     }
 
     [GraphQlObjectType("Boost")]
-    public class Boost : IGenericMorph
+    public partial class Boost : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Title { get; set; }
         public string SmallText { get; set; }
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
@@ -29409,9 +29442,9 @@ namespace Poolz.Finance.CSharp.Strapi
     }
 
     [GraphQlObjectType("BuyPoolz")]
-    public class BuyPoolz : IGenericMorph
+    public partial class BuyPoolz : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Name { get; set; }
         public string Url { get; set; }
         public UploadFile Icon { get; set; }
@@ -29422,16 +29455,16 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class BuyPoolzEntityResponseCollection
+    public partial class BuyPoolzEntityResponseCollection
     {
         public ICollection<BuyPoolz> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("BuyWith")]
-    public class BuyWith : IGenericMorph
+    public partial class BuyWith : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Name { get; set; }
         public ICollection<ComponentChainAddressesChainAddresses> ChainAddresses { get; set; }
         public DateTimeOffset? CreatedAt { get; set; }
@@ -29439,16 +29472,16 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class BuyWithEntityResponseCollection
+    public partial class BuyWithEntityResponseCollection
     {
         public ICollection<BuyWith> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("Chain")]
-    public class Chain : IGenericMorph
+    public partial class Chain : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Name { get; set; }
         public string Symbol { get; set; }
         public bool? IsTest { get; set; }
@@ -29466,16 +29499,16 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class ChainEntityResponseCollection
+    public partial class ChainEntityResponseCollection
     {
         public ICollection<Chain> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("ChainSetting")]
-    public class ChainSetting : IGenericMorph
+    public partial class ChainSetting : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public bool? IsEvm { get; set; }
         public string DisplayText { get; set; }
         public UploadFile WhiteLogo { get; set; }
@@ -29501,21 +29534,21 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class ChainSettingEntityResponseCollection
+    public partial class ChainSettingEntityResponseCollection
     {
         public ICollection<ChainSetting> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
-    public class ChainSettingRelationResponseCollection
+    public partial class ChainSettingRelationResponseCollection
     {
         public ICollection<ChainSetting> Nodes { get; set; }
     }
 
     [GraphQlObjectType("Condition")]
-    public class Condition : IGenericMorph
+    public partial class Condition : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Value { get; set; }
         public DateTimeOffset? CreatedAt { get; set; }
         public DateTimeOffset? UpdatedAt { get; set; }
@@ -29523,9 +29556,9 @@ namespace Poolz.Finance.CSharp.Strapi
     }
 
     [GraphQlObjectType("Contract")]
-    public class Contract : IGenericMorph
+    public partial class Contract : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string NameVersion { get; set; }
         public object Abi { get; set; }
         public object ByteCode { get; set; }
@@ -29537,16 +29570,16 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class ContractEntityResponseCollection
+    public partial class ContractEntityResponseCollection
     {
         public ICollection<Contract> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("ContractType")]
-    public class ContractTypeData : IGenericMorph
+    public partial class ContractTypeData : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string ContractType { get; set; }
         public int? Order { get; set; }
         public bool? IsUpgradable { get; set; }
@@ -29555,16 +29588,16 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class ContractTypeEntityResponseCollection
+    public partial class ContractTypeEntityResponseCollection
     {
         public ICollection<ContractTypeData> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("ContractsOnChain")]
-    public class ContractsOnChain : IGenericMorph
+    public partial class ContractsOnChain : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public Chain Chain { get; set; }
         public ICollection<ComponentContractOnChainContractOnChain> Contracts { get; set; }
         public int? Decimals { get; set; }
@@ -29578,32 +29611,32 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class ContractsOnChainEntityResponseCollection
+    public partial class ContractsOnChainEntityResponseCollection
     {
         public ICollection<ContractsOnChain> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("Cover")]
-    public class Cover : IGenericMorph
+    public partial class Cover : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public UploadFile Picture { get; set; }
         public DateTimeOffset? CreatedAt { get; set; }
         public DateTimeOffset? UpdatedAt { get; set; }
         public object PublishedAt { get; set; }
     }
 
-    public class CoverEntityResponseCollection
+    public partial class CoverEntityResponseCollection
     {
         public ICollection<Cover> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("DefaultWallet")]
-    public class DefaultWallet : IGenericMorph
+    public partial class DefaultWallet : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Name { get; set; }
         public string Link { get; set; }
         public int? Order { get; set; }
@@ -29613,32 +29646,32 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class DefaultWalletEntityResponseCollection
+    public partial class DefaultWalletEntityResponseCollection
     {
         public ICollection<DefaultWallet> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("EvmVersion")]
-    public class EvmVersionData : IGenericMorph
+    public partial class EvmVersionData : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string EvmVersion { get; set; }
         public DateTimeOffset? CreatedAt { get; set; }
         public DateTimeOffset? UpdatedAt { get; set; }
         public object PublishedAt { get; set; }
     }
 
-    public class EvmVersionEntityResponseCollection
+    public partial class EvmVersionEntityResponseCollection
     {
         public ICollection<EvmVersionData> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("Footer")]
-    public class Footer : IGenericMorph
+    public partial class Footer : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public ICollection<ComponentSimpleUrlSimpleUrl> Company { get; set; }
         public ICollection<ComponentSimpleUrlSimpleUrl> Help { get; set; }
         public ICollection<ComponentSimpleUrlSimpleUrl> Information { get; set; }
@@ -29653,9 +29686,9 @@ namespace Poolz.Finance.CSharp.Strapi
     }
 
     [GraphQlObjectType("Grow")]
-    public class Grow : IGenericMorph
+    public partial class Grow : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public EnumGrowReward? Reward { get; set; }
         public string Text { get; set; }
         public UploadFile MainIcon { get; set; }
@@ -29686,16 +29719,16 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class GrowEntityResponseCollection
+    public partial class GrowEntityResponseCollection
     {
         public ICollection<Grow> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("GrowBadge")]
-    public class GrowBadge : IGenericMorph
+    public partial class GrowBadge : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Name { get; set; }
         public string BackgroundColor { get; set; }
         public string TooltipText { get; set; }
@@ -29705,16 +29738,16 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class GrowBadgeEntityResponseCollection
+    public partial class GrowBadgeEntityResponseCollection
     {
         public ICollection<GrowBadge> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("Header")]
-    public class Header : IGenericMorph
+    public partial class Header : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public ICollection<ComponentHeaderSimpleUrlHeaderSimpleUrl> HeaderList { get; set; }
         public DateTimeOffset? CreatedAt { get; set; }
         public DateTimeOffset? UpdatedAt { get; set; }
@@ -29722,9 +29755,9 @@ namespace Poolz.Finance.CSharp.Strapi
     }
 
     [GraphQlObjectType("IdoBadge")]
-    public class IdoBadge : IGenericMorph
+    public partial class IdoBadge : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Name { get; set; }
         public string ExplainText { get; set; }
         public string ColorCode { get; set; }
@@ -29733,16 +29766,16 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class IdoBadgeEntityResponseCollection
+    public partial class IdoBadgeEntityResponseCollection
     {
         public ICollection<IdoBadge> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("InvestTerm")]
-    public class InvestTerm : IGenericMorph
+    public partial class InvestTerm : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Value { get; set; }
         public DateTimeOffset? CreatedAt { get; set; }
         public DateTimeOffset? UpdatedAt { get; set; }
@@ -29750,9 +29783,9 @@ namespace Poolz.Finance.CSharp.Strapi
     }
 
     [GraphQlObjectType("Investor")]
-    public class Investor : IGenericMorph
+    public partial class Investor : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Name { get; set; }
         public UploadFile Icon { get; set; }
         public DateTimeOffset? CreatedAt { get; set; }
@@ -29760,16 +29793,16 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class InvestorEntityResponseCollection
+    public partial class InvestorEntityResponseCollection
     {
         public ICollection<Investor> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("LatestType")]
-    public class LatestType : IGenericMorph
+    public partial class LatestType : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public ICollection<ComponentVersionVersion> Version { get; set; }
         public DateTimeOffset? CreatedAt { get; set; }
         public DateTimeOffset? UpdatedAt { get; set; }
@@ -29777,9 +29810,9 @@ namespace Poolz.Finance.CSharp.Strapi
     }
 
     [GraphQlObjectType("LinkType")]
-    public class LinkType : IGenericMorph
+    public partial class LinkType : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Name { get; set; }
         public bool? IsOnTop { get; set; }
         public UploadFile DarkIcon { get; set; }
@@ -29789,16 +29822,16 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class LinkTypeEntityResponseCollection
+    public partial class LinkTypeEntityResponseCollection
     {
         public ICollection<LinkType> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("LockPoolzTerm")]
-    public class LockPoolzTerm : IGenericMorph
+    public partial class LockPoolzTerm : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Value { get; set; }
         public DateTimeOffset? CreatedAt { get; set; }
         public DateTimeOffset? UpdatedAt { get; set; }
@@ -29806,9 +29839,9 @@ namespace Poolz.Finance.CSharp.Strapi
     }
 
     [GraphQlObjectType("LockTokenWhitelist")]
-    public class LockTokenWhitelist : IGenericMorph
+    public partial class LockTokenWhitelist : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
         public EnumLocktokenwhitelistType? Type { get; set; }
@@ -29825,16 +29858,16 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class LockTokenWhitelistEntityResponseCollection
+    public partial class LockTokenWhitelistEntityResponseCollection
     {
         public ICollection<LockTokenWhitelist> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("Main")]
-    public class Main : IGenericMorph
+    public partial class Main : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public ComponentSectionSection Sections { get; set; }
         public DateTimeOffset? CreatedAt { get; set; }
         public DateTimeOffset? UpdatedAt { get; set; }
@@ -29842,9 +29875,9 @@ namespace Poolz.Finance.CSharp.Strapi
     }
 
     [GraphQlObjectType("MarketCapBadge")]
-    public class MarketCapBadge : IGenericMorph
+    public partial class MarketCapBadge : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Link { get; set; }
         public UploadFile Icon { get; set; }
         public DateTimeOffset? CreatedAt { get; set; }
@@ -29852,16 +29885,16 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class MarketCapBadgeEntityResponseCollection
+    public partial class MarketCapBadgeEntityResponseCollection
     {
         public ICollection<MarketCapBadge> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("MediaKit")]
-    public class MediaKit : IGenericMorph
+    public partial class MediaKit : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Name { get; set; }
         public string Text { get; set; }
         public ComponentDictionaryLinks Link { get; set; }
@@ -29870,16 +29903,16 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class MediaKitEntityResponseCollection
+    public partial class MediaKitEntityResponseCollection
     {
         public ICollection<MediaKit> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("NonEvmChain")]
-    public class NonEvmChain : IGenericMorph
+    public partial class NonEvmChain : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public UploadFile Icon { get; set; }
         public string DisplayText { get; set; }
         public string Regex { get; set; }
@@ -29888,16 +29921,16 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class NonEvmChainEntityResponseCollection
+    public partial class NonEvmChainEntityResponseCollection
     {
         public ICollection<NonEvmChain> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("OpenGrant")]
-    public class OpenGrant : IGenericMorph
+    public partial class OpenGrant : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Name { get; set; }
         public string Text { get; set; }
         public string Link { get; set; }
@@ -29907,16 +29940,16 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class OpenGrantEntityResponseCollection
+    public partial class OpenGrantEntityResponseCollection
     {
         public ICollection<OpenGrant> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("OurPartner")]
-    public class OurPartner : IGenericMorph
+    public partial class OurPartner : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Name { get; set; }
         public UploadFile DarkLogo { get; set; }
         public DateTimeOffset? CreatedAt { get; set; }
@@ -29924,16 +29957,16 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class OurPartnerEntityResponseCollection
+    public partial class OurPartnerEntityResponseCollection
     {
         public ICollection<OurPartner> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("PageInfo")]
-    public class PageInfo : IGenericMorph
+    public partial class PageInfo : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Link { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
@@ -29942,16 +29975,16 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class PageInfoEntityResponseCollection
+    public partial class PageInfoEntityResponseCollection
     {
         public ICollection<PageInfo> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("PoolzBoutique")]
-    public class PoolzBoutique : IGenericMorph
+    public partial class PoolzBoutique : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string ProjectName { get; set; }
         public string TokenAddress { get; set; }
         public int? ChainId { get; set; }
@@ -29966,32 +29999,32 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class PoolzBoutiqueEntityResponseCollection
+    public partial class PoolzBoutiqueEntityResponseCollection
     {
         public ICollection<PoolzBoutique> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("PragmaVersion")]
-    public class PragmaVersionData : IGenericMorph
+    public partial class PragmaVersionData : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string PragmaVersion { get; set; }
         public DateTimeOffset? CreatedAt { get; set; }
         public DateTimeOffset? UpdatedAt { get; set; }
         public object PublishedAt { get; set; }
     }
 
-    public class PragmaVersionEntityResponseCollection
+    public partial class PragmaVersionEntityResponseCollection
     {
         public ICollection<PragmaVersionData> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("Privacy")]
-    public class Privacy : IGenericMorph
+    public partial class Privacy : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Value { get; set; }
         public DateTimeOffset? CreatedAt { get; set; }
         public DateTimeOffset? UpdatedAt { get; set; }
@@ -29999,9 +30032,9 @@ namespace Poolz.Finance.CSharp.Strapi
     }
 
     [GraphQlObjectType("ProjectsInformation")]
-    public class ProjectsInformation : IGenericMorph
+    public partial class ProjectsInformation : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string CryptorankKey { get; set; }
         public int? PoolzBackId { get; set; }
         public int? WhitelistId { get; set; }
@@ -30040,21 +30073,21 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class ProjectsInformationEntityResponseCollection
+    public partial class ProjectsInformationEntityResponseCollection
     {
         public ICollection<ProjectsInformation> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
-    public class ProjectsInformationRelationResponseCollection
+    public partial class ProjectsInformationRelationResponseCollection
     {
         public ICollection<ProjectsInformation> Nodes { get; set; }
     }
 
     [GraphQlObjectType("StakingCoolDown")]
-    public class StakingCoolDown : IGenericMorph
+    public partial class StakingCoolDown : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string Amount { get; set; }
         public string CoolDownPeriod { get; set; }
         public int? Type { get; set; }
@@ -30064,16 +30097,16 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class StakingCoolDownEntityResponseCollection
+    public partial class StakingCoolDownEntityResponseCollection
     {
         public ICollection<StakingCoolDown> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
     [GraphQlObjectType("VaultFaq")]
-    public class VaultFaq : IGenericMorph
+    public partial class VaultFaq : IGenericMorph
     {
-        public Guid? DocumentId { get; set; }
+        public string DocumentId { get; set; }
         public string ShortText { get; set; }
         public string LongText { get; set; }
         public DateTimeOffset? CreatedAt { get; set; }
@@ -30081,20 +30114,20 @@ namespace Poolz.Finance.CSharp.Strapi
         public object PublishedAt { get; set; }
     }
 
-    public class VaultFaqEntityResponseCollection
+    public partial class VaultFaqEntityResponseCollection
     {
         public ICollection<VaultFaq> Nodes { get; set; }
         public Pagination PageInfo { get; set; }
     }
 
-    public interface IGenericMorph
+    public partial interface IGenericMorph
     {
     }
 
-    public class UsersPermissionsMe
+    public partial class UsersPermissionsMe
     {
-        public Guid? Id { get; set; }
-        public Guid? DocumentId { get; set; }
+        public string Id { get; set; }
+        public string DocumentId { get; set; }
         public string Username { get; set; }
         public string Email { get; set; }
         public bool? Confirmed { get; set; }
@@ -30102,41 +30135,41 @@ namespace Poolz.Finance.CSharp.Strapi
         public UsersPermissionsMeRole Role { get; set; }
     }
 
-    public class UsersPermissionsMeRole
+    public partial class UsersPermissionsMeRole
     {
-        public Guid? Id { get; set; }
+        public string Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string Type { get; set; }
     }
 
-    public class UsersPermissionsPasswordPayload
+    public partial class UsersPermissionsPasswordPayload
     {
         public bool? Ok { get; set; }
     }
 
-    public class UsersPermissionsLoginPayload
+    public partial class UsersPermissionsLoginPayload
     {
         public string Jwt { get; set; }
         public UsersPermissionsMe User { get; set; }
     }
 
-    public class UsersPermissionsCreateRolePayload
+    public partial class UsersPermissionsCreateRolePayload
     {
         public bool? Ok { get; set; }
     }
 
-    public class UsersPermissionsUpdateRolePayload
+    public partial class UsersPermissionsUpdateRolePayload
     {
         public bool? Ok { get; set; }
     }
 
-    public class UsersPermissionsDeleteRolePayload
+    public partial class UsersPermissionsDeleteRolePayload
     {
         public bool? Ok { get; set; }
     }
 
-    public class Query
+    public partial class Query
     {
         public UploadFile UploadFile { get; set; }
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
@@ -30375,7 +30408,7 @@ namespace Poolz.Finance.CSharp.Strapi
         public UsersPermissionsMe Me { get; set; }
     }
 
-    public class Mutation
+    public partial class Mutation
     {
         public ReviewWorkflowsWorkflow CreateReviewWorkflowsWorkflow { get; set; }
         public ReviewWorkflowsWorkflow UpdateReviewWorkflowsWorkflow { get; set; }
