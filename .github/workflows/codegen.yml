@@ -8,7 +8,7 @@ permissions:
   pull-requests: write
 
 env:
-  GRAPHQL_STRAPI_URL: ${{ secrets.GRAPHQL_STRAPI_URL }}
+  GRAPHQL_STRAPI_URL: ${{ secrets.GRAPHQL_URL }}
   TARGET_NAMESPACE:  'Poolz.Finance.CSharp.Strapi'
   GENERATED_FILE_PATH: 'src/Poolz.Finance.CSharp.Strapi/StrapiClient.cs'
   CODEGEN_PROJECT: 'src/Poolz.Finance.CSharp.Strapi.Generator/Poolz.Finance.CSharp.Strapi.Generator.csproj'
