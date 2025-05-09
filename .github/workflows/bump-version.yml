@@ -29,8 +29,8 @@ jobs:
 
       - name: Patch .csproj
         run: |
-          proj=$(git ls-files '*.csproj' | head -n1)
-          sed -i -E "s#<Version>[^<]+</Version>#<Version>${{ steps.ver.outputs.version }}</Version>#g" "$proj"
+          csproj_path="src/Poolz.Finance.CSharp.Strapi/Poolz.Finance.CSharp.Strapi.csproj"
+          sed -i -E "s#<Version>[^<]+</Version>#<Version>${{ steps.ver.outputs.version }}</Version>#g" "$csproj_path"
 
       - name: Create PR
         uses: peter-evans/create-pull-request@v7
