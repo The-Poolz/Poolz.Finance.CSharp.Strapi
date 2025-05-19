@@ -8,7 +8,7 @@ var configuration = new GraphQlGeneratorConfiguration
 {
     TargetNamespace = Env.TARGET_NAMESPACE.GetRequired(),
     IdTypeMapping = IdTypeMapping.String,
-    ScalarFieldTypeMappingProvider = new DateTimeScalarMappingProvider()
+    ScalarFieldTypeMappingProvider = new ScalarFieldTypeMappingProvider()
 };
 var generator = new GraphQlGenerator(configuration);
 var csharpCode = generator.GenerateFullClientCSharpFile(schema);
