@@ -1358,7 +1358,7 @@ namespace Poolz.Finance.CSharp.Strapi
             new Dictionary<global::System.Type, string>
             {
                 { typeof(string), "ID" },
-                { typeof(DateTimeOffset), "DateTime" },
+                { typeof(DateTime), "DateTime" },
                 { typeof(bool), "Boolean" },
                 { typeof(int), "Int" },
                 { typeof(decimal), "Float" },
@@ -17415,20 +17415,20 @@ namespace Poolz.Finance.CSharp.Strapi
         private InputPropertyInfo _between;
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<object>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<DateTime?>>))]
         #endif
-        public QueryBuilderParameter<ICollection<object>> And
+        public QueryBuilderParameter<ICollection<DateTime?>> And
         {
-            get { return (QueryBuilderParameter<ICollection<object>>)_and.Value; }
+            get { return (QueryBuilderParameter<ICollection<DateTime?>>)_and.Value; }
             set { _and = new InputPropertyInfo { Name = "and", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<object>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<DateTime?>>))]
         #endif
-        public QueryBuilderParameter<ICollection<object>> Or
+        public QueryBuilderParameter<ICollection<DateTime?>> Or
         {
-            get { return (QueryBuilderParameter<ICollection<object>>)_or.Value; }
+            get { return (QueryBuilderParameter<ICollection<DateTime?>>)_or.Value; }
             set { _or = new InputPropertyInfo { Name = "or", Value = value }; }
         }
 
@@ -17442,128 +17442,128 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> Eq
+        public QueryBuilderParameter<DateTime?> Eq
         {
-            get { return (QueryBuilderParameter<object>)_eq.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_eq.Value; }
             set { _eq = new InputPropertyInfo { Name = "eq", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> Eqi
+        public QueryBuilderParameter<DateTime?> Eqi
         {
-            get { return (QueryBuilderParameter<object>)_eqi.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_eqi.Value; }
             set { _eqi = new InputPropertyInfo { Name = "eqi", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> Ne
+        public QueryBuilderParameter<DateTime?> Ne
         {
-            get { return (QueryBuilderParameter<object>)_ne.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_ne.Value; }
             set { _ne = new InputPropertyInfo { Name = "ne", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> Nei
+        public QueryBuilderParameter<DateTime?> Nei
         {
-            get { return (QueryBuilderParameter<object>)_nei.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_nei.Value; }
             set { _nei = new InputPropertyInfo { Name = "nei", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> StartsWith
+        public QueryBuilderParameter<DateTime?> StartsWith
         {
-            get { return (QueryBuilderParameter<object>)_startsWith.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_startsWith.Value; }
             set { _startsWith = new InputPropertyInfo { Name = "startsWith", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> EndsWith
+        public QueryBuilderParameter<DateTime?> EndsWith
         {
-            get { return (QueryBuilderParameter<object>)_endsWith.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_endsWith.Value; }
             set { _endsWith = new InputPropertyInfo { Name = "endsWith", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> Contains
+        public QueryBuilderParameter<DateTime?> Contains
         {
-            get { return (QueryBuilderParameter<object>)_contains.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_contains.Value; }
             set { _contains = new InputPropertyInfo { Name = "contains", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> NotContains
+        public QueryBuilderParameter<DateTime?> NotContains
         {
-            get { return (QueryBuilderParameter<object>)_notContains.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_notContains.Value; }
             set { _notContains = new InputPropertyInfo { Name = "notContains", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> Containsi
+        public QueryBuilderParameter<DateTime?> Containsi
         {
-            get { return (QueryBuilderParameter<object>)_containsi.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_containsi.Value; }
             set { _containsi = new InputPropertyInfo { Name = "containsi", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> NotContainsi
+        public QueryBuilderParameter<DateTime?> NotContainsi
         {
-            get { return (QueryBuilderParameter<object>)_notContainsi.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_notContainsi.Value; }
             set { _notContainsi = new InputPropertyInfo { Name = "notContainsi", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> Gt
+        public QueryBuilderParameter<DateTime?> Gt
         {
-            get { return (QueryBuilderParameter<object>)_gt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_gt.Value; }
             set { _gt = new InputPropertyInfo { Name = "gt", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> Gte
+        public QueryBuilderParameter<DateTime?> Gte
         {
-            get { return (QueryBuilderParameter<object>)_gte.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_gte.Value; }
             set { _gte = new InputPropertyInfo { Name = "gte", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> Lt
+        public QueryBuilderParameter<DateTime?> Lt
         {
-            get { return (QueryBuilderParameter<object>)_lt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_lt.Value; }
             set { _lt = new InputPropertyInfo { Name = "lt", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> Lte
+        public QueryBuilderParameter<DateTime?> Lte
         {
-            get { return (QueryBuilderParameter<object>)_lte.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_lte.Value; }
             set { _lte = new InputPropertyInfo { Name = "lte", Value = value }; }
         }
 
@@ -17586,29 +17586,29 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<object>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<DateTime?>>))]
         #endif
-        public QueryBuilderParameter<ICollection<object>> In
+        public QueryBuilderParameter<ICollection<DateTime?>> In
         {
-            get { return (QueryBuilderParameter<ICollection<object>>)_in.Value; }
+            get { return (QueryBuilderParameter<ICollection<DateTime?>>)_in.Value; }
             set { _in = new InputPropertyInfo { Name = "in", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<object>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<DateTime?>>))]
         #endif
-        public QueryBuilderParameter<ICollection<object>> NotIn
+        public QueryBuilderParameter<ICollection<DateTime?>> NotIn
         {
-            get { return (QueryBuilderParameter<ICollection<object>>)_notIn.Value; }
+            get { return (QueryBuilderParameter<ICollection<DateTime?>>)_notIn.Value; }
             set { _notIn = new InputPropertyInfo { Name = "notIn", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<object>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<DateTime?>>))]
         #endif
-        public QueryBuilderParameter<ICollection<object>> Between
+        public QueryBuilderParameter<ICollection<DateTime?>> Between
         {
-            get { return (QueryBuilderParameter<ICollection<object>>)_between.Value; }
+            get { return (QueryBuilderParameter<ICollection<DateTime?>>)_between.Value; }
             set { _between = new InputPropertyInfo { Name = "between", Value = value }; }
         }
 
@@ -18663,11 +18663,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> Unlock
+        public QueryBuilderParameter<DateTime?> Unlock
         {
-            get { return (QueryBuilderParameter<object>)_unlock.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_unlock.Value; }
             set { _unlock = new InputPropertyInfo { Name = "Unlock", Value = value }; }
         }
 
@@ -18690,11 +18690,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> StartTime
+        public QueryBuilderParameter<DateTime?> StartTime
         {
-            get { return (QueryBuilderParameter<object>)_startTime.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_startTime.Value; }
             set { _startTime = new InputPropertyInfo { Name = "StartTime", Value = value }; }
         }
 
@@ -21375,11 +21375,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -21546,11 +21546,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -21865,11 +21865,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -22101,11 +22101,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -22207,11 +22207,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -22253,11 +22253,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -22380,11 +22380,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -22410,11 +22410,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -22557,11 +22557,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -22726,11 +22726,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -22875,11 +22875,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -22977,11 +22977,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -23183,11 +23183,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -23334,11 +23334,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -23570,11 +23570,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -23883,11 +23883,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -23922,11 +23922,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -24153,11 +24153,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -24326,11 +24326,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -24601,11 +24601,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -24723,11 +24723,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -24901,11 +24901,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -25030,11 +25030,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -25101,11 +25101,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -25461,11 +25461,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> StartTime
+        public QueryBuilderParameter<DateTime?> StartTime
         {
-            get { return (QueryBuilderParameter<object>)_startTime.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_startTime.Value; }
             set { _startTime = new InputPropertyInfo { Name = "startTime", Value = value }; }
         }
 
@@ -25507,11 +25507,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> FinishTime
+        public QueryBuilderParameter<DateTime?> FinishTime
         {
-            get { return (QueryBuilderParameter<object>)_finishTime.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_finishTime.Value; }
             set { _finishTime = new InputPropertyInfo { Name = "finishTime", Value = value }; }
         }
 
@@ -25580,11 +25580,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -25787,11 +25787,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -25820,11 +25820,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -25988,11 +25988,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -26020,11 +26020,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -26156,11 +26156,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -26187,11 +26187,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -26354,11 +26354,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -26387,11 +26387,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -26578,11 +26578,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -26611,11 +26611,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -26747,11 +26747,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -26916,11 +26916,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -27075,11 +27075,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -27255,11 +27255,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -27394,11 +27394,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -27563,11 +27563,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -27848,11 +27848,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -27982,11 +27982,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -28012,11 +28012,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -28166,20 +28166,20 @@ namespace Poolz.Finance.CSharp.Strapi
         private InputPropertyInfo _publishedAt;
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> StartTime
+        public QueryBuilderParameter<DateTime?> StartTime
         {
-            get { return (QueryBuilderParameter<object>)_startTime.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_startTime.Value; }
             set { _startTime = new InputPropertyInfo { Name = "StartTime", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> EndTime
+        public QueryBuilderParameter<DateTime?> EndTime
         {
-            get { return (QueryBuilderParameter<object>)_endTime.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_endTime.Value; }
             set { _endTime = new InputPropertyInfo { Name = "EndTime", Value = value }; }
         }
 
@@ -28203,11 +28203,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -28647,20 +28647,20 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> StartTime
+        public QueryBuilderParameter<DateTime?> StartTime
         {
-            get { return (QueryBuilderParameter<object>)_startTime.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_startTime.Value; }
             set { _startTime = new InputPropertyInfo { Name = "StartTime", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> FinishTime
+        public QueryBuilderParameter<DateTime?> FinishTime
         {
-            get { return (QueryBuilderParameter<object>)_finishTime.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_finishTime.Value; }
             set { _finishTime = new InputPropertyInfo { Name = "FinishTime", Value = value }; }
         }
 
@@ -28822,11 +28822,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -29035,11 +29035,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -29185,11 +29185,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<DateTime?>))]
         #endif
-        public QueryBuilderParameter<object> PublishedAt
+        public QueryBuilderParameter<DateTime?> PublishedAt
         {
-            get { return (QueryBuilderParameter<object>)_publishedAt.Value; }
+            get { return (QueryBuilderParameter<DateTime?>)_publishedAt.Value; }
             set { _publishedAt = new InputPropertyInfo { Name = "publishedAt", Value = value }; }
         }
 
@@ -29442,10 +29442,10 @@ namespace Poolz.Finance.CSharp.Strapi
     public partial class ComponentTokenDistributionTokenDistribution : IGenericMorph
     {
         public string Id { get; set; }
-        public object Unlock { get; set; }
+        public DateTime? Unlock { get; set; }
         public decimal? Ratio { get; set; }
         public bool? IsTimeTba { get; set; }
-        public object StartTime { get; set; }
+        public DateTime? StartTime { get; set; }
     }
 
     [GraphQlObjectType("ComponentSyntheticZoneSyntetic")]
@@ -29651,9 +29651,9 @@ namespace Poolz.Finance.CSharp.Strapi
         [JsonConverter(typeof(GraphQlInterfaceJsonConverter))]
         #endif
         public ICollection<IGenericMorph> Related { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class UploadFileEntityResponseCollection
@@ -29673,9 +29673,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public string DocumentId { get; set; }
         public string Name { get; set; }
         public string Code { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class I18NLocaleEntityResponseCollection
@@ -29696,9 +29696,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public ICollection<ReviewWorkflowsWorkflowStage> Stages { get; set; }
         public ReviewWorkflowsWorkflowStage StageRequiredToPublish { get; set; }
         public object ContentTypes { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class ReviewWorkflowsWorkflowEntityResponseCollection
@@ -29714,9 +29714,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public string Name { get; set; }
         public string Color { get; set; }
         public ReviewWorkflowsWorkflow Workflow { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class ReviewWorkflowsWorkflowStageEntityResponseCollection
@@ -29736,9 +29736,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public string DocumentId { get; set; }
         public string Action { get; set; }
         public UsersPermissionsRole Role { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class UsersPermissionsPermissionRelationResponseCollection
@@ -29763,9 +29763,9 @@ namespace Poolz.Finance.CSharp.Strapi
         #endif
         public UsersPermissionsUserRelationResponseCollection UsersConnection { get; set; }
         public ICollection<UsersPermissionsUser> Users { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class UsersPermissionsRoleEntityResponseCollection
@@ -29784,9 +29784,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public bool? Confirmed { get; set; }
         public bool? Blocked { get; set; }
         public UsersPermissionsRole Role { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class UsersPermissionsUserEntityResponse
@@ -29823,9 +29823,9 @@ namespace Poolz.Finance.CSharp.Strapi
         #endif
         public UploadFileRelationResponseCollection SlidersConnection { get; set; }
         public ICollection<UploadFile> Sliders { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     [GraphQlObjectType("Account")]
@@ -29834,9 +29834,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public string DocumentId { get; set; }
         public string Title { get; set; }
         public string SmallText { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     [GraphQlObjectType("AuthAdministrator")]
@@ -29844,9 +29844,9 @@ namespace Poolz.Finance.CSharp.Strapi
     {
         public string DocumentId { get; set; }
         public string Wallet { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class AuthAdministratorEntityResponseCollection
@@ -29864,9 +29864,9 @@ namespace Poolz.Finance.CSharp.Strapi
         #endif
         public AuthResourceRelationResponseCollection OnlyAdminResourcesConnection { get; set; }
         public ICollection<AuthResource> OnlyAdminResources { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     [GraphQlObjectType("AuthResource")]
@@ -29879,9 +29879,9 @@ namespace Poolz.Finance.CSharp.Strapi
         #endif
         public AuthRoleRelationResponseCollection RoleIDsConnection { get; set; }
         public ICollection<AuthRole> RoleIDs { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class AuthResourceEntityResponseCollection
@@ -29910,9 +29910,9 @@ namespace Poolz.Finance.CSharp.Strapi
         #endif
         public AuthResourceRelationResponseCollection ResourceIDsConnection { get; set; }
         public ICollection<AuthResource> ResourceIDs { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class AuthRoleEntityResponseCollection
@@ -29936,9 +29936,9 @@ namespace Poolz.Finance.CSharp.Strapi
         #endif
         public AuthRoleRelationResponseCollection RoleIDsConnection { get; set; }
         public ICollection<AuthRole> RoleIDs { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class AuthUserEntityResponseCollection
@@ -29975,9 +29975,9 @@ namespace Poolz.Finance.CSharp.Strapi
         #endif
         public UploadFileRelationResponseCollection TopBgConnection { get; set; }
         public ICollection<UploadFile> TopBg { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     [GraphQlObjectType("BuyPoolz")]
@@ -29989,9 +29989,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public UploadFile Icon { get; set; }
         public bool? IsDex { get; set; }
         public int? Order { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class BuyPoolzEntityResponseCollection
@@ -30006,9 +30006,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public string DocumentId { get; set; }
         public string Name { get; set; }
         public ICollection<ComponentChainAddressesChainAddresses> ChainAddresses { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class BuyWithEntityResponseCollection
@@ -30033,9 +30033,9 @@ namespace Poolz.Finance.CSharp.Strapi
         [JsonProperty("contracts_on_chain")]
         #endif
         public ContractsOnChain ContractsOnChain { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class ChainEntityResponseCollection
@@ -30068,9 +30068,9 @@ namespace Poolz.Finance.CSharp.Strapi
         [JsonProperty("projects_informations")]
         #endif
         public ICollection<ProjectsInformation> ProjectsInformations { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class ChainSettingEntityResponseCollection
@@ -30089,9 +30089,9 @@ namespace Poolz.Finance.CSharp.Strapi
     {
         public string DocumentId { get; set; }
         public string Value { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     [GraphQlObjectType("Contract")]
@@ -30104,9 +30104,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public string ReleaseNotes { get; set; }
         public string GitLink { get; set; }
         public ComponentCompilerSettingCompilerSettings CompilerSetting { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class ContractEntityResponseCollection
@@ -30122,9 +30122,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public string ContractType { get; set; }
         public int? Order { get; set; }
         public bool? IsUpgradable { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class ContractTypeEntityResponseCollection
@@ -30145,9 +30145,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public string Rpc { get; set; }
         public string NativeCurrency { get; set; }
         public string WebSocket { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class ContractsOnChainEntityResponseCollection
@@ -30161,9 +30161,9 @@ namespace Poolz.Finance.CSharp.Strapi
     {
         public string DocumentId { get; set; }
         public UploadFile Picture { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class CoverEntityResponseCollection
@@ -30180,9 +30180,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public string Link { get; set; }
         public int? Order { get; set; }
         public UploadFile Icon { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class DefaultWalletEntityResponseCollection
@@ -30196,9 +30196,9 @@ namespace Poolz.Finance.CSharp.Strapi
     {
         public string DocumentId { get; set; }
         public string EvmVersion { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class EvmVersionEntityResponseCollection
@@ -30219,9 +30219,9 @@ namespace Poolz.Finance.CSharp.Strapi
         [JsonProperty("Boost_Social")]
         #endif
         public ICollection<ComponentSimpleUrlSimpleUrl> BoostSocial { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     [GraphQlObjectType("Grow")]
@@ -30234,7 +30234,7 @@ namespace Poolz.Finance.CSharp.Strapi
         public string ProjectName { get; set; }
         public int? Participants { get; set; }
         public UploadFile MainPicture { get; set; }
-        public object StartTime { get; set; }
+        public DateTime? StartTime { get; set; }
         public string SubTitle { get; set; }
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("data_ccode")]
@@ -30242,7 +30242,7 @@ namespace Poolz.Finance.CSharp.Strapi
         public string DataCcode { get; set; }
         public string DescriptionMainText { get; set; }
         public string DescriptionSubText { get; set; }
-        public object FinishTime { get; set; }
+        public DateTime? FinishTime { get; set; }
         public UploadFile Banner { get; set; }
         public string BannerUrl { get; set; }
         public string BannerText { get; set; }
@@ -30253,9 +30253,9 @@ namespace Poolz.Finance.CSharp.Strapi
         [JsonProperty("grow_badge")]
         #endif
         public GrowBadge GrowBadge { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class GrowEntityResponseCollection
@@ -30272,9 +30272,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public string BackgroundColor { get; set; }
         public string TooltipText { get; set; }
         public string Color { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class GrowBadgeEntityResponseCollection
@@ -30288,9 +30288,9 @@ namespace Poolz.Finance.CSharp.Strapi
     {
         public string DocumentId { get; set; }
         public ICollection<ComponentHeaderSimpleUrlHeaderSimpleUrl> HeaderList { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     [GraphQlObjectType("IdoBadge")]
@@ -30300,9 +30300,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public string Name { get; set; }
         public string ExplainText { get; set; }
         public string ColorCode { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class IdoBadgeEntityResponseCollection
@@ -30316,9 +30316,9 @@ namespace Poolz.Finance.CSharp.Strapi
     {
         public string DocumentId { get; set; }
         public string Value { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     [GraphQlObjectType("Investor")]
@@ -30327,9 +30327,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public string DocumentId { get; set; }
         public string Name { get; set; }
         public UploadFile Icon { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class InvestorEntityResponseCollection
@@ -30343,9 +30343,9 @@ namespace Poolz.Finance.CSharp.Strapi
     {
         public string DocumentId { get; set; }
         public ICollection<ComponentVersionVersion> Version { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     [GraphQlObjectType("LinkType")]
@@ -30356,9 +30356,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public bool? IsOnTop { get; set; }
         public UploadFile DarkIcon { get; set; }
         public UploadFile LightIcon { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class LinkTypeEntityResponseCollection
@@ -30372,9 +30372,9 @@ namespace Poolz.Finance.CSharp.Strapi
     {
         public string DocumentId { get; set; }
         public string Value { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     [GraphQlObjectType("LockTokenWhitelist")]
@@ -30392,9 +30392,9 @@ namespace Poolz.Finance.CSharp.Strapi
         [JsonProperty("chain_settings")]
         #endif
         public ICollection<ChainSetting> ChainSettings { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class LockTokenWhitelistEntityResponseCollection
@@ -30408,9 +30408,9 @@ namespace Poolz.Finance.CSharp.Strapi
     {
         public string DocumentId { get; set; }
         public ComponentSectionSection Sections { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     [GraphQlObjectType("MarketCapBadge")]
@@ -30419,9 +30419,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public string DocumentId { get; set; }
         public string Link { get; set; }
         public UploadFile Icon { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class MarketCapBadgeEntityResponseCollection
@@ -30437,9 +30437,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public string Name { get; set; }
         public string Text { get; set; }
         public ComponentDictionaryLinks Link { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class MediaKitEntityResponseCollection
@@ -30455,9 +30455,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public UploadFile Icon { get; set; }
         public string DisplayText { get; set; }
         public string Regex { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class NonEvmChainEntityResponseCollection
@@ -30474,9 +30474,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public string Text { get; set; }
         public string Link { get; set; }
         public UploadFile Icon { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class OpenGrantEntityResponseCollection
@@ -30491,9 +30491,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public string DocumentId { get; set; }
         public string Name { get; set; }
         public UploadFile DarkLogo { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class OurPartnerEntityResponseCollection
@@ -30509,9 +30509,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public string Link { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class PageInfoEntityResponseCollection
@@ -30533,9 +30533,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public string Telegram { get; set; }
         public string Discord { get; set; }
         public string Color { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class PoolzBoutiqueEntityResponseCollection
@@ -30549,9 +30549,9 @@ namespace Poolz.Finance.CSharp.Strapi
     {
         public string DocumentId { get; set; }
         public string PragmaVersion { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class PragmaVersionEntityResponseCollection
@@ -30565,25 +30565,25 @@ namespace Poolz.Finance.CSharp.Strapi
     {
         public string DocumentId { get; set; }
         public string Value { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     [GraphQlObjectType("ProjectPhase")]
     public partial class ProjectPhase : IGenericMorph
     {
         public string DocumentId { get; set; }
-        public object StartTime { get; set; }
-        public object EndTime { get; set; }
+        public DateTime? StartTime { get; set; }
+        public DateTime? EndTime { get; set; }
         public decimal? MaxInvest { get; set; }
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("projects_information")]
         #endif
         public ProjectsInformation ProjectsInformation { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class ProjectPhaseEntityResponseCollection
@@ -30607,8 +30607,8 @@ namespace Poolz.Finance.CSharp.Strapi
         public string Name { get; set; }
         public UploadFile Logo { get; set; }
         public UploadFile Block { get; set; }
-        public object StartTime { get; set; }
-        public object FinishTime { get; set; }
+        public DateTime? StartTime { get; set; }
+        public DateTime? FinishTime { get; set; }
         public ComponentVisualTextVisualText VisualText { get; set; }
         public ComponentUploadPoolUploadPool UploadPool { get; set; }
         public bool? IsShow { get; set; }
@@ -30642,9 +30642,9 @@ namespace Poolz.Finance.CSharp.Strapi
         [JsonProperty("project_phases")]
         #endif
         public ICollection<ProjectPhase> ProjectPhases { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class ProjectsInformationEntityResponseCollection
@@ -30666,9 +30666,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public string CoolDownPeriod { get; set; }
         public int? Type { get; set; }
         public string Text { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class StakingCoolDownEntityResponseCollection
@@ -30683,9 +30683,9 @@ namespace Poolz.Finance.CSharp.Strapi
         public string DocumentId { get; set; }
         public string ShortText { get; set; }
         public string LongText { get; set; }
-        public DateTimeOffset? CreatedAt { get; set; }
-        public DateTimeOffset? UpdatedAt { get; set; }
-        public object PublishedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public DateTime? PublishedAt { get; set; }
     }
 
     public partial class VaultFaqEntityResponseCollection
