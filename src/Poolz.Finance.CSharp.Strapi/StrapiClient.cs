@@ -1361,6 +1361,7 @@ namespace Poolz.Finance.CSharp.Strapi
                 { typeof(DateTime), "DateTime" },
                 { typeof(bool), "Boolean" },
                 { typeof(int), "Int" },
+                { typeof(long), "Long" },
                 { typeof(decimal), "Float" },
                 { typeof(AboutUsInput), "AboutUsInput" },
                 { typeof(AccountInput), "AccountInput" },
@@ -16915,20 +16916,20 @@ namespace Poolz.Finance.CSharp.Strapi
         private InputPropertyInfo _between;
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<object>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<long?>>))]
         #endif
-        public QueryBuilderParameter<ICollection<object>> And
+        public QueryBuilderParameter<ICollection<long?>> And
         {
-            get { return (QueryBuilderParameter<ICollection<object>>)_and.Value; }
+            get { return (QueryBuilderParameter<ICollection<long?>>)_and.Value; }
             set { _and = new InputPropertyInfo { Name = "and", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<object>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<long?>>))]
         #endif
-        public QueryBuilderParameter<ICollection<object>> Or
+        public QueryBuilderParameter<ICollection<long?>> Or
         {
-            get { return (QueryBuilderParameter<ICollection<object>>)_or.Value; }
+            get { return (QueryBuilderParameter<ICollection<long?>>)_or.Value; }
             set { _or = new InputPropertyInfo { Name = "or", Value = value }; }
         }
 
@@ -16942,128 +16943,128 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<long?>))]
         #endif
-        public QueryBuilderParameter<object> Eq
+        public QueryBuilderParameter<long?> Eq
         {
-            get { return (QueryBuilderParameter<object>)_eq.Value; }
+            get { return (QueryBuilderParameter<long?>)_eq.Value; }
             set { _eq = new InputPropertyInfo { Name = "eq", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<long?>))]
         #endif
-        public QueryBuilderParameter<object> Eqi
+        public QueryBuilderParameter<long?> Eqi
         {
-            get { return (QueryBuilderParameter<object>)_eqi.Value; }
+            get { return (QueryBuilderParameter<long?>)_eqi.Value; }
             set { _eqi = new InputPropertyInfo { Name = "eqi", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<long?>))]
         #endif
-        public QueryBuilderParameter<object> Ne
+        public QueryBuilderParameter<long?> Ne
         {
-            get { return (QueryBuilderParameter<object>)_ne.Value; }
+            get { return (QueryBuilderParameter<long?>)_ne.Value; }
             set { _ne = new InputPropertyInfo { Name = "ne", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<long?>))]
         #endif
-        public QueryBuilderParameter<object> Nei
+        public QueryBuilderParameter<long?> Nei
         {
-            get { return (QueryBuilderParameter<object>)_nei.Value; }
+            get { return (QueryBuilderParameter<long?>)_nei.Value; }
             set { _nei = new InputPropertyInfo { Name = "nei", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<long?>))]
         #endif
-        public QueryBuilderParameter<object> StartsWith
+        public QueryBuilderParameter<long?> StartsWith
         {
-            get { return (QueryBuilderParameter<object>)_startsWith.Value; }
+            get { return (QueryBuilderParameter<long?>)_startsWith.Value; }
             set { _startsWith = new InputPropertyInfo { Name = "startsWith", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<long?>))]
         #endif
-        public QueryBuilderParameter<object> EndsWith
+        public QueryBuilderParameter<long?> EndsWith
         {
-            get { return (QueryBuilderParameter<object>)_endsWith.Value; }
+            get { return (QueryBuilderParameter<long?>)_endsWith.Value; }
             set { _endsWith = new InputPropertyInfo { Name = "endsWith", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<long?>))]
         #endif
-        public QueryBuilderParameter<object> Contains
+        public QueryBuilderParameter<long?> Contains
         {
-            get { return (QueryBuilderParameter<object>)_contains.Value; }
+            get { return (QueryBuilderParameter<long?>)_contains.Value; }
             set { _contains = new InputPropertyInfo { Name = "contains", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<long?>))]
         #endif
-        public QueryBuilderParameter<object> NotContains
+        public QueryBuilderParameter<long?> NotContains
         {
-            get { return (QueryBuilderParameter<object>)_notContains.Value; }
+            get { return (QueryBuilderParameter<long?>)_notContains.Value; }
             set { _notContains = new InputPropertyInfo { Name = "notContains", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<long?>))]
         #endif
-        public QueryBuilderParameter<object> Containsi
+        public QueryBuilderParameter<long?> Containsi
         {
-            get { return (QueryBuilderParameter<object>)_containsi.Value; }
+            get { return (QueryBuilderParameter<long?>)_containsi.Value; }
             set { _containsi = new InputPropertyInfo { Name = "containsi", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<long?>))]
         #endif
-        public QueryBuilderParameter<object> NotContainsi
+        public QueryBuilderParameter<long?> NotContainsi
         {
-            get { return (QueryBuilderParameter<object>)_notContainsi.Value; }
+            get { return (QueryBuilderParameter<long?>)_notContainsi.Value; }
             set { _notContainsi = new InputPropertyInfo { Name = "notContainsi", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<long?>))]
         #endif
-        public QueryBuilderParameter<object> Gt
+        public QueryBuilderParameter<long?> Gt
         {
-            get { return (QueryBuilderParameter<object>)_gt.Value; }
+            get { return (QueryBuilderParameter<long?>)_gt.Value; }
             set { _gt = new InputPropertyInfo { Name = "gt", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<long?>))]
         #endif
-        public QueryBuilderParameter<object> Gte
+        public QueryBuilderParameter<long?> Gte
         {
-            get { return (QueryBuilderParameter<object>)_gte.Value; }
+            get { return (QueryBuilderParameter<long?>)_gte.Value; }
             set { _gte = new InputPropertyInfo { Name = "gte", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<long?>))]
         #endif
-        public QueryBuilderParameter<object> Lt
+        public QueryBuilderParameter<long?> Lt
         {
-            get { return (QueryBuilderParameter<object>)_lt.Value; }
+            get { return (QueryBuilderParameter<long?>)_lt.Value; }
             set { _lt = new InputPropertyInfo { Name = "lt", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<long?>))]
         #endif
-        public QueryBuilderParameter<object> Lte
+        public QueryBuilderParameter<long?> Lte
         {
-            get { return (QueryBuilderParameter<object>)_lte.Value; }
+            get { return (QueryBuilderParameter<long?>)_lte.Value; }
             set { _lte = new InputPropertyInfo { Name = "lte", Value = value }; }
         }
 
@@ -17086,29 +17087,29 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<object>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<long?>>))]
         #endif
-        public QueryBuilderParameter<ICollection<object>> In
+        public QueryBuilderParameter<ICollection<long?>> In
         {
-            get { return (QueryBuilderParameter<ICollection<object>>)_in.Value; }
+            get { return (QueryBuilderParameter<ICollection<long?>>)_in.Value; }
             set { _in = new InputPropertyInfo { Name = "in", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<object>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<long?>>))]
         #endif
-        public QueryBuilderParameter<ICollection<object>> NotIn
+        public QueryBuilderParameter<ICollection<long?>> NotIn
         {
-            get { return (QueryBuilderParameter<ICollection<object>>)_notIn.Value; }
+            get { return (QueryBuilderParameter<ICollection<long?>>)_notIn.Value; }
             set { _notIn = new InputPropertyInfo { Name = "notIn", Value = value }; }
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<object>>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<ICollection<long?>>))]
         #endif
-        public QueryBuilderParameter<ICollection<object>> Between
+        public QueryBuilderParameter<ICollection<long?>> Between
         {
-            get { return (QueryBuilderParameter<ICollection<object>>)_between.Value; }
+            get { return (QueryBuilderParameter<ICollection<long?>>)_between.Value; }
             set { _between = new InputPropertyInfo { Name = "between", Value = value }; }
         }
 
@@ -23541,11 +23542,11 @@ namespace Poolz.Finance.CSharp.Strapi
         }
 
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
-        [JsonConverter(typeof(QueryBuilderParameterConverter<object>))]
+        [JsonConverter(typeof(QueryBuilderParameterConverter<long?>))]
         #endif
-        public QueryBuilderParameter<object> ChainId
+        public QueryBuilderParameter<long?> ChainId
         {
-            get { return (QueryBuilderParameter<object>)_chainId.Value; }
+            get { return (QueryBuilderParameter<long?>)_chainId.Value; }
             set { _chainId = new InputPropertyInfo { Name = "chainId", Value = value }; }
         }
 
@@ -30024,7 +30025,7 @@ namespace Poolz.Finance.CSharp.Strapi
         public string Name { get; set; }
         public string Symbol { get; set; }
         public bool? IsTest { get; set; }
-        public object ChainId { get; set; }
+        public long? ChainId { get; set; }
         #if !GRAPHQL_GENERATOR_DISABLE_NEWTONSOFT_JSON
         [JsonProperty("chain_setting")]
         #endif
