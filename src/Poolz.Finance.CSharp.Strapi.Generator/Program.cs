@@ -7,7 +7,8 @@ var schema = await GraphQlGenerator.RetrieveSchema(HttpMethod.Post, url);
 var configuration = new GraphQlGeneratorConfiguration
 {
     TargetNamespace = Env.TARGET_NAMESPACE.GetRequired(),
-    IdTypeMapping = IdTypeMapping.String
+    IdTypeMapping = IdTypeMapping.String,
+    ScalarFieldTypeMappingProvider = new DateTimeScalarMappingProvider()
 };
 var generator = new GraphQlGenerator(configuration);
 var csharpCode = generator.GenerateFullClientCSharpFile(schema);
