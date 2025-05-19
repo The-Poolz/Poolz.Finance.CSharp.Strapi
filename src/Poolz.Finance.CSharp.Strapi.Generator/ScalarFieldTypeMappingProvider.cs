@@ -2,7 +2,7 @@
 
 namespace Poolz.Finance.CSharp.Strapi.Generator;
 
-public sealed class DateTimeScalarMappingProvider : IScalarFieldTypeMappingProvider
+public sealed class ScalarFieldTypeMappingProvider : IScalarFieldTypeMappingProvider
 {
     public ScalarFieldTypeDescription GetCustomScalarFieldType(ScalarFieldTypeProviderContext context)
     {
