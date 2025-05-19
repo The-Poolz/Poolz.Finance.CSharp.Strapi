@@ -12,8 +12,11 @@ public sealed class ScalarFieldTypeMappingProvider : IScalarFieldTypeMappingProv
         {
             "DateTime" => new ScalarFieldTypeDescription
             {
-                NetTypeName = GenerationContext.GetNullableNetTypeName(context, "DateTime", isReferenceType: false),
-                FormatMask = null
+                NetTypeName = GenerationContext.GetNullableNetTypeName(context, "DateTime", isReferenceType: false)
+            },
+            "Long" => new ScalarFieldTypeDescription
+            {
+                NetTypeName = GenerationContext.GetNullableNetTypeName(context, "long", isReferenceType: false)
             },
             _ => DefaultScalarFieldTypeMappingProvider.GetFallbackFieldType(context)
         };
