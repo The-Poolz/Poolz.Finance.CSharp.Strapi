@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <PackageId>Poolz.Finance.CSharp.Strapi</PackageId>
     <Title>Auto-generated C# GraphQL client for Strapi of The-Poolz company.</Title>
-    <Version>1.3.0</Version>
+    <Version>1.3.1</Version>
     <Authors>ArdenHide, Lomet</Authors>
     <Company>The-Poolz</Company>
     <Product>Poolz.Finance.CSharp.Strapi</Product>
